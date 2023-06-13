@@ -10,12 +10,12 @@ public class Enemy3MoveScript : MonoBehaviour
 
     public float speed;
     public float aggroDistance;
+    public float attackDistance;
+    public float retreatDistance;
 
-    public int enemy3Damage;
 
     public Transform followTarget;
     public float targetDir;
-    public GameObject enemy1;
 
 
     public GameObject enemy3Sprite;
@@ -35,7 +35,15 @@ public class Enemy3MoveScript : MonoBehaviour
     {
         if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
         {
-            transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy continues moving towards player
+            if (Vector2.Distance(transform.position, followTarget.position) > attackDistance) // if enemy distance from player is greater than shoot distance
+            {
+                transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy moves towards player
+            }
+
+            else if (Vector2.Distance(transform.position, followTarget.position) < retreatDistance) // if enemy distance from player is lesser than retreat distance
+            {
+                transform.position = Vector2.MoveTowards(transform.position, followTarget.position, -speed * Time.deltaTime); // enemy moves away from player
+            }
         }
 
         Vector3 heading = followTarget.position - transform.position; // check for player direction from enemy direction

@@ -2,22 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CrystalProjectileScript : MonoBehaviour
+public class StaffProjectileScript2 : MonoBehaviour
 {
-    Rigidbody2D rb;
-
-    public int bulletDamage = 5;
+    public int bulletDamage = 150;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
@@ -46,6 +44,9 @@ public class CrystalProjectileScript : MonoBehaviour
             enemy4.TakeDamage(bulletDamage); // damage enemy by bulletdamage amount
         }
 
-        Destroy(gameObject); // destroy bullet
+        if (GetComponentInParent<StaffProjectileScript>().currentBounces <= 3)
+        {
+            Destroy(gameObject); // destroy bullet
+        }
     }
 }
