@@ -37034,8 +37034,8 @@ MonoBehaviour:
   followTarget: {fileID: 1077654548}
   enemy2Projectile: {fileID: 8663081142794548862, guid: 656cf828de7b83248a325cfee9a9ea82, type: 3}
   numberOfProjectiles: 1
-  projectileSpread: 1
-  projectileForce: 0.25
+  projectileSpread: 0.8
+  projectileForce: 0.15
   firePoint: {fileID: 1728645396}
 --- !u!114 &1728645392
 MonoBehaviour:
@@ -37342,8 +37342,6 @@ MonoBehaviour:
   enemy4: {fileID: 1837368720}
   enemy4Sprite: {fileID: 1837368720}
   facingRight: 0
-  vibrateSpeed: 2
-  vibrateIntensity: 0.25
   scaleChange: {x: 0.1, y: 0.1, z: 0}
 --- !u!61 &1837368725
 BoxCollider2D:
