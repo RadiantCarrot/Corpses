@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class StaffProjectileScript : MonoBehaviour
 {
     Rigidbody2D rb;
 
-    public int bulletDamage = 20;
-
     private Vector2 lastVelocity;
     private float currentSpeed;
     private Vector2 direction;
-    private int currentBounces = 0;
+    public int currentBounces = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -40,10 +39,5 @@ public class StaffProjectileScript : MonoBehaviour
 
         rb.velocity = direction * Mathf.Max(currentSpeed, 0);
         currentBounces++;
-    }
-
-    void OnTriggerEnter2D(Collider2D hitInfo)
-    {
-        Destroy(gameObject); // destroy bullet
     }
 }

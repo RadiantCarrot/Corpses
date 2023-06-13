@@ -15,7 +15,6 @@ public class Enemy1MoveScript : MonoBehaviour
 
     public Transform followTarget;
     public float targetDir;
-    public GameObject enemy1;
 
 
     public GameObject enemy1Sprite;

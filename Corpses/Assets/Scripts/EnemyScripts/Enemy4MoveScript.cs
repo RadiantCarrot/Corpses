@@ -6,20 +6,15 @@ public class Enemy4MoveScript : MonoBehaviour
 {
     public GameObject spawnFlash;
 
-    Rigidbody2D rb;
-
-    public float speed;
-    public float aggroDistance;
-
-    public int enemy1Damage;
-
-    public Transform followTarget;
-    public float targetDir;
     public GameObject enemy4;
-
+    Rigidbody2D rb;
 
     public GameObject enemy4Sprite;
     public bool facingRight;
+
+    public float vibrateSpeed;
+    public float vibrateIntensity;
+    public Vector3 scaleChange;
 
     // Start is called before the first frame update
     void Start()
@@ -27,25 +22,18 @@ public class Enemy4MoveScript : MonoBehaviour
         // Instantiate(spawnFlash, transform.position, Quaternion.identity); // create spawn flash effect
         rb = GetComponent<Rigidbody2D>(); // assigns rigidbody to character
 
-        followTarget = GameObject.FindGameObjectWithTag("Player").transform; // set followTarget as player's position
+        scaleChange = new Vector3(-0.01f, -0.01f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
+        enemy4.transform.localScale += scaleChange; // increase scale
+
+        if (enemy4.transform.localScale.y < 0.8f || enemy4.transform.localScale.y > 1.2f) // if scale hits limit
         {
-            transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy continues moving towards player
+            scaleChange = -scaleChange; // decrease scale
         }
-
-        Vector3 heading = followTarget.position - transform.position; // check for player direction from enemy direction
-        targetDir = AngleDir(transform.forward, heading, transform.up); // set direction vector 
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, aggroDistance); // draw aggro range
     }
 
     float AngleDir(Vector3 fwd, Vector3 targetDir, Vector3 up)
