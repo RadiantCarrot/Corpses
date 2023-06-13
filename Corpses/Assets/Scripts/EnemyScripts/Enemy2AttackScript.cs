@@ -74,7 +74,6 @@ public class Enemy2AttackScript : MonoBehaviour
 
         if (hitInfo.gameObject.CompareTag("Player")) // if there is player
         {
-            Debug.Log("Hit player!");
             player.TakeDamage(enemy2Damage); // damage player by enemy damage amount
         }
     }

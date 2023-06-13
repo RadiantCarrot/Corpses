@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Enemy4HealthScript : MonoBehaviour
 {
-    public int health = 400;
+    public int health;
+
+    public XpScript xpScript;
+    public int baseXp;
+    private int xpBuffer;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +28,11 @@ public class Enemy4HealthScript : MonoBehaviour
 
         if (health < 0)
         {
-            Destroy(gameObject);
+            xpScript.AddXp(baseXp); // give player xp
+            xpBuffer = (xpScript.playerLevel / 2) * baseXp; // additional xp for scaling
+            xpScript.AddXp(xpBuffer); // give player scaling xp
+
+            Destroy(gameObject); //die
         }
     }
 }

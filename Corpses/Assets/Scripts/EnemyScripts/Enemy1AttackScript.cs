@@ -41,7 +41,6 @@ public class Enemy1AttackScript : MonoBehaviour
 
         if (hitInfo.gameObject.CompareTag("Player")) // if there is player
         {
-            Debug.Log("Hit player!");
             player.TakeDamage(enemy1Damage); // damage player by enemy damage amount
         }
     }
