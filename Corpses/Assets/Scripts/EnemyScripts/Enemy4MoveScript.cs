@@ -12,8 +12,6 @@ public class Enemy4MoveScript : MonoBehaviour
     public GameObject enemy4Sprite;
     public bool facingRight;
 
-    public float vibrateSpeed;
-    public float vibrateIntensity;
     public Vector3 scaleChange;
 
     // Start is called before the first frame update
@@ -30,7 +28,7 @@ public class Enemy4MoveScript : MonoBehaviour
     {
         enemy4.transform.localScale += scaleChange; // increase scale
 
-        if (enemy4.transform.localScale.y < 0.8f || enemy4.transform.localScale.y > 1.2f) // if scale hits limit
+        if (enemy4.transform.localScale.y < 0.9f || enemy4.transform.localScale.y > 1.1f) // if scale hits limit
         {
             scaleChange = -scaleChange; // decrease scale
         }
