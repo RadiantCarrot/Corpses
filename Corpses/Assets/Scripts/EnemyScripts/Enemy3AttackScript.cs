@@ -56,7 +56,6 @@ public class Enemy3AttackScript : MonoBehaviour
 
         if (hitInfo.gameObject.CompareTag("Player")) // if there is player
         {
-            Debug.Log("Hit player!");
             player.TakeDamage(enemy3Damage); // damage player by enemy damage amount
         }
     }
