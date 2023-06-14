@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponSwapScript : MonoBehaviour
 {
     public int selectedWeapon = 0;
+    public bool weaponUnlocked;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +53,7 @@ public class WeaponSwapScript : MonoBehaviour
         int i = 0; // create index
         foreach (Transform weapon in transform) // loop through each weapon's transform in this weapon holder
         {
-            if (i == selectedWeapon) // if index matches selected weapon
+            if (i == selectedWeapon && weaponUnlocked == true) // if index matches selected weapon
             {
                 weapon.gameObject.SetActive(true); // set weapon as active
             }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class StaffProjectileScript : MonoBehaviour
 {
     Rigidbody2D rb;
+    public int bulletLifetime;
 
     private Vector2 lastVelocity;
     private float currentSpeed;
@@ -16,6 +17,8 @@ public class StaffProjectileScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        StartCoroutine(Despawn());
     }
 
     // Update is called once per frame
@@ -39,5 +42,11 @@ public class StaffProjectileScript : MonoBehaviour
 
         rb.velocity = direction * Mathf.Max(currentSpeed, 0);
         currentBounces++;
+    }
+
+    IEnumerator Despawn()
+    {
+        yield return new WaitForSeconds(bulletLifetime);
+        Destroy(gameObject); // destroy bullet
     }
 }

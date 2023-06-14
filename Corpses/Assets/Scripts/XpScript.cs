@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Linq;
 using UnityEngine;
+using TMPro;
 
 public class XpScript : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class XpScript : MonoBehaviour
     public XpBarScript xpBar;
 
     public int playerLevel = 0;
+    public TMP_Text levelText;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,7 @@ public class XpScript : MonoBehaviour
         if (currentXp >= maxXp) // if xp is filled
         {
             playerLevel++; // player levels up
+            levelText.text = "Player Level: " + playerLevel.ToString(); // display current level
 
             xpbuffer = maxXp / 3;
             maxXp = maxXp * 2 - xpbuffer; // new max xp required for next level up

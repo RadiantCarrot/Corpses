@@ -10,6 +10,11 @@ public class Enemy1HealthScript : MonoBehaviour
     public int baseXp;
     private int xpBuffer;
 
+    public GameObject gold;
+    private float goldRadius = 1f;
+    private int dropRate;
+    public int goldAmount;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,11 +33,30 @@ public class Enemy1HealthScript : MonoBehaviour
 
         if (health < 0)
         {
-            xpScript.AddXp(baseXp); // give player xp
-            xpBuffer = (xpScript.playerLevel / 2) * baseXp; // additional xp for scaling
-            xpScript.AddXp(xpBuffer); // give player scaling xp
+            GiveXp();
+            GiveGold();
 
             Destroy(gameObject); //die
+        }
+    }
+
+    public void GiveXp()
+    {
+        xpScript.AddXp(baseXp); // give player xp
+        xpBuffer = (xpScript.playerLevel / 2) * baseXp; // additional xp for scaling
+        xpScript.AddXp(xpBuffer); // give player scaling xp
+    }
+
+    public void GiveGold()
+    {
+        dropRate = Random.Range(0, 2); // return random number within range
+
+        if (dropRate == 1) // if gold can spawn
+        {
+            for (var i = 0; i < goldAmount; i++) // check amount of gold to spawn
+            {
+                Instantiate(gold, Random.insideUnitSphere * goldRadius + transform.position, transform.rotation); // spawn gold in a radius around self
+            }
         }
     }
 }
