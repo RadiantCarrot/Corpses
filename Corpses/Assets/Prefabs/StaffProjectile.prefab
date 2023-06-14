@@ -252,4 +252,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6f2412a1ccf9394f8876aa2db99db50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletLifetime: 10
   currentBounces: 0

@@ -44,9 +44,9 @@ public class Enemy3AttackScript : MonoBehaviour
 
     void Attack()
     {
-        for (int i = 0; i < amountOfProjectiles; i++)
+        for (int i = 0; i < amountOfProjectiles; i++) // for each projectile
         {
-            Instantiate(enemy3Projectile, Random.insideUnitSphere * spawnRadius + transform.position, transform.rotation);
+            Instantiate(enemy3Projectile, Random.insideUnitSphere * spawnRadius + transform.position, transform.rotation); // instantiate in a radius around self
         }
     }
 

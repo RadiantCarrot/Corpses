@@ -7,11 +7,14 @@ public class CrystalProjectileScript : MonoBehaviour
     Rigidbody2D rb;
 
     public int bulletDamage = 5;
+    public float bulletLifetime;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        StartCoroutine(Despawn());
     }
 
     // Update is called once per frame
@@ -46,6 +49,12 @@ public class CrystalProjectileScript : MonoBehaviour
             enemy4.TakeDamage(bulletDamage); // damage enemy by bulletdamage amount
         }
 
+        Destroy(gameObject); // destroy bullet
+    }
+
+    IEnumerator Despawn()
+    {
+        yield return new WaitForSeconds(bulletLifetime);
         Destroy(gameObject); // destroy bullet
     }
 }
