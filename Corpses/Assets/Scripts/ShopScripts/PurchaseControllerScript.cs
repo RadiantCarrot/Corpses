@@ -17,6 +17,7 @@ public class PurchaseControllerScript : MonoBehaviour
     public float textDuration;
 
     public Transform weaponHolder;
+    public GameObject testWeapon;
 
     // Start is called before the first frame update
     void Start()
@@ -27,36 +28,30 @@ public class PurchaseControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            testWeapon.transform.parent = weaponHolder; // assign weapon as child of weaponHolder (player held "inventory")
 
-    }
+            weaponHolder.transform.rotation = Quaternion.Euler(0f, 0f, 90f); // reset weaponholder rotation
+            testWeapon.transform.rotation = Quaternion.Euler(0f, 0f, 90f); // reset weapon rotation to align with weapon holder
 
-    void AddWeapon()
-    {
-
+            testWeapon.transform.localPosition = new Vector3(0.75f, 0, 0); // reset weapon position
+        }
     }
 
     public void BuyWeapon(string weaponName)
     {
-        Debug.Log("Buying" + weaponName);
         playerLevel = xpScript.playerLevel; // get player level
-        Debug.Log(xpScript.playerLevel);
         goldAmount = goldScript.currentGold; // get player gold amount
-        Debug.Log(goldScript.currentGold);
 
         GameObject[] weapons = GameObject.FindGameObjectsWithTag("Weapon"); // create array of weapons
-        for (int i = 0; i < weapons.Length; i++)
-        {
-            Debug.Log(weapons[i]);
-        }
 
         foreach (GameObject weapon in weapons) // loop through each weapon in the array
         {
-            if (weaponName == weapon.name) // if weapon being purchased has same name as one of the weapons in the array
+            if (weapon.name == weaponName) // if weapon being purchased has same name as one of the weapons in the array
             {
-                Debug.Log("kek");
-
-                unlockLevel = weapon.GetComponent<ItemDisplayScript>().unlockLevel; // get weapon unlock level
-                unlockCost = weapon.GetComponent<ItemDisplayScript>().goldRequirement; // get weapon unlock cost
+                unlockLevel = weaponHolder.GetComponent<WeaponStatsScript>().unlockLevel; // get weapon unlock level
+                unlockCost = weaponHolder.GetComponent<WeaponStatsScript>().goldRequirement; // get weapon unlock cost
 
                 if (playerLevel >= unlockLevel) // if player level is greater than / equal to unlock level
                 {
@@ -66,21 +61,35 @@ public class PurchaseControllerScript : MonoBehaviour
                         StartCoroutine(BlankText());
 
                         goldScript.SubtractGold(unlockCost); // subtract gold
-                        weapon.GetComponent<ItemDisplayScript>().weaponPurchased = true;
 
                         weapon.transform.parent = weaponHolder; // assign weapon as child of weaponHolder (player held "inventory")
-                        weapon.transform.localPosition = Vector3.zero; // or new Vector3(0, 0, 0)
+                        weaponHolder.transform.rotation = Quaternion.Euler(0f, 0f, 90f); // reset weaponholder rotation
+                        weapon.transform.rotation = Quaternion.Euler(0f, 0f, 90f); // reset weapon rotation to align with weapon holder
+                        weapon.transform.localPosition = new Vector3(0.75f, 0, 0); // reset weapon position
+                        weapon.SetActive(false); // deactivate weapon
+
+                        GameObject[] shopWeapons = GameObject.FindGameObjectsWithTag("ShopWeapon"); // create array of shop weapons
+
+                        foreach (GameObject shopWeapon in shopWeapons) // loop through each weapon in the array
+                        {
+                            if (shopWeapon.name == weaponName) // if shop weapon matches weapon being purchased
+                            {
+                                Destroy(shopWeapon); // destroy weapon on display
+                            }
+                        }
                     }
 
                     else // if player does not have enough gold
                     {
                         purchaseText.text = "Not Enough Gold :("; // display purchase text
+                        StartCoroutine(BlankText());
                     }
                 }
 
                 else // if player level is lesser than unlock level
                 {
                     purchaseText.text = "Level Requirement Not Met :("; // display purchase text
+                    StartCoroutine(BlankText());
                 }
             }
         }

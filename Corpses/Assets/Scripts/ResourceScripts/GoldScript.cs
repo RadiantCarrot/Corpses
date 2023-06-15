@@ -20,14 +20,9 @@ public class GoldScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        if (Input.GetKeyDown(KeyCode.G))
         {
             AddGold(20);
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            AddGold(200);
         }
     }
 

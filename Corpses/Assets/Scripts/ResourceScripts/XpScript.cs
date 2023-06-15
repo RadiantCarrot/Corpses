@@ -27,14 +27,15 @@ public class XpScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             AddXp(20);
         }
 
         if (Input.GetKeyDown(KeyCode.L))
         {
-            AddXp(200);
+            playerLevel++;
+            levelText.text = "Player Level: " + playerLevel.ToString(); // display current level
         }
     }
 

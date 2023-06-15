@@ -324,7 +324,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &195646830
 GameObject:
@@ -631,7 +631,7 @@ RectTransform:
   m_Children:
   - {fileID: 496575527}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -770,7 +770,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 200}
+  m_AnchoredPosition: {x: 0, y: 150}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &385954243
@@ -898,7 +898,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &496575526
 GameObject:
@@ -1131,12 +1131,12 @@ GameObject:
   - component: {fileID: 583952329}
   - component: {fileID: 583952330}
   m_Layer: 0
-  m_Name: WizardStaff
+  m_Name: Wizard Staff
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &583952328
 Transform:
   m_ObjectHideFlags: 0
@@ -1145,13 +1145,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583952327}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.15, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1299380963}
-  m_Father: {fileID: 1815605856}
-  m_RootOrder: 1
+  m_Father: {fileID: 1806608534}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &583952329
 SpriteRenderer:
@@ -1397,7 +1397,64 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &825740700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 825740703}
+  - component: {fileID: 825740702}
+  - component: {fileID: 825740701}
+  m_Layer: 0
+  m_Name: DeveloperOptions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &825740701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825740700}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6be7211073c6c2944872df4355d4d4dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &825740702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825740700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe84433d76196f45b7bf09a00ec9ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &825740703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825740700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &884763942
 GameObject:
@@ -1430,7 +1487,7 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &884763944
 MonoBehaviour:
@@ -1459,7 +1516,7 @@ GameObject:
   - component: {fileID: 909166076}
   - component: {fileID: 909166077}
   m_Layer: 0
-  m_Name: BasicWand
+  m_Name: Basic Wand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1548,7 +1605,7 @@ MonoBehaviour:
   firePoint: {fileID: 2082700544}
   bulletPrefab: {fileID: 5837199995715850007, guid: b430bbde0e143dd489cbccef33445052, type: 3}
   bulletForce: 10
-  fireRate: 2
+  fireRate: 2.5
   nextShot: 0
 --- !u!1 &1052990521
 GameObject:
@@ -1682,7 +1739,7 @@ Transform:
   - {fileID: 1309832231}
   - {fileID: 1815605856}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1077654550
 MonoBehaviour:
@@ -1742,12 +1799,11 @@ GameObject:
   - component: {fileID: 1133707409}
   - component: {fileID: 1133707411}
   - component: {fileID: 1133707414}
-  - component: {fileID: 1133707410}
   - component: {fileID: 1133707412}
   - component: {fileID: 1133707413}
   m_Layer: 0
-  m_Name: ShopCrystal
-  m_TagString: Untagged
+  m_Name: Magic Crystal
+  m_TagString: ShopWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1768,23 +1824,6 @@ Transform:
   m_Father: {fileID: 1251476861}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1133707410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1133707408}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f54413699f20f84a9c23dd0d20bd8a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 1573621066}
-  bulletPrefab: {fileID: 6682731228867913065, guid: 59951c631054a2147990bd9a98e8bd96, type: 3}
-  bulletForce: 15
-  fireRate: 20
-  nextShot: 0
 --- !u!212 &1133707411
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1864,8 +1903,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Magic Crystal
   itemSprite: {fileID: 0}
-  unlockLevel: 0
-  goldRequirement: 0
   shopCanvas: {fileID: 0}
   playerInRange: 0
   nameText: {fileID: 0}
@@ -1873,6 +1910,7 @@ MonoBehaviour:
   goldText: {fileID: 0}
   purchaseControllerScript: {fileID: 0}
   weaponPurchased: 0
+  weaponStatsScript: {fileID: 0}
 --- !u!58 &1133707414
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1901,12 +1939,12 @@ GameObject:
   - component: {fileID: 1169629021}
   - component: {fileID: 1169629022}
   m_Layer: 0
-  m_Name: MagicCrystal
+  m_Name: Magic Crystal
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1169629020
 Transform:
   m_ObjectHideFlags: 0
@@ -1915,13 +1953,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169629019}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.75, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.25, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1.6666665, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1351734366}
-  m_Father: {fileID: 1815605856}
-  m_RootOrder: 2
+  m_Father: {fileID: 1806608534}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1169629021
 SpriteRenderer:
@@ -2003,12 +2041,11 @@ GameObject:
   - component: {fileID: 1175292713}
   - component: {fileID: 1175292715}
   - component: {fileID: 1175292718}
-  - component: {fileID: 1175292714}
   - component: {fileID: 1175292716}
   - component: {fileID: 1175292717}
   m_Layer: 0
-  m_Name: ShopStaff
-  m_TagString: Untagged
+  m_Name: Wizard Staff
+  m_TagString: ShopWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2029,23 +2066,6 @@ Transform:
   m_Father: {fileID: 1251476861}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1175292714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1175292712}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76eab32bfb8d2474b91b6fe8884bd607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 1286919208}
-  bulletPrefab: {fileID: 8676362315742951152, guid: 147388c9cd449084ebc7a8179f5e2fcf, type: 3}
-  bulletForce: 20
-  fireRate: 1.2
-  nextShot: 0
 --- !u!212 &1175292715
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2125,8 +2145,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Wizard Staff
   itemSprite: {fileID: 0}
-  unlockLevel: 0
-  goldRequirement: 0
   shopCanvas: {fileID: 0}
   playerInRange: 0
   nameText: {fileID: 0}
@@ -2134,6 +2152,7 @@ MonoBehaviour:
   goldText: {fileID: 0}
   purchaseControllerScript: {fileID: 0}
   weaponPurchased: 0
+  weaponStatsScript: {fileID: 0}
 --- !u!58 &1175292718
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -37801,7 +37820,7 @@ Transform:
   - {fileID: 1175292713}
   - {fileID: 1133707409}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1251476862
 MonoBehaviour:
@@ -37818,8 +37837,9 @@ MonoBehaviour:
   xpScript: {fileID: 449225751}
   goldScript: {fileID: 1786659208}
   purchaseText: {fileID: 322051376}
-  textDuration: 4
+  textDuration: 2
   weaponHolder: {fileID: 1815605856}
+  testWeapon: {fileID: 583952327}
 --- !u!1 &1286919207
 GameObject:
   m_ObjectHideFlags: 0
@@ -38155,7 +38175,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1396581352
 GameObject:
@@ -38474,7 +38494,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1436942508
 GameObject:
@@ -38571,7 +38591,7 @@ RectTransform:
   - {fileID: 132899101}
   - {fileID: 1535481902}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -38800,7 +38820,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &1542528766
 CircleCollider2D:
@@ -39092,7 +39112,7 @@ RectTransform:
   m_Children:
   - {fileID: 280971332}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -39143,7 +39163,7 @@ Transform:
   - {fileID: 1221191396}
   - {fileID: 2116829262}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1728645389
 GameObject:
@@ -39328,7 +39348,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1786659206
 GameObject:
@@ -39360,7 +39380,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1786659208
 MonoBehaviour:
@@ -39377,6 +39397,39 @@ MonoBehaviour:
   minGold: 0
   currentGold: 0
   goldText: {fileID: 280971333}
+--- !u!1 &1806608533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1806608534}
+  m_Layer: 0
+  m_Name: LockedWeapons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1806608534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1806608533}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.75, y: -50, z: 0}
+  m_LocalScale: {x: 1, y: 0.15, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 583952328}
+  - {fileID: 1169629020}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1815605855
 GameObject:
   m_ObjectHideFlags: 0
@@ -39388,6 +39441,7 @@ GameObject:
   - component: {fileID: 1815605856}
   - component: {fileID: 1815605857}
   - component: {fileID: 1815605858}
+  - component: {fileID: 1815605859}
   m_Layer: 0
   m_Name: WeaponHolder
   m_TagString: Untagged
@@ -39408,8 +39462,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 909166074}
-  - {fileID: 583952328}
-  - {fileID: 1169629020}
   m_Father: {fileID: 1077654548}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -39441,7 +39493,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedWeapon: 0
-  weaponUnlocked: 0
+--- !u!114 &1815605859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1815605855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9e3c93b84daa64092f2d4f4a471718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlockLevel: 5
+  goldRequirement: 10
 --- !u!1 &1837368720
 GameObject:
   m_ObjectHideFlags: 0
@@ -39528,7 +39593,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1837368723
 MonoBehaviour:
