@@ -7,8 +7,8 @@ public class ItemDisplayScript : MonoBehaviour
 {
     public string itemName;
     public Sprite itemSprite;
-    public int unlockLevel;
-    public int goldRequirement;
+    private int unlockLevel;
+    private int goldRequirement;
 
     public GameObject shopCanvas;
     public bool playerInRange = false;
@@ -18,7 +18,9 @@ public class ItemDisplayScript : MonoBehaviour
 
     public PurchaseControllerScript purchaseControllerScript;
     public bool weaponPurchased = false;
-    
+
+    public WeaponStatsScript weaponStatsScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,10 @@ public class ItemDisplayScript : MonoBehaviour
         goldText = GameObject.Find("ItemGoldText").GetComponent<TextMeshProUGUI>(); // assign text
          
         purchaseControllerScript = GameObject.Find("ShopController").GetComponent<PurchaseControllerScript>(); // assign purchase script
+        weaponStatsScript = GameObject.Find("WeaponHolder").GetComponent<WeaponStatsScript>(); // assign weapons stats script
+
+        unlockLevel = weaponStatsScript.unlockLevel;
+        goldRequirement = weaponStatsScript.goldRequirement;
     }
 
     // Update is called once per frame
