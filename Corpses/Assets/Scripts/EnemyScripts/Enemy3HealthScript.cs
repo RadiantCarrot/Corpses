@@ -18,7 +18,7 @@ public class Enemy3HealthScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        xpScript = GameObject.Find("XpController").GetComponent<XpScript>();
     }
 
     // Update is called once per frame
