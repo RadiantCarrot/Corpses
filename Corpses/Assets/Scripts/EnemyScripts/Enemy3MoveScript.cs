@@ -54,6 +54,8 @@ public class Enemy3MoveScript : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, aggroDistance); // draw aggro range
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, retreatDistance); // draw retreat range
     }
 
     float AngleDir(Vector3 fwd, Vector3 targetDir, Vector3 up)

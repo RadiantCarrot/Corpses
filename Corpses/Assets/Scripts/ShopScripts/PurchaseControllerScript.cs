@@ -28,15 +28,7 @@ public class PurchaseControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            testWeapon.transform.parent = weaponHolder; // assign weapon as child of weaponHolder (player held "inventory")
-
-            weaponHolder.transform.rotation = Quaternion.Euler(0f, 0f, 90f); // reset weaponholder rotation
-            testWeapon.transform.rotation = Quaternion.Euler(0f, 0f, 90f); // reset weapon rotation to align with weapon holder
-
-            testWeapon.transform.localPosition = new Vector3(0.75f, 0, 0); // reset weapon position
-        }
+        
     }
 
     public void BuyWeapon(string weaponName)
