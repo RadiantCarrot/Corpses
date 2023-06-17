@@ -29,10 +29,13 @@ public class Enemy3AttackScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > nextShotTime && Vector2.Distance(transform.position, followTarget.position) <= attackDistance)  // if projectile is off cooldown and player is within range
+        if (followTarget != null) // if player exists
         {
-            nextShotTime = Time.time + timeBetweenShots; // chill for a bit before creating more projectiles
-            Attack(); // shoot projectile
+            if (Time.time > nextShotTime && Vector2.Distance(transform.position, followTarget.position) <= attackDistance)  // if projectile is off cooldown and player is within range
+            {
+                nextShotTime = Time.time + timeBetweenShots; // chill for a bit before creating more projectiles
+                Attack(); // shoot projectile
+            }
         }
     }
 

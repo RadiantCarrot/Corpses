@@ -23,8 +23,8 @@ public class Room2CheckerScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) // if there is player
         {
-            room2Spawn = true; // can spawn enemies
-            enemySpawnScript.SpawnEnemies(2);
+            enemySpawnScript.timerActive = true; // start timer
+            enemySpawnScript.RoomToSpawn(2); // pass room number
         }
     }
 
@@ -32,7 +32,15 @@ public class Room2CheckerScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) // if there is player
         {
-            room2Spawn = false; // cannot spawn enemies
+            enemySpawnScript.timerActive = false; // stop timer
+
+
+            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy"); // find and shove all enemies into array
+
+            foreach (GameObject enemy in enemies)
+            {
+                Destroy(enemy); // destroy enemies
+            }
         }
     }
 }
