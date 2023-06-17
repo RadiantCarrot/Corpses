@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7705343418639130266}
   - component: {fileID: 7101364383332716729}
-  - component: {fileID: 3193977263581431736}
   - component: {fileID: 1305831288401365441}
   - component: {fileID: 6336394143482832484}
+  - component: {fileID: 3193977263581431736}
   m_Layer: 7
   m_Name: WandProjectile
   m_TagString: PlayerBullet
@@ -87,19 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3193977263581431736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5837199995715850007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08b298cd3af5d4a45bb4c9d0b6b86cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletDamage: 40
 --- !u!50 &1305831288401365441
 Rigidbody2D:
   serializedVersion: 4
@@ -137,3 +124,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &3193977263581431736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5837199995715850007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08b298cd3af5d4a45bb4c9d0b6b86cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamage: 50

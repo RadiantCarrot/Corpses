@@ -32,13 +32,19 @@ public class Enemy2MoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
+        if (followTarget != null) // if player exists
         {
-            transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy continues moving towards player
+            if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
+            {
+                transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy continues moving towards player
+            }
         }
 
-        Vector3 heading = followTarget.position - transform.position; // check for player direction from enemy direction
-        targetDir = AngleDir(transform.forward, heading, transform.up); // set direction vector 
+        if (followTarget != null) // if player exists
+        {
+            Vector3 heading = followTarget.position - transform.position; // check for player direction from enemy direction
+            targetDir = AngleDir(transform.forward, heading, transform.up); // set direction vector 
+        }
     }
 
     private void OnDrawGizmos()

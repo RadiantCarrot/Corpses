@@ -28,9 +28,12 @@ public class Enemy2AttackScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, followTarget.position) <= attackDistance) // if player is within attack distance of enemy
+        if (followTarget != null) // if player exists
         {
-            Attack(); // enemy can attack
+            if (Vector2.Distance(transform.position, followTarget.position) <= attackDistance) // if player is within attack distance of enemy
+            {
+                Attack(); // enemy can attack
+            }
         }
     }
 

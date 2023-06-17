@@ -33,21 +33,27 @@ public class Enemy3MoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
+        if (followTarget != null) // if player exists
         {
-            if (Vector2.Distance(transform.position, followTarget.position) > attackDistance) // if enemy distance from player is greater than shoot distance
+            if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
             {
-                transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy moves towards player
-            }
+                if (Vector2.Distance(transform.position, followTarget.position) > attackDistance) // if enemy distance from player is greater than shoot distance
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy moves towards player
+                }
 
-            else if (Vector2.Distance(transform.position, followTarget.position) < retreatDistance) // if enemy distance from player is lesser than retreat distance
-            {
-                transform.position = Vector2.MoveTowards(transform.position, followTarget.position, -speed * Time.deltaTime); // enemy moves away from player
+                else if (Vector2.Distance(transform.position, followTarget.position) < retreatDistance) // if enemy distance from player is lesser than retreat distance
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, followTarget.position, -speed * Time.deltaTime); // enemy moves away from player
+                }
             }
         }
 
-        Vector3 heading = followTarget.position - transform.position; // check for player direction from enemy direction
-        targetDir = AngleDir(transform.forward, heading, transform.up); // set direction vector 
+        if (followTarget != null) // if player exists
+        {
+            Vector3 heading = followTarget.position - transform.position; // check for player direction from enemy direction
+            targetDir = AngleDir(transform.forward, heading, transform.up); // set direction vector 
+        }
     }
 
     private void OnDrawGizmos()
