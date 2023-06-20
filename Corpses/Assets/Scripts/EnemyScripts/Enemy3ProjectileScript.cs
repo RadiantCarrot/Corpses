@@ -11,6 +11,8 @@ public class Enemy3ProjectileScript : MonoBehaviour
     public float bulletForce;
     public int bulletDamage = 20;
 
+    public float bulletLifetime;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,7 @@ public class Enemy3ProjectileScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player"); // set position of player
 
         StartCoroutine(SpawnDelay());
+        StartCoroutine(Despawn());
     }
 
     // Update is called once per frame
@@ -34,10 +37,13 @@ public class Enemy3ProjectileScript : MonoBehaviour
 
     void Fly()
     {
-        Vector3 dir = player.transform.position - transform.position; // get direction of player
-        rb.velocity = new Vector2(dir.x, dir.y).normalized * bulletForce; // shoot bullet towards direction of player
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg; // point bullet in direction of player
-        transform.rotation = Quaternion.Euler(0f, 0f, angle); // set bullet rotation to face player
+        if (player != null) // if player exists
+        {
+            Vector3 dir = player.transform.position - transform.position; // get direction of player
+            rb.velocity = new Vector2(dir.x, dir.y).normalized * bulletForce; // shoot bullet towards direction of player
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg; // point bullet in direction of player
+            transform.rotation = Quaternion.Euler(0f, 0f, angle); // set bullet rotation to face player
+        }
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
@@ -48,6 +54,12 @@ public class Enemy3ProjectileScript : MonoBehaviour
             player.TakeDamage(bulletDamage); // damage player by creepiedamage amount
         }
 
+        Destroy(gameObject); // destroy bullet
+    }
+
+    IEnumerator Despawn()
+    {
+        yield return new WaitForSeconds (bulletLifetime);
         Destroy(gameObject); // destroy bullet
     }
 }

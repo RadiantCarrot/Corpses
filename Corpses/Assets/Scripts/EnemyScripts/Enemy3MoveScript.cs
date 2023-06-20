@@ -13,10 +13,9 @@ public class Enemy3MoveScript : MonoBehaviour
     public float attackDistance;
     public float retreatDistance;
 
-
+    private float spawnDuration = 0.5f;
     public Transform followTarget;
     public float targetDir;
-
 
     public GameObject enemy3Sprite;
     public bool facingRight;
@@ -33,26 +32,31 @@ public class Enemy3MoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (followTarget != null) // if player exists
-        {
-            if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
-            {
-                if (Vector2.Distance(transform.position, followTarget.position) > attackDistance) // if enemy distance from player is greater than shoot distance
-                {
-                    transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy moves towards player
-                }
+        spawnDuration -= Time.deltaTime; // decrease spawn timer
 
-                else if (Vector2.Distance(transform.position, followTarget.position) < retreatDistance) // if enemy distance from player is lesser than retreat distance
+        if (spawnDuration <= 0) // if spawn delay is over
+        {
+            if (followTarget != null) // if player exists
+            {
+                if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, followTarget.position, -speed * Time.deltaTime); // enemy moves away from player
+                    if (Vector2.Distance(transform.position, followTarget.position) > attackDistance) // if enemy distance from player is greater than shoot distance
+                    {
+                        transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy moves towards player
+                    }
+
+                    else if (Vector2.Distance(transform.position, followTarget.position) < retreatDistance) // if enemy distance from player is lesser than retreat distance
+                    {
+                        transform.position = Vector2.MoveTowards(transform.position, followTarget.position, -speed * Time.deltaTime); // enemy moves away from player
+                    }
                 }
             }
-        }
 
-        if (followTarget != null) // if player exists
-        {
-            Vector3 heading = followTarget.position - transform.position; // check for player direction from enemy direction
-            targetDir = AngleDir(transform.forward, heading, transform.up); // set direction vector 
+            if (followTarget != null) // if player exists
+            {
+                Vector3 heading = followTarget.position - transform.position; // check for player direction from enemy direction
+                targetDir = AngleDir(transform.forward, heading, transform.up); // set direction vector 
+            }
         }
     }
 

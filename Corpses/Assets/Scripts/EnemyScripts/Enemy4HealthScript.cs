@@ -15,10 +15,14 @@ public class Enemy4HealthScript : MonoBehaviour
     private int dropRate;
     public int goldAmount;
 
+    public int despawnTime;
+
     // Start is called before the first frame update
     void Start()
     {
         xpScript = GameObject.Find("XpController").GetComponent<XpScript>();
+
+        StartCoroutine(Despawn());
     }
 
     // Update is called once per frame
@@ -53,5 +57,11 @@ public class Enemy4HealthScript : MonoBehaviour
         {
             Instantiate(gold, Random.insideUnitSphere * goldRadius + transform.position, transform.rotation); // spawn gold in a radius around self
         }
+    }
+
+    IEnumerator Despawn()
+    {
+        yield return new WaitForSeconds(despawnTime);
+        Destroy(gameObject); // destroy bullet
     }
 }

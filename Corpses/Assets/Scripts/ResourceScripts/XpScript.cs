@@ -15,6 +15,8 @@ public class XpScript : MonoBehaviour
 
     public int playerLevel = 0;
     public TMP_Text levelText;
+    public TMP_Text levelUpText;
+    public float levelUpTextDuration;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,9 @@ public class XpScript : MonoBehaviour
         {
             playerLevel++;
             levelText.text = "Player Level: " + playerLevel.ToString(); // display current level
+
+            levelUpText.text = "Level Up!"; // display level up
+            StartCoroutine(BlankText());
         }
     }
 
@@ -47,7 +52,11 @@ public class XpScript : MonoBehaviour
         if (currentXp >= maxXp) // if xp is filled
         {
             playerLevel++; // player levels up
+
             levelText.text = "Player Level: " + playerLevel.ToString(); // display current level
+
+            levelUpText.text = "Level Up!"; // display level up
+            StartCoroutine(BlankText());
 
             xpbuffer = maxXp / 3;
             maxXp = maxXp * 2 - xpbuffer; // new max xp required for next level up
@@ -56,5 +65,11 @@ public class XpScript : MonoBehaviour
             xpBar.setMinXp(minXp); // set min xpbar value
             currentXp = 0; // reset xp level
         }
+    }
+
+    IEnumerator BlankText ()
+    {
+        yield return new WaitForSeconds(levelUpTextDuration);
+        levelUpText.text = " "; // display level up
     }
 }
