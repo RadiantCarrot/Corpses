@@ -140,3 +140,4 @@ MonoBehaviour:
   spawnDelay: 0.5
   bulletForce: 10
   bulletDamage: 20
+  bulletLifetime: 10

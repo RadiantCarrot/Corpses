@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using TMPro;
 
 public class EnemySpawnScript : MonoBehaviour
 {
@@ -11,8 +12,11 @@ public class EnemySpawnScript : MonoBehaviour
     public float spawnIntervalMax;
     public float spawnIntervalMin;
 
-    public int spawnRoom;
+    private int waveNumber = 0;
+    public TMP_Text waveText;
+    public float waveTextDuration;
 
+    public int spawnRoom;
     public float spawnRadius;
     public GameObject player;
     public GameObject room1Checker;
@@ -22,6 +26,7 @@ public class EnemySpawnScript : MonoBehaviour
     public GameObject enemy2;
     public GameObject enemy3;
     public GameObject enemy4;
+    public int chestSpawnRate;
 
     // Start is called before the first frame update
     void Start()
@@ -43,12 +48,19 @@ public class EnemySpawnScript : MonoBehaviour
         }
 
         if (timerActive == true)
-        {
+        {      
             spawnInterval -= Time.deltaTime; // decrease spawn interval
 
             if (spawnInterval <= 0) // if spawn interval is less than or equal to zero
             {
                 SpawnEnemies();
+
+                chestSpawnRate = Random.Range(1, 3); // chest spawns 33% of the time
+
+                if (chestSpawnRate == 1)
+                {
+                    Instantiate(enemy4, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate chest
+                }
 
                 spawnInterval = spawnIntervalReset; // reset spawn interval
 
@@ -70,6 +82,10 @@ public class EnemySpawnScript : MonoBehaviour
 
     public void SpawnEnemies()
     {
+        waveNumber++; // increase wave counter
+        waveText.text = "Wave " + waveNumber.ToString() + " Spawning!"; // display wave text
+        StartCoroutine(BlankText());
+
         switch (spawnRoom)
         {
             case 1:
@@ -82,7 +98,7 @@ public class EnemySpawnScript : MonoBehaviour
                 for (int i = 0; i <= 1; i++) // spawn enemy 2 times
                 {
                     Instantiate(enemy2, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate in a radius around self
-                }
+                }  
 
                 break;
 
@@ -111,5 +127,11 @@ public class EnemySpawnScript : MonoBehaviour
 
                 break;
         }
-    }  
+    }
+
+    IEnumerator BlankText()
+    {
+        yield return new WaitForSeconds(waveTextDuration);
+        waveText.text = " "; // display level up
+    }
 }

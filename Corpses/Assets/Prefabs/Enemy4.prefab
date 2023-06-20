@@ -169,3 +169,4 @@ MonoBehaviour:
   baseXp: 5
   gold: {fileID: 2133003044600673074, guid: 99a377a2ea229dc4cb098d5cf90e509a, type: 3}
   goldAmount: 10
+  despawnTime: 10

@@ -13,9 +13,9 @@ public class Enemy1MoveScript : MonoBehaviour
 
     public int enemy1Damage;
 
+    private float spawnDuration = 0.5f;
     public Transform followTarget;
     public float targetDir;
-
 
     public GameObject enemy1Sprite;
     public bool facingRight;
@@ -32,11 +32,16 @@ public class Enemy1MoveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (followTarget != null) // if player exists
+        spawnDuration -= Time.deltaTime; // decrease spawn timer
+
+        if (spawnDuration <= 0) // if spawn delay is over
         {
-            if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
+            if (followTarget != null) // if player exists
             {
-                transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy continues moving towards player
+                if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy continues moving towards player
+                }
             }
         }
 
