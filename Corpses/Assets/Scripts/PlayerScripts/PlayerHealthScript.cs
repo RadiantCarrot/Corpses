@@ -9,6 +9,9 @@ public class PlayerHealthScript : MonoBehaviour
 
     public HealthBarScript healthBar;
 
+    public GameObject waveText;
+    public GameObject endScreenUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,8 @@ public class PlayerHealthScript : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            waveText.SetActive(false);
+            endScreenUI.SetActive(true); // activate endscreen
             Destroy(gameObject); // die
         }
     }
