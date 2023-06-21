@@ -13,7 +13,7 @@ public class Enemy3MoveScript : MonoBehaviour
     public float attackDistance;
     public float retreatDistance;
 
-    private float spawnDuration = 0.5f;
+    public float spawnDuration;
     public Transform followTarget;
     public float targetDir;
 

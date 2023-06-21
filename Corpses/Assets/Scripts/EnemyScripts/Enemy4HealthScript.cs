@@ -17,10 +17,13 @@ public class Enemy4HealthScript : MonoBehaviour
 
     public int despawnTime;
 
+    public AnalyticsScript analyticsScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        xpScript = GameObject.Find("XpController").GetComponent<XpScript>();
+        xpScript = GameObject.Find("XpController").GetComponent<XpScript>(); // assign xp script
+        analyticsScript = GameObject.Find("EndscreenCanvas").GetComponent<AnalyticsScript>(); // assign analytics script
 
         StartCoroutine(Despawn());
     }

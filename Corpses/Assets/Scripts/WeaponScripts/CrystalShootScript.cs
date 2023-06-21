@@ -11,18 +11,25 @@ public class CrystalShootScript : MonoBehaviour
     public float fireRate;
     public float nextShot;
 
+    public AnalyticsScript analyticsScript;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        analyticsScript = GameObject.Find("EndscreenCanvas").GetComponent<AnalyticsScript>(); // assign analytics script
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0)) // pew pew when mouse left click is held
+        if (transform.parent.name == "WeaponHolder")
         {
-            NormalShot(); // pew pew
+            if (Input.GetMouseButton(0)) // pew pew when mouse left click is held
+            {
+                NormalShot(); // pew pew
+
+                analyticsScript.BulletCounter(1); // add enemy death to counter
+            }
         }
     }
 
