@@ -115,4 +115,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldController: {fileID: 0}
-  goldLifetime: 5
+  goldLifetime: 15
