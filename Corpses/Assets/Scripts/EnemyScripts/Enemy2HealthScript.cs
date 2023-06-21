@@ -15,10 +15,13 @@ public class Enemy2HealthScript : MonoBehaviour
     private int dropRate;
     public int goldAmount;
 
+    public AnalyticsScript analyticsScript;
+
     // Start is called before the first frame update
     void Start()
     {
-        xpScript = GameObject.Find("XpController").GetComponent<XpScript>();
+        xpScript = GameObject.Find("XpController").GetComponent<XpScript>(); // assign xp script
+        analyticsScript = GameObject.Find("EndscreenCanvas").GetComponent<AnalyticsScript>(); // assign analytics script
     }
 
     // Update is called once per frame
@@ -35,6 +38,7 @@ public class Enemy2HealthScript : MonoBehaviour
         {
             GiveXp();
             GiveGold();
+            analyticsScript.EnemyCounter(1); // add enemy death to counter
 
             Destroy(gameObject); //die
         }

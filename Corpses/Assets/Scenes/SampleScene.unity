@@ -539,7 +539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 100}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250032076
@@ -596,7 +596,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1237,10 +1237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cb68123bbaaa748be69290770ad50c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  analyticsScript: {fileID: 619880217}
   bulletsFired: {fileID: 250032076}
   enemiesSlain: {fileID: 551610214}
   highestLevel: {fileID: 1275039363}
-  timeSurvived: {fileID: 2123587636}
+  totalPlaytime: {fileID: 2123587636}
 --- !u!1 &385954243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,7 +1756,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1901,6 +1902,7 @@ MonoBehaviour:
   bulletForce: 20
   fireRate: 1.2
   nextShot: 0
+  analyticsScript: {fileID: 0}
 --- !u!1 &619880212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2015,6 +2017,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5af0b842e12a743970a93ac04b9b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletsFired: 0
+  displayBulletsFired: 
+  enemiesSlain: 0
+  displayEnemiesSlain: 
+  highestLevel: 0
+  currentXp: 0
+  maxXp: 0
+  displayHighestLevel: 
+  secondStart: 0
+  secondCounter: 0
+  secondRounded: 0
+  secondValue: 0
+  minuteValue: 0
+  displayTotalPlaytime: 
+  endscreenDisplayScript: {fileID: 376967869}
+  xpScript: {fileID: 449225751}
 --- !u!1 &675973547
 GameObject:
   m_ObjectHideFlags: 0
@@ -2394,7 +2412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 200}
+  m_AnchoredPosition: {x: 0, y: 300}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &746002118
@@ -2792,6 +2810,7 @@ MonoBehaviour:
   bulletForce: 10
   fireRate: 2.5
   nextShot: 0
+  analyticsScript: {fileID: 0}
 --- !u!1 &960083370
 GameObject:
   m_ObjectHideFlags: 0
@@ -3225,6 +3244,7 @@ MonoBehaviour:
   healthBar: {fileID: 496575528}
   waveText: {fileID: 1038864079}
   endScreenUI: {fileID: 376967865}
+  analyticsScript: {fileID: 619880217}
 --- !u!1 &1086499528
 GameObject:
   m_ObjectHideFlags: 0
@@ -3288,7 +3308,6 @@ MonoBehaviour:
   enemy2: {fileID: 7352682663710739470, guid: 8d468773715602d46bdbbaa6c5bc9d5a, type: 3}
   enemy3: {fileID: 6974031642547280512, guid: 797897778758baf4d9cdd8edee357a43, type: 3}
   enemy4: {fileID: 7645800086575773018, guid: 9f4ebda49c64c334cbd65e28e1f53a00, type: 3}
-  chestSpawnRate: 0
 --- !u!1 &1133707408
 GameObject:
   m_ObjectHideFlags: 0
@@ -3531,6 +3550,7 @@ MonoBehaviour:
   bulletForce: 15
   fireRate: 20
   nextShot: 0
+  analyticsScript: {fileID: 0}
 --- !u!1 &1175292712
 GameObject:
   m_ObjectHideFlags: 0
@@ -39376,7 +39396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -100}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275039363
@@ -39433,7 +39453,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -48064,7 +48084,7 @@ GameObject:
   - component: {fileID: 2123587637}
   - component: {fileID: 2123587636}
   m_Layer: 5
-  m_Name: TimeSurvivedText
+  m_Name: TotalPlaytimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48087,7 +48107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -150}
+  m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2123587636
@@ -48110,7 +48130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Time Survived:'
+  m_text: 'Total Playtime:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -48144,7 +48164,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

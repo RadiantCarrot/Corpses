@@ -26,7 +26,7 @@ public class EnemySpawnScript : MonoBehaviour
     public GameObject enemy2;
     public GameObject enemy3;
     public GameObject enemy4;
-    public int chestSpawnRate;
+    private int chestSpawnRate;
 
     // Start is called before the first frame update
     void Start()
@@ -50,6 +50,11 @@ public class EnemySpawnScript : MonoBehaviour
         if (timerActive == true)
         {      
             spawnInterval -= Time.deltaTime; // decrease spawn interval
+
+            //if (spawnInterval <= 3)  // if 3 seconds to spawn
+            //{
+            //    waveText.text = "Enemies Spawning in " + spawnInterval.ToString("F2") + "..."; // display countdown text
+            //}
 
             if (spawnInterval <= 0) // if spawn interval is less than or equal to zero
             {
@@ -83,7 +88,7 @@ public class EnemySpawnScript : MonoBehaviour
     public void SpawnEnemies()
     {
         waveNumber++; // increase wave counter
-        waveText.text = "Wave " + waveNumber.ToString() + " Spawning!"; // display wave text
+        waveText.text = "Wave " + waveNumber.ToString() + "!"; // display wave text
         StartCoroutine(BlankText());
 
         switch (spawnRoom)

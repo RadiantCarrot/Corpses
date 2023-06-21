@@ -12,6 +12,8 @@ public class PlayerHealthScript : MonoBehaviour
     public GameObject waveText;
     public GameObject endScreenUI;
 
+    public AnalyticsScript analyticsScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class PlayerHealthScript : MonoBehaviour
         if (currentHealth <= 0)
         {
             waveText.SetActive(false);
+            analyticsScript.SetPlaytime(); // set playtime
             endScreenUI.SetActive(true); // activate endscreen
             Destroy(gameObject); // die
         }

@@ -13,7 +13,7 @@ public class Enemy2MoveScript : MonoBehaviour
 
     public int enemy1Damage;
 
-    private float spawnDuration = 0.5f;
+    public float spawnDuration;
     public Transform followTarget;
     public float targetDir;
 

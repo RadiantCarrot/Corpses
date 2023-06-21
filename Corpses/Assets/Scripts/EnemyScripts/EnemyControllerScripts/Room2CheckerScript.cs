@@ -26,9 +26,9 @@ public class Room2CheckerScript : MonoBehaviour
         {
             currentTimer -= Time.deltaTime; // decrease countdown
 
-            if (currentTimer >= 0)
+            if (currentTimer >= 0 && currentTimer <= 5)
             {
-                countdownText.text = "Get Ready, Enemies Spawning in " + currentTimer.ToString("F2") + "!"; // display countdown text
+                countdownText.text = "Enemies Spawning in " + currentTimer.ToString("F2") + "..."; // display countdown text
             }
             else
             {
