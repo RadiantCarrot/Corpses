@@ -15,10 +15,18 @@ public class Enemy3HealthScript : MonoBehaviour
     private int dropRate;
     public int goldAmount;
 
+    public Material originalMaterial;
+    public Material flashMaterial;
+    public SpriteRenderer spriteRenderer;
+    public float flashDuration;
+    public Coroutine flashRoutine;
+
     // Start is called before the first frame update
     void Start()
     {
-        xpScript = GameObject.Find("XpController").GetComponent<XpScript>();
+        xpScript = GameObject.Find("XpController").GetComponent<XpScript>(); // assign xp controller
+
+        originalMaterial = spriteRenderer.material; // get the material which the spriterenderer uses
     }
 
     // Update is called once per frame
@@ -58,5 +66,26 @@ public class Enemy3HealthScript : MonoBehaviour
                 Instantiate(gold, Random.insideUnitSphere * goldRadius + transform.position, transform.rotation); // spawn gold in a radius around self
             }
         }
+    }
+
+    void Flash()
+    {
+        if (flashRoutine != null) // if currently flashing
+        {
+            StopCoroutine(flashRoutine); // stop flashing, prevents lags/bugs
+        }
+
+        flashRoutine = StartCoroutine(FlashRoutine()); // start flashing
+    }
+
+    private IEnumerator FlashRoutine()
+    {
+        spriteRenderer.material = flashMaterial; // swap original material to flash material
+
+        yield return new WaitForSeconds(flashDuration); // hold sprite material as flash material
+
+        spriteRenderer.material = originalMaterial; // swap flash material back to original material
+
+        flashRoutine = null; // end flashing coroutine
     }
 }

@@ -17,10 +17,18 @@ public class Enemy4HealthScript : MonoBehaviour
 
     public int despawnTime;
 
+    public Material originalMaterial;
+    public Material flashMaterial;
+    public SpriteRenderer spriteRenderer;
+    public float flashDuration;
+    public Coroutine flashRoutine;
+
     // Start is called before the first frame update
     void Start()
     {
-        xpScript = GameObject.Find("XpController").GetComponent<XpScript>();
+        xpScript = GameObject.Find("XpController").GetComponent<XpScript>(); // assign xp controller
+
+        originalMaterial = spriteRenderer.material; // get the material which the spriterenderer uses
 
         StartCoroutine(Despawn());
     }
@@ -63,5 +71,26 @@ public class Enemy4HealthScript : MonoBehaviour
     {
         yield return new WaitForSeconds(despawnTime);
         Destroy(gameObject); // destroy bullet
+    }
+
+    void Flash()
+    {
+        if (flashRoutine != null) // if currently flashing
+        {
+            StopCoroutine(flashRoutine); // stop flashing, prevents lags/bugs
+        }
+
+        flashRoutine = StartCoroutine(FlashRoutine()); // start flashing
+    }
+
+    private IEnumerator FlashRoutine()
+    {
+        spriteRenderer.material = flashMaterial; // swap original material to flash material
+
+        yield return new WaitForSeconds(flashDuration); // hold sprite material as flash material
+
+        spriteRenderer.material = originalMaterial; // swap flash material back to original material
+
+        flashRoutine = null; // end flashing coroutine
     }
 }

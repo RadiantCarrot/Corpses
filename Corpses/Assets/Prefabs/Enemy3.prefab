@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3873b98e767f495469690edeff9f83fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnFlash: {fileID: 0}
+  spawnFlash: {fileID: 8840603674929440252, guid: c180f57af06b9cf48b4ac62607b908d4, type: 3}
   speed: 4
   aggroDistance: 12
   attackDistance: 10
@@ -184,3 +184,7 @@ MonoBehaviour:
   baseXp: 30
   gold: {fileID: 2133003044600673074, guid: 99a377a2ea229dc4cb098d5cf90e509a, type: 3}
   goldAmount: 2
+  originalMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  flashMaterial: {fileID: 2100000, guid: cc06d03e98c725b4090d38dc97750545, type: 2}
+  spriteRenderer: {fileID: 6974031642547280542}
+  flashDuration: 0.1

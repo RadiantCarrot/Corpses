@@ -13,7 +13,7 @@ public class Enemy3MoveScript : MonoBehaviour
     public float attackDistance;
     public float retreatDistance;
 
-    private float spawnDuration = 0.5f;
+    private float spawnDuration = 1f;
     public Transform followTarget;
     public float targetDir;
 
@@ -23,7 +23,7 @@ public class Enemy3MoveScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Instantiate(spawnFlash, transform.position, Quaternion.identity); // create spawn flash effect
+        Instantiate(spawnFlash, transform.position, Quaternion.identity); // create spawn flash effect
         rb = GetComponent<Rigidbody2D>(); // assigns rigidbody to character
 
         followTarget = GameObject.FindGameObjectWithTag("Player").transform; // set followTarget as player's position
@@ -36,6 +36,8 @@ public class Enemy3MoveScript : MonoBehaviour
 
         if (spawnDuration <= 0) // if spawn delay is over
         {
+            GetComponent<Collider2D>().enabled = true; // enable collider
+
             if (followTarget != null) // if player exists
             {
                 if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
@@ -57,6 +59,10 @@ public class Enemy3MoveScript : MonoBehaviour
                 Vector3 heading = followTarget.position - transform.position; // check for player direction from enemy direction
                 targetDir = AngleDir(transform.forward, heading, transform.up); // set direction vector 
             }
+        }
+        else
+        {
+            GetComponent<Collider2D>().enabled = false; // disable collider
         }
     }
 
