@@ -42,8 +42,10 @@ public class PurchaseControllerScript : MonoBehaviour
         {
             if (weapon.name == weaponName) // if weapon being purchased has same name as one of the weapons in the array
             {
-                unlockLevel = weaponHolder.GetComponent<WeaponStatsScript>().unlockLevel; // get weapon unlock level
-                unlockCost = weaponHolder.GetComponent<WeaponStatsScript>().goldRequirement; // get weapon unlock cost
+                //unlockLevel = weaponHolder.GetComponent<WeaponStatsScript>().unlockLevel; // get weapon unlock level
+                //unlockCost = weaponHolder.GetComponent<WeaponStatsScript>().goldRequirement; // get weapon unlock cost
+                unlockLevel = 5;
+                unlockCost = 10;
 
                 if (playerLevel >= unlockLevel) // if player level is greater than / equal to unlock level
                 {

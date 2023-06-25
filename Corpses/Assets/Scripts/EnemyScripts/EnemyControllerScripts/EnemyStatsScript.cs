@@ -2,58 +2,76 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyStatsScript : MonoBehaviour
+public class EnemyStatsScript
 {
-    public GameObject enemy1Name;
-    public Sprite enemy1Sprite;
-    public int enemy1Health;
-    public float enemy1Speed;
-    public int enemy1Damage;
+    public int enemyId { get; }
+    public GameObject enemyName { get; }
+    public Sprite enemySprite { get; }
+    public int enemyHealth { get; }
+    public float enemySpeed { get; }
+    public int enemyDamage { get; }
 
-    public float enemy1AggroDistance;
-    public float enemy1AttackDistance;
+    public float projectileSpeed { get; }
+    public int projectileDamage { get; }
 
-    public int enemy1Xp;
-    public int enemy1Gold;
+    public float enemyAggroDistance { get; }
+    public float enemyAttackDistance { get; }
+    public float enemyRetreatDistance { get; }
 
-
-    public GameObject enemy2Name;
-    public Sprite enemy2Sprite;
-    public int enemy2Health;
-    public float enemy2Speed;
-    public int enemy2Damage;
-
-    public float enemy2AggroDistance;
-    public float enemy2AttackDistance;
-
-    public int enemy2Xp;
-    public int enemy2Gold;
+    public int enemyXp { get; }
+    public int enemyGold { get; }
 
 
-    public GameObject enemy3Name;
-    public Sprite enemy3Sprite;
-    public int enemy3Health;
-    public float enemy3Speed;
-    public int enemy3Damage;
+    //public GameObject enemy1Name;
+    //public Sprite enemy1Sprite;
+    //public int enemy1Health;
+    //public float enemy1Speed;
+    //public int enemy1Damage;
 
-    public float enemy3AggroDistance;
-    public float enemy3AttackDistance;
+    //public float enemy1AggroDistance;
+    //public float enemy1AttackDistance;
 
-    public int enemy3Xp;
-    public int enemy3Gold;
+    //public int enemy1Xp;
+    //public int enemy1Gold;
 
 
-    public GameObject enemy4Name;
-    public Sprite enemy4Sprite;
-    public int enemy4Health;
-    public float enemy4Speed;
-    public int enemy4Damage;
+    //public GameObject enemy2Name;
+    //public Sprite enemy2Sprite;
+    //public int enemy2Health;
+    //public float enemy2Speed;
+    //public int enemy2Damage;
 
-    public float enemy4AggroDistance;
-    public float enemy4AttackDistance;
+    //public float enemy2AggroDistance;
+    //public float enemy2AttackDistance;
 
-    public int enemy4Xp;
-    public int enemy4Gold;
+    //public int enemy2Xp;
+    //public int enemy2Gold;
+
+
+    //public GameObject enemy3Name;
+    //public Sprite enemy3Sprite;
+    //public int enemy3Health;
+    //public float enemy3Speed;
+    //public int enemy3Damage;
+
+    //public float enemy3AggroDistance;
+    //public float enemy3AttackDistance;
+
+    //public int enemy3Xp;
+    //public int enemy3Gold;
+
+
+    //public GameObject enemy4Name;
+    //public Sprite enemy4Sprite;
+    //public int enemy4Health;
+    //public float enemy4Speed;
+    //public int enemy4Damage;
+
+    //public float enemy4AggroDistance;
+    //public float enemy4AttackDistance;
+
+    //public int enemy4Xp;
+    //public int enemy4Gold;
 
 
     // Start is called before the first frame update

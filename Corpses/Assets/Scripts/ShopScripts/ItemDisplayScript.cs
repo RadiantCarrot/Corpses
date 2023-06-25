@@ -31,8 +31,10 @@ public class ItemDisplayScript : MonoBehaviour
         purchaseControllerScript = GameObject.Find("ShopController").GetComponent<PurchaseControllerScript>(); // assign purchase script
         weaponStatsScript = GameObject.Find("WeaponHolder").GetComponent<WeaponStatsScript>(); // assign weapons stats script
 
-        unlockLevel = weaponStatsScript.unlockLevel;
-        goldRequirement = weaponStatsScript.goldRequirement;
+        //unlockLevel = weaponStatsScript.unlockLevel;
+        //goldRequirement = weaponStatsScript.goldRequirement;
+        unlockLevel = 5;
+        goldRequirement = 10;
     }
 
     // Update is called once per frame
