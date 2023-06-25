@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class ShopStatsScript
 {
-    public int shopId { get; }
-    public Sprite shopSprite { get; }
-    public int weaponId { get; }
+    public string shopItemId { get; }
+    public Sprite shopItemSprite { get; }
+    public string weaponId { get; }
     public string weaponName { get; }
     public int unlockLevel { get; }
     public int goldRequirement { get; }
 
-    // Start is called before the first frame update
-    void Start()
+    public ShopStatsScript(string shopItemId, Sprite shopItemSprite, string weaponId, string weaponName, int unlockLevel, int goldRequirement)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        this.shopItemId = shopItemId;
+        this.shopItemSprite = shopItemSprite;
+        this.weaponId = weaponId;
+        this.weaponName = weaponName;
+        this.unlockLevel = unlockLevel;
+        this.goldRequirement = goldRequirement;
     }
 }

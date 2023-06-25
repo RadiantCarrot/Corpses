@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeaponStatsScript
 {
-    public int weaponId { get; }
+    public string weaponId { get; }
     public string weaponName { get; }
     public Sprite weaponSprite { get; }
     public float attackInterval { get; }
@@ -14,6 +14,17 @@ public class WeaponStatsScript
 
     //public int unlockLevel;
     //public int goldRequirement;
+
+    public WeaponStatsScript( string weaponId, string weaponName, Sprite weaponSprite, float attackInterval, int projectileDamage, float projectileSpeed, float despawnTime)
+    {
+        this.weaponId = weaponId;
+        this.weaponName = weaponName;
+        this.weaponSprite = weaponSprite;
+        this.attackInterval = attackInterval;
+        this.projectileDamage = projectileDamage;
+        this.projectileSpeed = projectileSpeed;
+        this.despawnTime = despawnTime;
+    }
 
 
     // Start is called before the first frame update

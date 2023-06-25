@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyStatsScript
 {
-    public int enemyId { get; }
-    public GameObject enemyName { get; }
+    public string enemyId { get; }
+    public string enemyName { get; }
     public Sprite enemySprite { get; }
     public int enemyHealth { get; }
     public float enemySpeed { get; }
@@ -14,75 +14,27 @@ public class EnemyStatsScript
     public float projectileSpeed { get; }
     public int projectileDamage { get; }
 
-    public float enemyAggroDistance { get; }
-    public float enemyAttackDistance { get; }
-    public float enemyRetreatDistance { get; }
+    public float aggroDistance { get; }
+    public float attackDistance { get; }
+    public float retreatDistance { get; }
 
-    public int enemyXp { get; }
     public int enemyGold { get; }
+    public int enemyXp { get; }
 
-
-    //public GameObject enemy1Name;
-    //public Sprite enemy1Sprite;
-    //public int enemy1Health;
-    //public float enemy1Speed;
-    //public int enemy1Damage;
-
-    //public float enemy1AggroDistance;
-    //public float enemy1AttackDistance;
-
-    //public int enemy1Xp;
-    //public int enemy1Gold;
-
-
-    //public GameObject enemy2Name;
-    //public Sprite enemy2Sprite;
-    //public int enemy2Health;
-    //public float enemy2Speed;
-    //public int enemy2Damage;
-
-    //public float enemy2AggroDistance;
-    //public float enemy2AttackDistance;
-
-    //public int enemy2Xp;
-    //public int enemy2Gold;
-
-
-    //public GameObject enemy3Name;
-    //public Sprite enemy3Sprite;
-    //public int enemy3Health;
-    //public float enemy3Speed;
-    //public int enemy3Damage;
-
-    //public float enemy3AggroDistance;
-    //public float enemy3AttackDistance;
-
-    //public int enemy3Xp;
-    //public int enemy3Gold;
-
-
-    //public GameObject enemy4Name;
-    //public Sprite enemy4Sprite;
-    //public int enemy4Health;
-    //public float enemy4Speed;
-    //public int enemy4Damage;
-
-    //public float enemy4AggroDistance;
-    //public float enemy4AttackDistance;
-
-    //public int enemy4Xp;
-    //public int enemy4Gold;
-
-
-    // Start is called before the first frame update
-    void Start()
+    public EnemyStatsScript (string enemyId, string enemyName, Sprite enemySprite, int enemyHealth, float enemySpeed, int enemyDamage, float projectileSpeed, int projectileDamage, float aggroDistance, float attackDistance, float retreatDistance, int enemyGold, int enemyXp)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        this.enemyId = enemyId;
+        this.enemyName = enemyName;
+        this.enemySprite = enemySprite;
+        this.enemyHealth = enemyHealth;
+        this.enemySpeed = enemySpeed;
+        this.enemyDamage = enemyDamage;
+        this.projectileSpeed = projectileSpeed;
+        this.projectileDamage = projectileDamage;
+        this.aggroDistance = aggroDistance;
+        this.attackDistance = attackDistance;
+        this.retreatDistance = retreatDistance;
+        this.enemyGold = enemyGold;
+        this.enemyXp = enemyXp;
     }
 }
