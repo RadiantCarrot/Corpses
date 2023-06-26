@@ -49,7 +49,7 @@ public static class DataAccessScript
         return shopItemList;
     }
 
-    public static void SetShopList(List<ShopStatsScript> sItemList)
+    public static void SetShopItemList(List<ShopStatsScript> sItemList)
     {
         shopItemList = sItemList;
     }

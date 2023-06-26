@@ -5,6 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class DataReaderScript
 {
+    // NAMES HAVE TO BE THE SAME AS EXCEL SHEET NAMES
+
     public List<WeaponReferenceScript> weaponList;
     public List<EnemyReferenceScript> enemyList;
     public List<ShopReferenceScript> shopItemList;
