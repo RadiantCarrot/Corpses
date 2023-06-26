@@ -21,7 +21,11 @@ public class EnemyStatsScript
     public int enemyGold { get; }
     public int enemyXp { get; }
 
-    public EnemyStatsScript (string enemyId, string enemyName, Sprite enemySprite, int enemyHealth, float enemySpeed, int enemyDamage, float projectileSpeed, int projectileDamage, float aggroDistance, float attackDistance, float retreatDistance, int enemyGold, int enemyXp)
+
+    public bool isRanged { get; }
+
+
+    public EnemyStatsScript (string enemyId, string enemyName, Sprite enemySprite, int enemyHealth, float enemySpeed, int enemyDamage, float projectileSpeed, int projectileDamage, float aggroDistance, float attackDistance, float retreatDistance, int enemyGold, int enemyXp, bool isRanged)
     {
         this.enemyId = enemyId;
         this.enemyName = enemyName;
@@ -36,5 +40,6 @@ public class EnemyStatsScript
         this.retreatDistance = retreatDistance;
         this.enemyGold = enemyGold;
         this.enemyXp = enemyXp;
+        this.isRanged = isRanged;
     }
 }

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public static class DataAccessScript
 {
-    private static List<WeaponStatsScript> weaponList;
-    private static List<EnemyStatsScript> enemyList;
-    private static List<ShopStatsScript> shopItemList;
-    private static List<DialogueScript> dialogueList;
+    public static List<WeaponStatsScript> weaponList;
+    public static List<EnemyStatsScript> enemyList;
+    public static List<ShopStatsScript> shopItemList;
+    public static List<DialogueScript> dialogueList;
 
 
 

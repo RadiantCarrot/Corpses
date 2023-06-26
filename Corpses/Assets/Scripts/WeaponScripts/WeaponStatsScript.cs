@@ -8,14 +8,17 @@ public class WeaponStatsScript
     public string weaponName { get; }
     public Sprite weaponSprite { get; }
     public float attackInterval { get; }
+
     public int projectileDamage { get; }
     public float projectileSpeed { get; }
     public float despawnTime { get; }
 
+    public bool startEquipped { get; }
+
     //public int unlockLevel;
     //public int goldRequirement;
 
-    public WeaponStatsScript( string weaponId, string weaponName, Sprite weaponSprite, float attackInterval, int projectileDamage, float projectileSpeed, float despawnTime)
+    public WeaponStatsScript( string weaponId, string weaponName, Sprite weaponSprite, float attackInterval, int projectileDamage, float projectileSpeed, float despawnTime, bool startEquipped)
     {
         this.weaponId = weaponId;
         this.weaponName = weaponName;
@@ -24,6 +27,7 @@ public class WeaponStatsScript
         this.projectileDamage = projectileDamage;
         this.projectileSpeed = projectileSpeed;
         this.despawnTime = despawnTime;
+        this.startEquipped = startEquipped;
     }
 
 

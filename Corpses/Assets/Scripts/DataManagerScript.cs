@@ -33,7 +33,7 @@ public class DataManagerScript : MonoBehaviour
         List<WeaponStatsScript> weaponList = new List<WeaponStatsScript>(); // add data to list
         foreach (WeaponReferenceScript weaponRef in data.weaponList) // for each dataset in list
         {
-            WeaponStatsScript weapon = new WeaponStatsScript(weaponRef.weaponId, weaponRef.weaponName, weaponRef.weaponSprite, weaponRef.attackInterval, weaponRef.projectileDamage, weaponRef.projectileSpeed, weaponRef.despawnTime); // pass in values
+            WeaponStatsScript weapon = new WeaponStatsScript(weaponRef.weaponId, weaponRef.weaponName, weaponRef.weaponSprite, weaponRef.attackInterval, weaponRef.projectileDamage, weaponRef.projectileSpeed, weaponRef.despawnTime, weaponRef.startEquipped); // pass in values
             weaponList.Add(weapon); // add to list
         }
         DataAccessScript.SetWeaponList(weaponList); // set list
@@ -43,7 +43,7 @@ public class DataManagerScript : MonoBehaviour
         List<EnemyStatsScript> enemyList = new List<EnemyStatsScript>(); // add data to list
         foreach (EnemyReferenceScript enemyRef in data.enemyList) // for each dataset in list
         {
-            EnemyStatsScript enemy = new EnemyStatsScript(enemyRef.enemyId, enemyRef.enemyName, enemyRef.enemySprite, enemyRef.enemyHealth, enemyRef.enemySpeed, enemyRef.enemyDamage, enemyRef.projectileSpeed, enemyRef.projectileDamage, enemyRef.aggroDistance, enemyRef.attackDistance, enemyRef.retreatDistance, enemyRef.enemyGold, enemyRef.enemyXp); // pass in values
+            EnemyStatsScript enemy = new EnemyStatsScript(enemyRef.enemyId, enemyRef.enemyName, enemyRef.enemySprite, enemyRef.enemyHealth, enemyRef.enemySpeed, enemyRef.enemyDamage, enemyRef.projectileSpeed, enemyRef.projectileDamage, enemyRef.aggroDistance, enemyRef.attackDistance, enemyRef.retreatDistance, enemyRef.enemyGold, enemyRef.enemyXp, enemyRef.isRanged); // pass in values
             enemyList.Add(enemy); // add to list
         }
         DataAccessScript.SetEnemyList(enemyList); // set list

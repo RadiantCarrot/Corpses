@@ -22,4 +22,6 @@ public class EnemyReferenceScript
 
     public int enemyGold;
     public int enemyXp;
+
+    public bool isRanged;
 }

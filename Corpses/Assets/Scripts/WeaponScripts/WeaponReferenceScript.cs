@@ -13,4 +13,5 @@ public class WeaponReferenceScript
     public int projectileDamage;
     public float projectileSpeed;
     public float despawnTime;
+    public bool startEquipped;
 }
