@@ -14,7 +14,7 @@ public class WeaponRotateScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteRender = WeaponGFX.GetComponent<SpriteRenderer>();
+        // spriteRender = WeaponGFX.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame

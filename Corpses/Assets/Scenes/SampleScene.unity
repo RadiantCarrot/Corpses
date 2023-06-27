@@ -2722,6 +2722,8 @@ MonoBehaviour:
   dialogueList: []
   weaponObj: {fileID: 2865066977966366224, guid: 4b453f030cbe0cc4c8d0fb64be6bb541, type: 3}
   weaponHolder: {fileID: 1815605856}
+  initialWeaponPt: {fileID: 1044471560}
+  initialWeaponPoint: {fileID: 1044471561}
   lockedWeapons: {fileID: 1806608534}
 --- !u!1 &884763942
 GameObject:
@@ -3021,6 +3023,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038864079}
   m_CullTransparentMesh: 1
+--- !u!1 &1044471560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044471561}
+  m_Layer: 0
+  m_Name: InitialWeaponPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044471561
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044471560}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1815605856}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1052990521
 GameObject:
   m_ObjectHideFlags: 0
@@ -40786,7 +40819,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1044471561}
   m_Father: {fileID: 1077654548}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

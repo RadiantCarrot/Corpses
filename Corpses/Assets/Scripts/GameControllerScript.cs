@@ -12,6 +12,8 @@ public class GameControllerScript : MonoBehaviour
 
     public GameObject weaponObj;
     public Transform weaponHolder;
+    public GameObject initialWeaponPt;
+    public Transform initialWeaponPoint;
     public Transform lockedWeapons;
 
     // Start is called before the first frame update
@@ -33,10 +35,12 @@ public class GameControllerScript : MonoBehaviour
         {
             Debug.Log($"Testing for {weapon.startEquipped}, and {weapon.weaponName}");
 
-            if (weapon.startEquipped ==  true)
+            if (weapon.startEquipped ==  true) // if weapon starts as equipped
             {
-                // instantiate weapon as child of WeaponHolder gameobject
-                GameObject weaponObject = Instantiate(weaponObj, weaponHolder.transform);
+                GameObject weaponObject = Instantiate(weaponObj, initialWeaponPoint.transform); // instantiate weapon at initialWeaponPoint (offset weapon)
+                weaponObject.transform.parent = weaponHolder; // assign weapon as child of weaponHolder
+                initialWeaponPoint.transform.parent = lockedWeapons; // teleport weapon point away
+                Destroy(initialWeaponPt); // destroy weapon point
 
                 weaponObject.name = weapon.weaponName;
                 // weaponObject.GetComponent<WeaponShootScript>().weaponSprite = weapon.weaponSprite;
@@ -48,8 +52,7 @@ public class GameControllerScript : MonoBehaviour
 
             else
             {
-                // instantiate weapon as child of LockedWeapons gameobject
-                GameObject weaponObject = Instantiate(weaponObj, lockedWeapons.transform);
+                GameObject weaponObject = Instantiate(weaponObj, lockedWeapons.transform); // instantiate weapon as child of LockedWeapons gameobject
 
                 weaponObject.name = weapon.weaponName;
                 // weaponObject.GetComponent<WeaponShootScript>().weaponSprite = weapon.weaponSprite;
