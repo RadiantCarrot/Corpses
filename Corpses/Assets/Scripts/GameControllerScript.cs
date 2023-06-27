@@ -50,6 +50,7 @@ public class GameControllerScript : MonoBehaviour
             {
                 // instantiate weapon as child of LockedWeapons gameobject
                 GameObject weaponObject = Instantiate(weaponObj, lockedWeapons.transform);
+
                 weaponObject.name = weapon.weaponName;
                 // weaponObject.GetComponent<WeaponShootScript>().weaponSprite = weapon.weaponSprite;
                 weaponObject.GetComponent<WeaponShootScript>().attackInterval = weapon.attackInterval;
