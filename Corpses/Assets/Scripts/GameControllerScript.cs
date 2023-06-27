@@ -32,29 +32,30 @@ public class GameControllerScript : MonoBehaviour
         foreach (WeaponStatsScript weapon in DataAccessScript.GetWeaponList())
         {
             Debug.Log($"Testing for {weapon.startEquipped}, and {weapon.weaponName}");
-            if (weapon.startEquipped)
+
+            if (weapon.startEquipped ==  true)
             {
                 // instantiate weapon as child of WeaponHolder gameobject
                 GameObject weaponObject = Instantiate(weaponObj, weaponHolder.transform);
+
                 weaponObject.name = weapon.weaponName;
-                // weaponObject.GetComponent<WeaponReferenceScript>().weaponSprite = weapon.weaponSprite;
-                weaponObject.GetComponent<WeaponReferenceScript>().attackInterval = weapon.attackInterval;
-                weaponObject.GetComponent<WeaponReferenceScript>().projectileDamage = weapon.projectileDamage;
-                weaponObject.GetComponent<WeaponReferenceScript>().projectileSpeed = weapon.projectileSpeed;
-                weaponObject.GetComponent<WeaponReferenceScript>().despawnTime = weapon.despawnTime;
+                // weaponObject.GetComponent<WeaponShootScript>().weaponSprite = weapon.weaponSprite;
+                weaponObject.GetComponent<WeaponShootScript>().attackInterval = weapon.attackInterval;
+                weaponObject.GetComponent<WeaponShootScript>().projectileDamage = weapon.projectileDamage;
+                weaponObject.GetComponent<WeaponShootScript>().projectileSpeed = weapon.projectileSpeed;
+                weaponObject.GetComponent<WeaponShootScript>().despawnTime = weapon.despawnTime;
             }
 
-            else if(!weapon.startEquipped)
+            else
             {
                 // instantiate weapon as child of LockedWeapons gameobject
-                GameObject weaponObject = Instantiate(weaponObj, lockedWeapons.transform) as GameObject;
+                GameObject weaponObject = Instantiate(weaponObj, lockedWeapons.transform);
                 weaponObject.name = weapon.weaponName;
-                // weaponObject.GetComponent<WeaponReferenceScript>().weaponSprite = weapon.weaponSprite;
-                weaponObject.GetComponent<WeaponReferenceScript>().attackInterval = weapon.attackInterval;
-                weaponObject.GetComponent<WeaponReferenceScript>().projectileDamage = weapon.projectileDamage;
-                weaponObject.GetComponent<WeaponReferenceScript>().projectileSpeed = weapon.projectileSpeed;
-                weaponObject.GetComponent<WeaponReferenceScript>().despawnTime = weapon.despawnTime;
-                Debug.Log("test2");
+                // weaponObject.GetComponent<WeaponShootScript>().weaponSprite = weapon.weaponSprite;
+                weaponObject.GetComponent<WeaponShootScript>().attackInterval = weapon.attackInterval;
+                weaponObject.GetComponent<WeaponShootScript>().projectileDamage = weapon.projectileDamage;
+                weaponObject.GetComponent<WeaponShootScript>().projectileSpeed = weapon.projectileSpeed;
+                weaponObject.GetComponent<WeaponShootScript>().despawnTime = weapon.despawnTime;
             }
         }
     }
