@@ -25,12 +25,18 @@ public class GameControllerScript : MonoBehaviour
 
     void SetWeapon()
     {
-        foreach (var weapon in DataAccessScript.weaponList)
+        foreach (WeaponStatsScript weapon in DataAccessScript.GetWeaponList())
         {
             if (weapon.startEquipped == true)
             {
                 // instantiate weapon as child of WeaponHolder gameobject
-                //Instantiate(weapon, weaponHolder.transform) as GameObject;
+                GameObject weaponObject = Instantiate(GameObject, weaponHolder.transform) as GameObject;
+                weaponObject.name = weapon.weaponName;
+                weaponObject.sprite = weapon.weaponSprite;
+                weaponObject.attackInterval = weapon.attackInterval;
+                weaponObject.projectileDamage = weapon.projectileDamage;
+                weaponObject.projectileSpeed = weapon.projectileSpeed;
+                weaponObject.despawnTime = weapon.despawnTime;
             }
             else
             {

@@ -19,11 +19,36 @@ public class DataManagerScript : MonoBehaviour
 
     public void LoadRefData()
     {
-        string filePath = Path.Combine(Application.dataPath, "Data/TestData.txt"); // load data from file path
+        //string weaponFilePath = Path.Combine(Application.dataPath, "Data/weaponList.json"); // load data from file path
+        //string enemyFilePath = Path.Combine(Application.dataPath, "Data/enemyList.json"); // load data from file path
+        //string shopItemFilePath = Path.Combine(Application.dataPath, "Data/shopItemList.json"); // load data from file path
+        //string dialogueFilePath = Path.Combine(Application.dataPath, "Data/dialogueList.json"); // load data from file path
+
+        string filePath = Path.Combine(Application.dataPath, "Data/data.json"); // load data from file path
+
+        //string weaponDataString = File.ReadAllText(weaponFilePath); // read data
+        //string enemyDataString = File.ReadAllText(enemyFilePath); // read data
+        //string shopItemDataString = File.ReadAllText(shopItemFilePath); // read data
+        //string dialogueDataString = File.ReadAllText(dialogueFilePath); // read data
+        //Debug.Log(weaponDataString);
+        //Debug.Log(enemyDataString);
+        //Debug.Log(shopItemDataString);
+        //Debug.Log(dialogueDataString);
+
         string dataString = File.ReadAllText(filePath); // read data
         Debug.Log(dataString);
 
-        DataReaderScript data = JsonUtility.FromJson <DataReaderScript>(dataString); // create and return data based on data passed in
+        //DataReaderScript weaponData = JsonUtility.FromJson <DataReaderScript>(weaponDataString); // create and return data based on data passed in
+        //DataReaderScript enemyData = JsonUtility.FromJson<DataReaderScript>(enemyDataString); // create and return data based on data passed in
+        //DataReaderScript shopItemData = JsonUtility.FromJson<DataReaderScript>(shopItemDataString); // create and return data based on data passed in
+        //DataReaderScript dialogueData = JsonUtility.FromJson<DataReaderScript>(dialogueDataString); // create and return data based on data passed in
+
+        DataReaderScript data = JsonUtility.FromJson<DataReaderScript>(dataString); // create and return data based on data passed in
+
+        //ProcessData(weaponData);
+        //ProcessData(enemyData);
+        //ProcessData(shopItemData);
+        //ProcessData(dialogueData);
 
         ProcessData(data);
     }
