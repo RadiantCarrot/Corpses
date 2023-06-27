@@ -8,7 +8,7 @@ public class DataManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadRefData();
+        //LoadRefData();
     }
 
     // Update is called once per frame
@@ -19,37 +19,12 @@ public class DataManagerScript : MonoBehaviour
 
     public void LoadRefData()
     {
-        //string weaponFilePath = Path.Combine(Application.dataPath, "Data/weaponList.json"); // load data from file path
-        //string enemyFilePath = Path.Combine(Application.dataPath, "Data/enemyList.json"); // load data from file path
-        //string shopItemFilePath = Path.Combine(Application.dataPath, "Data/shopItemList.json"); // load data from file path
-        //string dialogueFilePath = Path.Combine(Application.dataPath, "Data/dialogueList.json"); // load data from file path
-
         string filePath = Path.Combine(Application.dataPath, "Data/data.json"); // load data from file path
 
-        //string weaponDataString = File.ReadAllText(weaponFilePath); // read data
-        //string enemyDataString = File.ReadAllText(enemyFilePath); // read data
-        //string shopItemDataString = File.ReadAllText(shopItemFilePath); // read data
-        //string dialogueDataString = File.ReadAllText(dialogueFilePath); // read data
-        //Debug.Log(weaponDataString);
-        //Debug.Log(enemyDataString);
-        //Debug.Log(shopItemDataString);
-        //Debug.Log(dialogueDataString);
-
         string dataString = File.ReadAllText(filePath); // read data
-        Debug.Log(dataString);
-
-        //DataReaderScript weaponData = JsonUtility.FromJson <DataReaderScript>(weaponDataString); // create and return data based on data passed in
-        //DataReaderScript enemyData = JsonUtility.FromJson<DataReaderScript>(enemyDataString); // create and return data based on data passed in
-        //DataReaderScript shopItemData = JsonUtility.FromJson<DataReaderScript>(shopItemDataString); // create and return data based on data passed in
-        //DataReaderScript dialogueData = JsonUtility.FromJson<DataReaderScript>(dialogueDataString); // create and return data based on data passed in
+        //Debug.Log(dataString);
 
         DataReaderScript data = JsonUtility.FromJson<DataReaderScript>(dataString); // create and return data based on data passed in
-
-        //ProcessData(weaponData);
-        //ProcessData(enemyData);
-        //ProcessData(shopItemData);
-        //ProcessData(dialogueData);
-
         ProcessData(data);
     }
 
@@ -60,9 +35,11 @@ public class DataManagerScript : MonoBehaviour
         {
             WeaponStatsScript weapon = new WeaponStatsScript(weaponRef.weaponId, weaponRef.weaponName, weaponRef.weaponSprite, weaponRef.attackInterval, weaponRef.projectileDamage, weaponRef.projectileSpeed, weaponRef.despawnTime, weaponRef.startEquipped); // pass in values
             weaponList.Add(weapon); // add to list
+            //Debug.Log(weapon.weaponName);
+
         }
         DataAccessScript.SetWeaponList(weaponList); // set list
-        Debug.Log(DataAccessScript.GetWeaponList().Count);
+        //Debug.Log(DataAccessScript.GetWeaponList().Count);
 
 
         List<EnemyStatsScript> enemyList = new List<EnemyStatsScript>(); // add data to list
@@ -72,7 +49,7 @@ public class DataManagerScript : MonoBehaviour
             enemyList.Add(enemy); // add to list
         }
         DataAccessScript.SetEnemyList(enemyList); // set list
-        Debug.Log(DataAccessScript.GetEnemyList().Count);
+        //Debug.Log(DataAccessScript.GetEnemyList().Count);
 
 
         List<ShopStatsScript> shopItemList = new List<ShopStatsScript>(); // add data to list
@@ -82,7 +59,7 @@ public class DataManagerScript : MonoBehaviour
             shopItemList.Add(shopItem); // add to list
         }
         DataAccessScript.SetShopItemList(shopItemList); // set list
-        Debug.Log(DataAccessScript.GetShopItemList().Count);
+        //Debug.Log(DataAccessScript.GetShopItemList().Count);
 
 
         List<DialogueScript> dialogueList = new List<DialogueScript>(); // add data to list
@@ -92,7 +69,7 @@ public class DataManagerScript : MonoBehaviour
             dialogueList.Add(dialogue); // add to list
         }
         DataAccessScript.SetDialogueList(dialogueList); // set list
-        Debug.Log(DataAccessScript.GetDialogueList().Count);
+        //Debug.Log(DataAccessScript.GetDialogueList().Count);
 
         // (XScript)System.Enum.Parse(typeof(BuffType), xRef.x)
     }

@@ -29,7 +29,7 @@ public class ItemDisplayScript : MonoBehaviour
         goldText = GameObject.Find("ItemGoldText").GetComponent<TextMeshProUGUI>(); // assign text
          
         purchaseControllerScript = GameObject.Find("ShopController").GetComponent<PurchaseControllerScript>(); // assign purchase script
-        weaponStatsScript = GameObject.Find("WeaponHolder").GetComponent<WeaponStatsScript>(); // assign weapons stats script
+        //weaponStatsScript = GameObject.Find("WeaponHolder").GetComponent<WeaponStatsScript>(); // assign weapons stats script
 
         //unlockLevel = weaponStatsScript.unlockLevel;
         //goldRequirement = weaponStatsScript.goldRequirement;
