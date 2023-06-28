@@ -12,9 +12,12 @@ public class WeaponShootScript : MonoBehaviour
     public string weaponName;
     public Sprite weaponSprite;
     public float attackInterval;
+    public string attackType;
 
     public int projectileDamage;
     public float projectileSpeed;
+    public string projectileType;
+
     public float nextShot;
     public float despawnTime;
 
@@ -35,19 +38,39 @@ public class WeaponShootScript : MonoBehaviour
         {
             if (Time.time >= nextShot)
             {
-                if (Input.GetButtonDown("Fire1")) // pew pew when mouse left click is pressed
+                if (attackType == "click")
                 {
-                    if (weaponName == "Wizard Staff")
+                    if (Input.GetButtonDown("Fire1")) // pew pew when mouse left click is pressed
                     {
-                        BouncyShot(); // pew pew
-                        nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                        if (projectileType == "bouncy") // if weapon shoots bouncy projectiles
+                        {
+                            BouncyShot(); // pew pew
+                            nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                        }
+                        else
+                        {
+                            NormalShot(); // pew pew
+                            nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                        }
+                        analyticsScript.BulletCounter(1); // add bullet shot to counter
                     }
-                    else
+                }
+                else
+                {
+                    if (Input.GetMouseButton(0)) // pew pew when mouse left click is pressed
                     {
-                        NormalShot(); // pew pew
-                        nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                        if (projectileType == "bouncy") // if weapon shoots bouncy projectiles
+                        {
+                            BouncyShot(); // pew pew
+                            nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                        }
+                        else
+                        {
+                            NormalShot(); // pew pew
+                            nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                        }
+                        analyticsScript.BulletCounter(1); // add bullet shot to counter
                     }
-                    analyticsScript.BulletCounter(1); // add bullet shot to counter
                 }
             }
         }

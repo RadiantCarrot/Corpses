@@ -45,11 +45,14 @@ public class GameControllerScript : MonoBehaviour
                 initialWeaponPoint.transform.parent = lockedWeapons; // teleport weapon point away
                 Destroy(initialWeaponPt); // destroy weapon point
 
+                weaponObject.GetComponent<WeaponShootScript>().weaponId = weapon.weaponId;
                 weaponObject.name = weapon.weaponName;
                 // weaponObject.GetComponent<WeaponShootScript>().weaponSprite = weapon.weaponSprite;
                 weaponObject.GetComponent<WeaponShootScript>().attackInterval = weapon.attackInterval;
+                weaponObject.GetComponent<WeaponShootScript>().attackType = weapon.attackType;
                 weaponObject.GetComponent<WeaponShootScript>().projectileDamage = weapon.projectileDamage;
                 weaponObject.GetComponent<WeaponShootScript>().projectileSpeed = weapon.projectileSpeed;
+                weaponObject.GetComponent<WeaponShootScript>().projectileType = weapon.projectileType;
                 weaponObject.GetComponent<WeaponShootScript>().despawnTime = weapon.despawnTime;
             }
 
@@ -57,11 +60,14 @@ public class GameControllerScript : MonoBehaviour
             {
                 GameObject weaponObject = Instantiate(weaponObj, lockedWeapons.transform); // instantiate weapon as child of LockedWeapons gameobject
 
+                weaponObject.GetComponent<WeaponShootScript>().weaponId = weapon.weaponId;
                 weaponObject.name = weapon.weaponName;
                 // weaponObject.GetComponent<WeaponShootScript>().weaponSprite = weapon.weaponSprite;
                 weaponObject.GetComponent<WeaponShootScript>().attackInterval = weapon.attackInterval;
+                weaponObject.GetComponent<WeaponShootScript>().attackType = weapon.attackType;
                 weaponObject.GetComponent<WeaponShootScript>().projectileDamage = weapon.projectileDamage;
                 weaponObject.GetComponent<WeaponShootScript>().projectileSpeed = weapon.projectileSpeed;
+                weaponObject.GetComponent<WeaponShootScript>().projectileType = weapon.projectileType;
                 weaponObject.GetComponent<WeaponShootScript>().despawnTime = weapon.despawnTime;
             }
         }
@@ -91,7 +97,6 @@ public class GameControllerScript : MonoBehaviour
             shopObject.name = itemList[i].weaponName;
             shopObject.GetComponent<ItemDisplayScript>().unlockLevel = itemList[i].unlockLevel;
             shopObject.GetComponent<ItemDisplayScript>().goldRequirement = itemList[i].goldRequirement;
-
         }
     }
 

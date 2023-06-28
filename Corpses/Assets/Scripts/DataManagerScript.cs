@@ -33,7 +33,7 @@ public class DataManagerScript : MonoBehaviour
         List<WeaponStatsScript> weaponList = new List<WeaponStatsScript>(); // add data to list
         foreach (WeaponReferenceScript weaponRef in data.weaponList) // for each dataset in list
         {
-            WeaponStatsScript weapon = new WeaponStatsScript(weaponRef.weaponId, weaponRef.weaponName, weaponRef.weaponSprite, weaponRef.attackInterval, weaponRef.projectileDamage, weaponRef.projectileSpeed, weaponRef.despawnTime, weaponRef.startEquipped); // pass in values
+            WeaponStatsScript weapon = new WeaponStatsScript(weaponRef.weaponId, weaponRef.weaponName, weaponRef.weaponSprite, weaponRef.attackInterval, weaponRef.attackType, weaponRef.projectileDamage, weaponRef.projectileSpeed, weaponRef.projectileType, weaponRef.despawnTime, weaponRef.startEquipped); // pass in values
             weaponList.Add(weapon); // add to list
             //Debug.Log(weapon.weaponName);
 

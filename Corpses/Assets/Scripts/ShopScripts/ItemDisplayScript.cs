@@ -19,8 +19,6 @@ public class ItemDisplayScript : MonoBehaviour
     public PurchaseControllerScript purchaseControllerScript;
     public bool weaponPurchased = false;
 
-    public WeaponStatsScript weaponStatsScript;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +27,8 @@ public class ItemDisplayScript : MonoBehaviour
         goldText = GameObject.Find("ItemGoldText").GetComponent<TextMeshProUGUI>(); // assign text
          
         purchaseControllerScript = GameObject.Find("ShopController").GetComponent<PurchaseControllerScript>(); // assign purchase script
-        //weaponStatsScript = GameObject.Find("WeaponHolder").GetComponent<WeaponStatsScript>(); // assign weapons stats script
 
-        //unlockLevel = weaponStatsScript.unlockLevel;
-        //goldRequirement = weaponStatsScript.goldRequirement;
-        unlockLevel = 5;
-        goldRequirement = 10;
+        itemName = gameObject.name;
     }
 
     // Update is called once per frame
@@ -44,7 +38,7 @@ public class ItemDisplayScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E)) // when player presses E
             {
-                purchaseControllerScript.BuyWeapon(itemName); // signal intention to buy weapon
+                purchaseControllerScript.BuyWeapon(itemName, unlockLevel, goldRequirement); // signal intention to buy weapon
             }
         }
     }
@@ -53,9 +47,9 @@ public class ItemDisplayScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player")) // if there is player
         {
-            playerInRange = true;
+            playerInRange = true; // player is in range
 
-            nameText.text = itemName; // display object name
+            nameText.text = this.name; // display object name
             levelText.text = "Level " + unlockLevel.ToString() + " Weapon"; // display level requirement
             goldText.text = goldRequirement.ToString() + " Gold Required"; // display object gold requirement
         }

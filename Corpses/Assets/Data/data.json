@@ -99,7 +99,7 @@
   ],
   "shopItemList": [
     {
-      "shopItemId": "2",
+      "shopItemId": "1",
       "shopItemSprite": "weapon_two_sprite",
       "weaponId": "2",
       "weaponName": "Wizard Staff",
@@ -107,7 +107,7 @@
       "goldRequirement": "10"
     },
     {
-      "shopItemId": "3",
+      "shopItemId": "2",
       "shopItemSprite": "weapon_three_sprite",
       "weaponId": "3",
       "weaponName": "Magic Crystal",
@@ -115,7 +115,7 @@
       "goldRequirement": "50"
     },
     {
-      "shopItemId": "4",
+      "shopItemId": "3",
       "shopItemSprite": "weapon_four_sprite",
       "weaponId": "4",
       "weaponName": "Spell Book",
@@ -129,8 +129,10 @@
       "weaponName": "Basic Wand",
       "weaponSprite": "weapon_one_sprite",
       "attackInterval": "2.5",
+      "attackType": "click",
       "projectileDamage": "50",
       "projectileSpeed": "10",
+      "projectileType": "regular",
       "despawnTime": " -",
       "startEquipped": "1"
     },
@@ -139,8 +141,10 @@
       "weaponName": "Wizard Staff",
       "weaponSprite": "weapon_two_sprite",
       "attackInterval": "1.2",
+      "attackType": "click",
       "projectileDamage": "150",
       "projectileSpeed": "20",
+      "projectileType": "bouncy",
       "despawnTime": "10",
       "startEquipped": "0"
     },
@@ -149,9 +153,23 @@
       "weaponName": "Magic Crystal",
       "weaponSprite": "weapon_three_sprite",
       "attackInterval": "20",
+      "attackType": "hold",
       "projectileDamage": "20",
       "projectileSpeed": "15",
+      "projectileType": "regular",
       "despawnTime": "0.25",
+      "startEquipped": "0"
+    },
+    {
+      "weaponId": "4",
+      "weaponName": "Spell Book",
+      "weaponSprite": "weapon_four_sprite",
+      "attackInterval": " -",
+      "attackType": " -",
+      "projectileDamage": " -",
+      "projectileSpeed": " -",
+      "projectileType": " -",
+      "despawnTime": " -",
       "startEquipped": "0"
     }
   ]

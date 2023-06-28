@@ -10,8 +10,10 @@ public class WeaponReferenceScript
     public string weaponName;
     public Sprite weaponSprite;
     public float attackInterval;
+    public string attackType;
     public int projectileDamage;
     public float projectileSpeed;
+    public string projectileType;
     public float despawnTime;
     public bool startEquipped;
 }

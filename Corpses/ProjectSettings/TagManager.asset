@@ -9,6 +9,7 @@ TagManager:
   - EnemyBullet
   - Weapon
   - ShopWeapon
+  - ShopSpawnpoint
   layers:
   - Default
   - TransparentFX
