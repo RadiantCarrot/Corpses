@@ -6,6 +6,7 @@ public class WeaponShootScript : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject bulletBouncyPrefab;
 
     public string weaponId;
     public string weaponName;
@@ -36,9 +37,16 @@ public class WeaponShootScript : MonoBehaviour
             {
                 if (Input.GetButtonDown("Fire1")) // pew pew when mouse left click is pressed
                 {
-                    NormalShot(); // pew pew
-                    nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
-
+                    if (weaponName == "Wizard Staff")
+                    {
+                        BouncyShot(); // pew pew
+                        nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                    }
+                    else
+                    {
+                        NormalShot(); // pew pew
+                        nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                    }
                     analyticsScript.BulletCounter(1); // add bullet shot to counter
                 }
             }
@@ -48,6 +56,11 @@ public class WeaponShootScript : MonoBehaviour
     void NormalShot()
     {
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); // create bullet
+        newBullet.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed; // bullet go pew
+    }
+    void BouncyShot()
+    {
+        GameObject newBullet = Instantiate(bulletBouncyPrefab, firePoint.position, firePoint.rotation); // create bullet
         newBullet.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed; // bullet go pew
     }
 }

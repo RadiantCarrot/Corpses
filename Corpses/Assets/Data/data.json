@@ -46,7 +46,7 @@
       "retreatDistance": " -",
       "enemyGold": "1",
       "enemyXp": "20",
-      "isRanged": "no"
+      "isRanged": "0"
     },
     {
       "enemyId": "2",
@@ -62,7 +62,7 @@
       "retreatDistance": " -",
       "enemyGold": "2",
       "enemyXp": "30",
-      "isRanged": "no"
+      "isRanged": "0"
     },
     {
       "enemyId": "3",
@@ -78,7 +78,7 @@
       "retreatDistance": "7",
       "enemyGold": "2",
       "enemyXp": "30",
-      "isRanged": "yes"
+      "isRanged": "1"
     },
     {
       "enemyId": "4",
@@ -94,18 +94,10 @@
       "retreatDistance": " -",
       "enemyGold": "10",
       "enemyXp": "5",
-      "isRanged": "no"
+      "isRanged": "0"
     }
   ],
   "shopItemList": [
-    {
-      "shopItemId": "1",
-      "shopItemSprite": "weapon_one_sprite",
-      "weaponId": "1",
-      "weaponName": "Basic Wand",
-      "unlockLevel": " -",
-      "goldRequirement": " -"
-    },
     {
       "shopItemId": "2",
       "shopItemSprite": "weapon_two_sprite",

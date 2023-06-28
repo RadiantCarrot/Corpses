@@ -44,6 +44,8 @@ public class PurchaseControllerScript : MonoBehaviour
             {
                 //unlockLevel = weaponHolder.GetComponent<WeaponStatsScript>().unlockLevel; // get weapon unlock level
                 //unlockCost = weaponHolder.GetComponent<WeaponStatsScript>().goldRequirement; // get weapon unlock cost
+                // unlockLevel = weaponHolder.GetComponent<ItemDisplayScript>().unlockLevel; // get weapon unlock level
+                // unlockCost = weaponHolder.GetComponent<ItemDisplayScript>().goldRequirement; // get weapon unlock cost
                 unlockLevel = 5;
                 unlockCost = 10;
 

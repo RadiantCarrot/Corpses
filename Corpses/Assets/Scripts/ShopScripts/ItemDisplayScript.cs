@@ -7,8 +7,8 @@ public class ItemDisplayScript : MonoBehaviour
 {
     public string itemName;
     public Sprite itemSprite;
-    private int unlockLevel;
-    private int goldRequirement;
+    public int unlockLevel;
+    public int goldRequirement;
 
     public GameObject shopCanvas;
     public bool playerInRange = false;
