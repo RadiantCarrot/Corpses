@@ -2,22 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy2MoveScript : MonoBehaviour
+public class EnemyMoveScript : MonoBehaviour
 {
     public GameObject spawnFlash;
 
     Rigidbody2D rb;
 
-    public float speed;
+    public float enemySpeed;
     public float aggroDistance;
-
+    public float attackDistance;
+    public float retreatDistance;
 
     public float spawnDuration;
     public Transform followTarget;
     public float targetDir;
 
-    public GameObject enemy2Sprite;
+    public bool isRanged;
+
+    public GameObject enemySprite;
     public bool facingRight;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +41,27 @@ public class Enemy2MoveScript : MonoBehaviour
         {
             if (followTarget != null) // if player exists
             {
-                if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
+                if (isRanged == false)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, followTarget.position, speed * Time.deltaTime); // enemy continues moving towards player
+                    if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
+                    {
+                        transform.position = Vector2.MoveTowards(transform.position, followTarget.position, enemySpeed * Time.deltaTime); // enemy continues moving towards player
+                    }
+                }
+                else
+                {
+                    if (Vector2.Distance(transform.position, followTarget.position) < aggroDistance) // if player is within enemy aggro distance
+                    {
+                        if (Vector2.Distance(transform.position, followTarget.position) > attackDistance) // if enemy distance from player is greater than shoot distance
+                        {
+                            transform.position = Vector2.MoveTowards(transform.position, followTarget.position, enemySpeed * Time.deltaTime); // enemy moves towards player
+                        }
+
+                        else if (Vector2.Distance(transform.position, followTarget.position) < retreatDistance) // if enemy distance from player is lesser than retreat distance
+                        {
+                            transform.position = Vector2.MoveTowards(transform.position, followTarget.position, -enemySpeed * Time.deltaTime); // enemy moves away from player
+                        }
+                    }
                 }
             }
 
@@ -49,12 +71,6 @@ public class Enemy2MoveScript : MonoBehaviour
                 targetDir = AngleDir(transform.forward, heading, transform.up); // set direction vector 
             }
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, aggroDistance); // draw aggro range
     }
 
     float AngleDir(Vector3 fwd, Vector3 targetDir, Vector3 up)
@@ -80,10 +96,18 @@ public class Enemy2MoveScript : MonoBehaviour
 
     void Flip()
     {
-        Vector3 currentScale = enemy2Sprite.transform.localScale; // check direction enemy is facing
+        Vector3 currentScale = enemySprite.transform.localScale; // check direction enemy is facing
         currentScale.x *= -1;
-        enemy2Sprite.transform.localScale = currentScale; // flip enemy sprite
+        enemySprite.transform.localScale = currentScale; // flip enemy sprite
 
         facingRight = !facingRight;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, aggroDistance); // draw aggro range
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, retreatDistance); // draw retreat range
     }
 }

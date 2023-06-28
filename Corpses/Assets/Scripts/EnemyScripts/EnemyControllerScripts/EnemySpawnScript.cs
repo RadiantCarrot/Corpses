@@ -59,13 +59,7 @@ public class EnemySpawnScript : MonoBehaviour
             if (spawnInterval <= 0) // if spawn interval is less than or equal to zero
             {
                 SpawnEnemies();
-
-                chestSpawnRate = Random.Range(1, 3); // chest spawns 33% of the time
-
-                if (chestSpawnRate == 1)
-                {
-                    Instantiate(enemy4, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate chest
-                }
+                SpawnChest();
 
                 spawnInterval = spawnIntervalReset; // reset spawn interval
 
@@ -131,6 +125,16 @@ public class EnemySpawnScript : MonoBehaviour
                 // no spawn
 
                 break;
+        }
+    }
+
+    void SpawnChest()
+    {
+        chestSpawnRate = Random.Range(1, 3); // chest spawns 33% of the time
+
+        if (chestSpawnRate == 1)
+        {
+            Instantiate(enemy4, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate chest
         }
     }
 
