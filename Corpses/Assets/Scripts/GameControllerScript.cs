@@ -19,6 +19,7 @@ public class GameControllerScript : MonoBehaviour
 
 
     public GameObject enemyObj;
+    // public List<GameObject> enemies = new List<GameObject>(); // create new list to store each enemy type
 
 
     public GameObject shopObj;
@@ -80,27 +81,6 @@ public class GameControllerScript : MonoBehaviour
 
     void SetEnemy()
     {
-        //foreach (EnemyStatsScript enemy in DataAccessScript.GetEnemyList())
-        //{
-        //    GameObject enemyObject = enemyObj;
-        //    enemyObject.name = enemy.enemyName;
-        //    enemyObject.GetComponent<EnemyHealthScript>().enemyName = enemy.enemyName;
-        //    // enemyObject.GetComponent<EnemyMoveScript>().enemySprite = enemy.enemySprite;
-        //    enemyObject.GetComponent<EnemyHealthScript>().enemyHealth = enemy.enemyHealth;
-        //    enemyObject.GetComponent<EnemyMoveScript>().enemySpeed = enemy.enemySpeed;
-        //    enemyObject.GetComponent<EnemyAttackScript>().enemyDamage = enemy.enemyDamage;
-        //    //enemyObject.GetComponent<EnemyAttackScript>().projectileSpeed = enemy.projectileSpeed;
-        //    //enemyObject.GetComponent<EnemyAttackScript>().projectileDamage = enemy.projectileDamage;
-        //    enemyObject.GetComponent<EnemyMoveScript>().aggroDistance = enemy.aggroDistance;
-        //    enemyObject.GetComponent<EnemyMoveScript>().attackDistance = enemy.attackDistance;
-        //    enemyObject.GetComponent<EnemyAttackScript>().attackDistance = enemy.attackDistance;
-        //    enemyObject.GetComponent<EnemyMoveScript>().retreatDistance = enemy.retreatDistance;
-        //    enemyObject.GetComponent<EnemyHealthScript>().enemyGold = enemy.enemyGold;
-        //    enemyObject.GetComponent<EnemyHealthScript>().enemyXp = enemy.enemyXp;
-        //    enemyObject.GetComponent<EnemyMoveScript>().isRanged = enemy.isRanged;
-        //    enemyObject.GetComponent<EnemyAttackScript>().isRanged = enemy.isRanged;
-        //}
-
         List<EnemyStatsScript> enemyList = DataAccessScript.GetEnemyList(); // create list of enemies based off json data list
         List<GameObject> enemies = new List<GameObject>(); // create new list to store each enemy type
 
@@ -108,7 +88,6 @@ public class GameControllerScript : MonoBehaviour
         {
             GameObject enemyObject = enemyObj; // assign enemy as enemyObj gameobject prefab for instantiation
             enemyObject.name = enemyList[i].enemyName;
-            enemyObject.GetComponent<EnemyHealthScript>().enemyName = enemyList[i].enemyName;
             // enemyObject.GetComponent<EnemyMoveScript>().enemySprite = enemyList[i].enemySprite;
             enemyObject.GetComponent<EnemyHealthScript>().enemyHealth = enemyList[i].enemyHealth;
             enemyObject.GetComponent<EnemyMoveScript>().enemySpeed = enemyList[i].enemySpeed;
@@ -125,8 +104,8 @@ public class GameControllerScript : MonoBehaviour
             enemyObject.GetComponent<EnemyAttackScript>().isRanged = enemyList[i].isRanged;
 
             enemies.Add(enemyObj); // add to enemies list
-            Debug.Log(enemies.Count);
         }
+
         Instantiate(enemies[0]); // instantiate enemy based off index in enemies list
     }
 
