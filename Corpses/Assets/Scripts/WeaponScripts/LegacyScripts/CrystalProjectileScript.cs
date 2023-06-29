@@ -49,6 +49,12 @@ public class CrystalProjectileScript : MonoBehaviour
             enemy4.TakeDamage(bulletDamage); // damage enemy by bulletdamage amount
         }
 
+        EnemyHealthScript enemy = hitInfo.GetComponent<EnemyHealthScript>(); // check if bullet hits enemy
+        if (enemy != null) // if you hit an enemy
+        {
+            enemy.TakeDamage(bulletDamage); // damage enemy by bulletdamage amount
+        }
+
         Destroy(gameObject); // destroy bullet
     }
 

@@ -37,9 +37,15 @@ public static class DataAccessScript
     {
         enemyList = eList;
     }
+
     public static EnemyStatsScript GetEnemyById(string enemyId)
     {
         return enemyList.Find(i => i.enemyId == enemyId);
+    }
+
+    public static EnemyStatsScript GetEnemyByName(string enemyName)
+    {
+        return enemyList.Find(i => i.enemyName == enemyName);
     }
 
 

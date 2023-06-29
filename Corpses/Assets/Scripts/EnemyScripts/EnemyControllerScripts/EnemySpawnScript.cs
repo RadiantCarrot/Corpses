@@ -22,6 +22,7 @@ public class EnemySpawnScript : MonoBehaviour
     public GameObject room1Checker;
     public GameObject room2Checker;
 
+    public GameControllerScript gameControllerScript;
     public GameObject enemy1;
     public GameObject enemy2;
     public GameObject enemy3;
@@ -36,7 +37,7 @@ public class EnemySpawnScript : MonoBehaviour
         room2Checker = GameObject.Find("Room2Checker"); // set room checker
 
         spawnIntervalReset = spawnIntervalMax; // set initial spawn interval
-        spawnInterval = spawnIntervalReset;
+        spawnInterval = spawnIntervalReset; // reset spawn interval
     }
 
     // Update is called once per frame
@@ -89,15 +90,17 @@ public class EnemySpawnScript : MonoBehaviour
         {
             case 1:
 
-                for (int i = 0; i <= 3; i++) // spawn enemy 4 times
-                {
-                    Instantiate(enemy1, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate in a radius around self
-                }
+                //for (int i = 0; i <= 3; i++) // spawn enemy 4 times
+                //{
+                //    Instantiate(enemy1, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate in a radius around self
+                //}
 
-                for (int i = 0; i <= 1; i++) // spawn enemy 2 times
-                {
-                    Instantiate(enemy2, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate in a radius around self
-                }  
+                //for (int i = 0; i <= 1; i++) // spawn enemy 2 times
+                //{
+                //    Instantiate(enemy2, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate in a radius around self
+                //}  
+
+                //Instantiate(gameControllerScript.enemyObj);
 
                 break;
 

@@ -163,20 +163,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTarget: {fileID: 0}
   attackDistance: 0
-  attackDelay: 0
   canAttack: 1
   enemyDamage: 0
   isRanged: 0
-  enemy2Projectile: {fileID: 0}
-  numberOfProjectiles: 0
-  projectileSpread: 0
+  enemyMeleeProjectile: {fileID: 8663081142794548862, guid: 656cf828de7b83248a325cfee9a9ea82, type: 3}
   projectileForce: 0
   firePoint: {fileID: 0}
+  attackDelay: 0
   enemy: {fileID: 0}
-  spawnRadius: 0
-  enemyProjectile: {fileID: 0}
-  amountOfProjectiles: 0
-  timeBetweenShots: 0
+  enemyRangedProjectile: {fileID: 2349135355091652907, guid: e813cc5d7abc5764e921ef0a933dac55, type: 3}
 --- !u!114 &8784745039303501537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,9 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401b840ebb4952f479e3427d0a0c2e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 0
+  enemyHealth: 120
   xpScript: {fileID: 0}
-  enemyXp: 0
-  gold: {fileID: 0}
-  enemyGold: 0
+  enemyXp: 5
+  gold: {fileID: 2133003044600673074, guid: 99a377a2ea229dc4cb098d5cf90e509a, type: 3}
+  enemyGold: 10
   analyticsScript: {fileID: 0}

@@ -30,6 +30,8 @@ public class EnemyMoveScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); // assigns rigidbody to character
 
         followTarget = GameObject.FindGameObjectWithTag("Player").transform; // set followTarget as player's position
+
+        enemySprite = this.gameObject;
     }
 
     // Update is called once per frame

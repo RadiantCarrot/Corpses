@@ -18,6 +18,9 @@ public class GameControllerScript : MonoBehaviour
     public Transform lockedWeapons;
 
 
+    public GameObject enemyObj;
+
+
     public GameObject shopObj;
     public GameObject[] shopSpawnpoints;
 
@@ -29,7 +32,9 @@ public class GameControllerScript : MonoBehaviour
         dataManager.LoadRefData(); // load data
 
         SetWeapon();
+        SetEnemy();
         SetShop();
+        SetDialogue();
     }
 
     void SetWeapon()
@@ -75,16 +80,64 @@ public class GameControllerScript : MonoBehaviour
 
     void SetEnemy()
     {
+        //foreach (EnemyStatsScript enemy in DataAccessScript.GetEnemyList())
+        //{
+        //    GameObject enemyObject = enemyObj;
+        //    enemyObject.name = enemy.enemyName;
+        //    enemyObject.GetComponent<EnemyHealthScript>().enemyName = enemy.enemyName;
+        //    // enemyObject.GetComponent<EnemyMoveScript>().enemySprite = enemy.enemySprite;
+        //    enemyObject.GetComponent<EnemyHealthScript>().enemyHealth = enemy.enemyHealth;
+        //    enemyObject.GetComponent<EnemyMoveScript>().enemySpeed = enemy.enemySpeed;
+        //    enemyObject.GetComponent<EnemyAttackScript>().enemyDamage = enemy.enemyDamage;
+        //    //enemyObject.GetComponent<EnemyAttackScript>().projectileSpeed = enemy.projectileSpeed;
+        //    //enemyObject.GetComponent<EnemyAttackScript>().projectileDamage = enemy.projectileDamage;
+        //    enemyObject.GetComponent<EnemyMoveScript>().aggroDistance = enemy.aggroDistance;
+        //    enemyObject.GetComponent<EnemyMoveScript>().attackDistance = enemy.attackDistance;
+        //    enemyObject.GetComponent<EnemyAttackScript>().attackDistance = enemy.attackDistance;
+        //    enemyObject.GetComponent<EnemyMoveScript>().retreatDistance = enemy.retreatDistance;
+        //    enemyObject.GetComponent<EnemyHealthScript>().enemyGold = enemy.enemyGold;
+        //    enemyObject.GetComponent<EnemyHealthScript>().enemyXp = enemy.enemyXp;
+        //    enemyObject.GetComponent<EnemyMoveScript>().isRanged = enemy.isRanged;
+        //    enemyObject.GetComponent<EnemyAttackScript>().isRanged = enemy.isRanged;
+        //}
 
+        List<EnemyStatsScript> enemyList = DataAccessScript.GetEnemyList(); // create list of enemies based off json data list
+        List<GameObject> enemies = new List<GameObject>(); // create new list to store each enemy type
+
+        for (int i = 0; i < enemyList.Count; i++) // run through json data to assign parameters for each enemy type
+        {
+            GameObject enemyObject = enemyObj; // assign enemy as enemyObj gameobject prefab for instantiation
+            enemyObject.name = enemyList[i].enemyName;
+            enemyObject.GetComponent<EnemyHealthScript>().enemyName = enemyList[i].enemyName;
+            // enemyObject.GetComponent<EnemyMoveScript>().enemySprite = enemyList[i].enemySprite;
+            enemyObject.GetComponent<EnemyHealthScript>().enemyHealth = enemyList[i].enemyHealth;
+            enemyObject.GetComponent<EnemyMoveScript>().enemySpeed = enemyList[i].enemySpeed;
+            enemyObject.GetComponent<EnemyAttackScript>().enemyDamage = enemyList[i].enemyDamage;
+            //enemyObject.GetComponent<EnemyAttackScript>().projectileSpeed = enemyList[i].projectileSpeed;
+            //enemyObject.GetComponent<EnemyAttackScript>().projectileDamage = enemyList[i].projectileDamage;
+            enemyObject.GetComponent<EnemyMoveScript>().aggroDistance = enemyList[i].aggroDistance;
+            enemyObject.GetComponent<EnemyMoveScript>().attackDistance = enemyList[i].attackDistance;
+            enemyObject.GetComponent<EnemyAttackScript>().attackDistance = enemyList[i].attackDistance;
+            enemyObject.GetComponent<EnemyMoveScript>().retreatDistance = enemyList[i].retreatDistance;
+            enemyObject.GetComponent<EnemyHealthScript>().enemyGold = enemyList[i].enemyGold;
+            enemyObject.GetComponent<EnemyHealthScript>().enemyXp = enemyList[i].enemyXp;
+            enemyObject.GetComponent<EnemyMoveScript>().isRanged = enemyList[i].isRanged;
+            enemyObject.GetComponent<EnemyAttackScript>().isRanged = enemyList[i].isRanged;
+
+            enemies.Add(enemyObj); // add to enemies list
+            Debug.Log(enemies.Count);
+        }
+        //Instantiate(enemies[0]); // instantiate enemy based off enemy index
+        Instantiate(enemies); // instantiate enemy based off enemy index
     }
 
     void SetShop()
     {
         shopSpawnpoints = GameObject.FindGameObjectsWithTag("ShopSpawnpoint"); // create array of shop spawnpoints
 
-        List<ShopStatsScript> itemList = DataAccessScript.GetShopItemList(); // for each shop item in shop item list
+        List<ShopStatsScript> itemList = DataAccessScript.GetShopItemList(); // create list of shop items based off json data list
 
-        for (int i = 0; i < shopSpawnpoints.Length; i++) //loop through spawnpoints
+        for (int i = 0; i < shopSpawnpoints.Length; i++) // loop through shop item list, up to max spawnpoint count
         {
             //Debug.Log(string.Format("Shop spawn point: {0}, item spawned: {1}", shopSpawnpoints[i].name, itemList[i].weaponName));
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyHealthScript : MonoBehaviour
 {
+    public string enemyName;
     public int enemyHealth;
 
     public XpScript xpScript;

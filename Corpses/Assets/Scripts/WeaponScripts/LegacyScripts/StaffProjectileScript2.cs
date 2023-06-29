@@ -44,6 +44,12 @@ public class StaffProjectileScript2 : MonoBehaviour
             enemy4.TakeDamage(bulletDamage); // damage enemy by bulletdamage amount
         }
 
+        EnemyHealthScript enemy = hitInfo.GetComponent<EnemyHealthScript>(); // check if bullet hits enemy
+        if (enemy != null) // if you hit an enemy
+        {
+            enemy.TakeDamage(bulletDamage); // damage enemy by bulletdamage amount
+        }
+
         if (GetComponentInParent<StaffProjectileScript>().currentBounces <= 3)
         {
             Destroy(gameObject); // destroy bullet
