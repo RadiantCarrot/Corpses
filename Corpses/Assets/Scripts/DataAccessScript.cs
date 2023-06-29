@@ -6,6 +6,7 @@ public static class DataAccessScript
 {
     public static List<WeaponStatsScript> weaponList;
     public static List<EnemyStatsScript> enemyList;
+    public static List<WaveStatsScript> waveList;
     public static List<ShopStatsScript> shopItemList;
     public static List<DialogueScript> dialogueList;
 
@@ -43,9 +44,16 @@ public static class DataAccessScript
         return enemyList.Find(i => i.enemyId == enemyId);
     }
 
-    public static EnemyStatsScript GetEnemyByName(string enemyName)
+
+
+    public static List<WaveStatsScript> GetWaveList()
     {
-        return enemyList.Find(i => i.enemyName == enemyName);
+        return waveList;
+    }
+
+    public static void SetWaveList(List<WaveStatsScript> wList)
+    {
+        waveList = wList;
     }
 
 

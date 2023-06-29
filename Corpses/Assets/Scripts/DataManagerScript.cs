@@ -52,6 +52,18 @@ public class DataManagerScript : MonoBehaviour
         //Debug.Log(DataAccessScript.GetEnemyList().Count);
 
 
+        List<WaveStatsScript> waveList = new List<WaveStatsScript>(); // add data to list
+        foreach (WaveReferenceScript waveRef in data.waveList) // for each dataset in list
+        {
+            WaveStatsScript wave = new WaveStatsScript(waveRef.dungeonId, waveRef.waveNumber, waveRef.enemyId, waveRef.enemyName,waveRef.spawnCount); // pass in values
+            waveList.Add(wave); // add to list
+            //Debug.Log(wave.waveName);
+
+        }
+        DataAccessScript.SetWeaponList(weaponList); // set list
+        //Debug.Log(DataAccessScript.GetWeaponList().Count);
+
+
         List<ShopStatsScript> shopItemList = new List<ShopStatsScript>(); // add data to list
         foreach (ShopReferenceScript shopItemRef in data.shopItemList) // for each dataset in list
         {

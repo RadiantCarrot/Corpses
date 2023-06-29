@@ -123,6 +123,568 @@
       "goldRequirement": "100"
     }
   ],
+  "waveList": [
+    {
+      "dungeonId": "1",
+      "waveNumber": "1",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "4"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "1",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "1",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "1",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "2",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "4"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "2",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "2",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "2",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "3",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "4"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "3",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "3",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "3",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "4",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "4"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "4",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "4",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "4",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "5",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "4"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "5",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "5",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "5",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "6",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "4"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "6",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "6",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "6",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "7",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "4"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "7",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "7",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "7",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "8",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "4"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "8",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "8",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "8",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "9",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "4"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "9",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "9",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "9",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "10",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "4"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "10",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "10",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "1",
+      "waveNumber": "10",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "1",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "6"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "1",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "2"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "1",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "1",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "2",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "6"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "2",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "2"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "2",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "2",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "3",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "6"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "3",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "2"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "3",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "3",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "4",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "6"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "4",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "2"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "4",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "4",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "5",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "6"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "5",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "2"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "5",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "5",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "6",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "6"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "6",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "2"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "6",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "6",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "7",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "6"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "7",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "2"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "7",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "7",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "8",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "6"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "8",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "2"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "8",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "8",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "9",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "6"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "9",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "2"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "9",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "9",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "0"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "10",
+      "enemyId": "1",
+      "enemyName": "Enemy One",
+      "spawnCount": "6"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "10",
+      "enemyId": "2",
+      "enemyName": "Enemy Two",
+      "spawnCount": "2"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "10",
+      "enemyId": "3",
+      "enemyName": "Enemy Three",
+      "spawnCount": "1"
+    },
+    {
+      "dungeonId": "2",
+      "waveNumber": "10",
+      "enemyId": "4",
+      "enemyName": "Enemy Four",
+      "spawnCount": "1"
+    }
+  ],
   "weaponList": [
     {
       "weaponId": "1",

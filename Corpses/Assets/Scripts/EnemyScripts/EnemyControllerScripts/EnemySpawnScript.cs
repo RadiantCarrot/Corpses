@@ -22,6 +22,9 @@ public class EnemySpawnScript : MonoBehaviour
     public GameObject room1Checker;
     public GameObject room2Checker;
 
+    public List<string> waveList;
+    public int spawnCount;
+
     public GameControllerScript gameControllerScript;
     public GameObject enemy1;
     public GameObject enemy2;
@@ -102,7 +105,19 @@ public class EnemySpawnScript : MonoBehaviour
 
                 //Instantiate(gameControllerScript.enemyObj);
 
-                break;
+                foreach (WaveStatsScript wave in DataAccessScript.GetWaveList())
+                {
+                    if (wave.dungeonId == spawnRoom)
+                    {
+                        if (wave.waveNumber == waveNumber)
+                        {
+                            //if ()
+                            spawnCount = wave.spawnCount;
+                        }
+                    }
+                }
+
+            break;
 
             case 2:
 

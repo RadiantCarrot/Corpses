@@ -9,6 +9,7 @@ public class DataReaderScript
 
     public List<WeaponReferenceScript> weaponList;
     public List<EnemyReferenceScript> enemyList;
+    public List<WaveReferenceScript> waveList;
     public List<ShopReferenceScript> shopItemList;
     public List<DialogueReferenceScript> dialogueList;
 

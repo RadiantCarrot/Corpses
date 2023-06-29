@@ -7,6 +7,7 @@ public class GameControllerScript : MonoBehaviour
 {
     public List<string> weaponList;
     public List<string> enemyList;
+    public List<string> waveList;
     public List<string> shopItemList;
     public List<string> dialogueList;
 
@@ -44,7 +45,7 @@ public class GameControllerScript : MonoBehaviour
         {
             // Debug.Log($"Testing for {weapon.startEquipped}, and {weapon.weaponName}");
 
-            if (weapon.startEquipped ==  true) // if weapon starts as equipped
+            if (weapon.startEquipped == true) // if weapon starts as equipped
             {
                 GameObject weaponObject = Instantiate(weaponObj, initialWeaponPoint.transform); // instantiate weapon at initialWeaponPoint (offset weapon)
                 weaponObject.transform.parent = weaponHolder; // assign weapon as child of weaponHolder
