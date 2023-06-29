@@ -19,7 +19,7 @@ public class GameControllerScript : MonoBehaviour
 
 
     public GameObject enemyObj;
-    // public List<GameObject> enemies = new List<GameObject>(); // create new list to store each enemy type
+    public List<GameObject> enemies = new List<GameObject>(); // create new list to store each enemy type
 
 
     public GameObject shopObj;
@@ -82,12 +82,14 @@ public class GameControllerScript : MonoBehaviour
     void SetEnemy()
     {
         List<EnemyStatsScript> enemyList = DataAccessScript.GetEnemyList(); // create list of enemies based off json data list
-        List<GameObject> enemies = new List<GameObject>(); // create new list to store each enemy type
+        
+        //List<GameObject> enemies = new List<GameObject>(); // create new list to store each enemy type
 
         for (int i = 0; i < enemyList.Count; i++) // run through json data to assign parameters for each enemy type
         {
             GameObject enemyObject = enemyObj; // assign enemy as enemyObj gameobject prefab for instantiation
-            enemyObject.name = enemyList[i].enemyName;
+            //enemyObject.name = enemyList[i].enemyName;
+            enemyObject.GetComponent<EnemyHealthScript>().enemyName = enemyList[i].enemyName;
             // enemyObject.GetComponent<EnemyMoveScript>().enemySprite = enemyList[i].enemySprite;
             enemyObject.GetComponent<EnemyHealthScript>().enemyHealth = enemyList[i].enemyHealth;
             enemyObject.GetComponent<EnemyMoveScript>().enemySpeed = enemyList[i].enemySpeed;

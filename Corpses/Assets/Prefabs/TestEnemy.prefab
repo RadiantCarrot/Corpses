@@ -139,9 +139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnFlash: {fileID: 0}
-  enemySpeed: 0
-  aggroDistance: 0
-  attackDistance: 0
+  enemySpeed: 3
+  aggroDistance: 16
+  attackDistance: 3
   retreatDistance: 0
   spawnDuration: 0
   followTarget: {fileID: 0}
@@ -162,9 +162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followTarget: {fileID: 0}
-  attackDistance: 0
+  attackDistance: 3
   canAttack: 1
-  enemyDamage: 0
+  enemyDamage: 20
   isRanged: 0
   enemyMeleeProjectile: {fileID: 8663081142794548862, guid: 656cf828de7b83248a325cfee9a9ea82, type: 3}
   projectileForce: 0
@@ -184,9 +184,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Enemy Four
-  enemyHealth: 120
+  enemyHealth: 100
   xpScript: {fileID: 0}
-  enemyXp: 5
+  enemyXp: 20
   gold: {fileID: 2133003044600673074, guid: 99a377a2ea229dc4cb098d5cf90e509a, type: 3}
-  enemyGold: 10
+  enemyGold: 1
   analyticsScript: {fileID: 0}
