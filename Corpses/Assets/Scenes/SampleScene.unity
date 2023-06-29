@@ -2621,6 +2621,7 @@ MonoBehaviour:
   initialWeaponPt: {fileID: 1044471560}
   initialWeaponPoint: {fileID: 1044471561}
   lockedWeapons: {fileID: 1806608534}
+  enemyObj: {fileID: 8221869557416251293, guid: 041a3c63caa309a4593a9d71c4a66f22, type: 3}
   shopObj: {fileID: 6601509189580584175, guid: ca6a87fb7e92c3e4da294497121fed0d, type: 3}
   shopSpawnpoints: []
 --- !u!1 &833825792
@@ -3226,6 +3227,7 @@ MonoBehaviour:
   player: {fileID: 1077654544}
   room1Checker: {fileID: 465807171}
   room2Checker: {fileID: 1487075136}
+  gameControllerScript: {fileID: 832684767}
   enemy1: {fileID: 879196521933156881, guid: dfb399d531a27e642973a51bfd81a04d, type: 3}
   enemy2: {fileID: 7352682663710739470, guid: 8d468773715602d46bdbbaa6c5bc9d5a, type: 3}
   enemy3: {fileID: 6974031642547280512, guid: 797897778758baf4d9cdd8edee357a43, type: 3}

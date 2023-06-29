@@ -169,7 +169,6 @@ MonoBehaviour:
   enemyMeleeProjectile: {fileID: 8663081142794548862, guid: 656cf828de7b83248a325cfee9a9ea82, type: 3}
   projectileForce: 0
   firePoint: {fileID: 0}
-  attackDelay: 0
   enemy: {fileID: 0}
   enemyRangedProjectile: {fileID: 2349135355091652907, guid: e813cc5d7abc5764e921ef0a933dac55, type: 3}
 --- !u!114 &8784745039303501537
@@ -184,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 401b840ebb4952f479e3427d0a0c2e0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: Enemy Four
   enemyHealth: 120
   xpScript: {fileID: 0}
   enemyXp: 5

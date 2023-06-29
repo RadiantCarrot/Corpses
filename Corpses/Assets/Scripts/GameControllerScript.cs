@@ -127,8 +127,7 @@ public class GameControllerScript : MonoBehaviour
             enemies.Add(enemyObj); // add to enemies list
             Debug.Log(enemies.Count);
         }
-        //Instantiate(enemies[0]); // instantiate enemy based off enemy index
-        Instantiate(enemies); // instantiate enemy based off enemy index
+        Instantiate(enemies[0]); // instantiate enemy based off index in enemies list
     }
 
     void SetShop()
