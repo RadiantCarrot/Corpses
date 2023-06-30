@@ -21,17 +21,13 @@ public class EnemySpawnScript : MonoBehaviour
     public GameObject player;
     public GameObject room1Checker;
     public GameObject room2Checker;
+    public GameObject enemySpawnpoint;
 
     public List<string> waveList;
     public int spawnCount;
 
     public GameControllerScript gameControllerScript;
     public GameObject enemyObj;
-    public GameObject enemy1;
-    public GameObject enemy2;
-    public GameObject enemy3;
-    public GameObject enemy4;
-    private int chestSpawnRate;
 
     // Start is called before the first frame update
     void Start()
@@ -94,18 +90,7 @@ public class EnemySpawnScript : MonoBehaviour
         {
             case 1:
 
-                //for (int i = 0; i <= 3; i++) // spawn enemy 4 times
-                //{
-                //    Instantiate(enemy1, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate in a radius around self
-                //}
-
-                //for (int i = 0; i <= 1; i++) // spawn enemy 2 times
-                //{
-                //    Instantiate(enemy2, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate in a radius around self
-                //}  
-
-                //Instantiate(gameControllerScript.enemyObj);
-
+                enemySpawnpoint = room1Checker;
                 foreach (WaveStatsScript wave in DataAccessScript.GetWaveList())
                 {
                     if (wave.dungeonId == spawnRoom) // set spawnroom
@@ -122,19 +107,17 @@ public class EnemySpawnScript : MonoBehaviour
 
             case 2:
 
-                for (int i = 0; i <= 5; i++) // spawn enemy 6 times
+                enemySpawnpoint = room2Checker;
+                foreach (WaveStatsScript wave in DataAccessScript.GetWaveList())
                 {
-                    Instantiate(enemy1, Random.insideUnitSphere * spawnRadius + room2Checker.transform.position, room2Checker.transform.rotation); // instantiate in a radius around self
-                }
-
-                for (int i = 0; i <= 2; i++) // spawn enemy 3 times
-                {
-                    Instantiate(enemy2, Random.insideUnitSphere * spawnRadius + room2Checker.transform.position, room2Checker.transform.rotation); // instantiate in a radius around self
-                }
-
-                for (int i = 0; i <= 0; i++) // spawn enemy 1 times
-                {
-                    Instantiate(enemy3, Random.insideUnitSphere * spawnRadius + room2Checker.transform.position, room2Checker.transform.rotation); // instantiate in a radius around self
+                    if (wave.dungeonId == spawnRoom) // set spawnroom
+                    {
+                        if (wave.waveNumber == waveNumber) // set wave number
+                        {
+                            //Debug.Log(wave.dungeonId);
+                            SpawnEnemies(wave.enemyName, wave.spawnCount); // spawn enemy
+                        }
+                    }
                 }
 
                 break;
@@ -154,13 +137,13 @@ public class EnemySpawnScript : MonoBehaviour
             Debug.Log(enemyName);
 
 
-            if (enemyName == enemy.enemyName) //"Enemy One")
+            if (enemyName == enemy.enemyName)
             {
                 Debug.Log(enemy.enemyName);
 
                 for (int i = 0; i < spawnCount; i++)
                 {
-                    GameObject enemyObject = Instantiate(enemyObj, Random.insideUnitSphere * spawnRadius + room1Checker.transform.position, room1Checker.transform.rotation); // instantiate enemy in a radius around room center
+                    GameObject enemyObject = Instantiate(enemyObj, Random.insideUnitSphere * spawnRadius + enemySpawnpoint.transform.position, enemySpawnpoint.transform.rotation); // instantiate enemy in a radius around room center
                     enemyObject.name = enemy.enemyName;
                     enemyObject.GetComponent<EnemyHealthScript>().enemyName = enemy.enemyName;
                     // enemyObject.GetComponent<EnemyMoveScript>().enemySprite = enemy.enemySprite;
