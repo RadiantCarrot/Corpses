@@ -54,13 +54,23 @@ public class EnemyHealthScript : MonoBehaviour
 
     public void GiveGold()
     {
-        dropRate = Random.Range(0, 2); // return random number within range
-
-        if (dropRate == 1) // if gold can spawn
+        if (name == "Enemy Four")
         {
             for (var i = 0; i < enemyGold; i++) // check amount of gold to spawn
             {
                 Instantiate(gold, Random.insideUnitSphere * goldRadius + transform.position, transform.rotation); // spawn gold in a radius around self
+            }
+        }
+        else
+        {
+            dropRate = Random.Range(0, 2); // return random number within range
+
+            if (dropRate == 1) // if gold can spawn
+            {
+                for (var i = 0; i < enemyGold; i++) // check amount of gold to spawn
+                {
+                    Instantiate(gold, Random.insideUnitSphere * goldRadius + transform.position, transform.rotation); // spawn gold in a radius around self
+                }
             }
         }
     }

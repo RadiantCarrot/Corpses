@@ -60,8 +60,8 @@ public class DataManagerScript : MonoBehaviour
             //Debug.Log(wave.waveName);
 
         }
-        DataAccessScript.SetWeaponList(weaponList); // set list
-        //Debug.Log(DataAccessScript.GetWeaponList().Count);
+        DataAccessScript.SetWaveList(waveList); // set list
+        //Debug.Log(DataAccessScript.GetWaveList().Count);
 
 
         List<ShopStatsScript> shopItemList = new List<ShopStatsScript>(); // add data to list

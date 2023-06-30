@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 
-public class WaveReferenceScript : MonoBehaviour
+public class WaveReferenceScript
 {
     public int dungeonId;
     public int waveNumber;
