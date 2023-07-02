@@ -8,6 +8,6 @@ public class DialogueReferenceScript
 {
     public string dialogueId;
     public string displayName;
-    public Sprite displaySprite;
+    public string displaySprite;
     public string dialogueText;
 }

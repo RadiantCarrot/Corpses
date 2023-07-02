@@ -5,13 +5,13 @@ using UnityEngine;
 public class ShopStatsScript
 {
     public string shopItemId { get; }
-    public Sprite shopItemSprite { get; }
+    public string shopItemSprite { get; }
     public string weaponId { get; }
     public string weaponName { get; }
     public int unlockLevel { get; }
     public int goldRequirement { get; }
 
-    public ShopStatsScript(string shopItemId, Sprite shopItemSprite, string weaponId, string weaponName, int unlockLevel, int goldRequirement)
+    public ShopStatsScript(string shopItemId, string shopItemSprite, string weaponId, string weaponName, int unlockLevel, int goldRequirement)
     {
         this.shopItemId = shopItemId;
         this.shopItemSprite = shopItemSprite;

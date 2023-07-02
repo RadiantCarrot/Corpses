@@ -7,7 +7,7 @@ using UnityEngine;
 public class ShopReferenceScript
 {
     public string shopItemId;
-    public Sprite shopItemSprite;
+    public string shopItemSprite;
     public string weaponId;
     public string weaponName;
     public int unlockLevel;

@@ -34,7 +34,6 @@ public class GameControllerScript : MonoBehaviour
         dataManager.LoadRefData(); // load data
 
         SetWeapon();
-        SetEnemy();
         SetShop();
         SetDialogue();
     }
@@ -54,7 +53,10 @@ public class GameControllerScript : MonoBehaviour
 
                 weaponObject.GetComponent<WeaponShootScript>().weaponId = weapon.weaponId;
                 weaponObject.name = weapon.weaponName;
-                // weaponObject.GetComponent<WeaponShootScript>().weaponSprite = weapon.weaponSprite;
+                //AssetManagerScript.LoadSprite(weapon.weaponSprite + ".png", (Sprite s) =>
+                //{
+                //    weaponObject.GetComponent<SpriteRenderer>().sprite = s;
+                //});
                 weaponObject.GetComponent<WeaponShootScript>().attackInterval = weapon.attackInterval;
                 weaponObject.GetComponent<WeaponShootScript>().attackType = weapon.attackType;
                 weaponObject.GetComponent<WeaponShootScript>().projectileDamage = weapon.projectileDamage;
@@ -69,7 +71,10 @@ public class GameControllerScript : MonoBehaviour
 
                 weaponObject.GetComponent<WeaponShootScript>().weaponId = weapon.weaponId;
                 weaponObject.name = weapon.weaponName;
-                // weaponObject.GetComponent<WeaponShootScript>().weaponSprite = weapon.weaponSprite;
+                //AssetManagerScript.LoadSprite(weapon.weaponSprite + ".png", (Sprite s) =>
+                //{
+                //    weaponObject.GetComponent<SpriteRenderer>().sprite = s;
+                //});
                 weaponObject.GetComponent<WeaponShootScript>().attackInterval = weapon.attackInterval;
                 weaponObject.GetComponent<WeaponShootScript>().attackType = weapon.attackType;
                 weaponObject.GetComponent<WeaponShootScript>().projectileDamage = weapon.projectileDamage;
@@ -78,38 +83,6 @@ public class GameControllerScript : MonoBehaviour
                 weaponObject.GetComponent<WeaponShootScript>().despawnTime = weapon.despawnTime;
             }
         }
-    }
-
-    void SetEnemy()
-    {
-        List<EnemyStatsScript> enemyList = DataAccessScript.GetEnemyList(); // create list of enemies based off json data list
-        
-        //List<GameObject> enemies = new List<GameObject>(); // create new list to store each enemy type
-
-        for (int i = 0; i < enemyList.Count; i++) // run through json data to assign parameters for each enemy type
-        {
-            GameObject enemyObject = enemyObj; // assign enemy as enemyObj gameobject prefab for instantiation
-            //enemyObject.name = enemyList[i].enemyName;
-            enemyObject.GetComponent<EnemyHealthScript>().enemyName = enemyList[i].enemyName;
-            // enemyObject.GetComponent<EnemyMoveScript>().enemySprite = enemyList[i].enemySprite;
-            enemyObject.GetComponent<EnemyHealthScript>().enemyHealth = enemyList[i].enemyHealth;
-            enemyObject.GetComponent<EnemyMoveScript>().enemySpeed = enemyList[i].enemySpeed;
-            enemyObject.GetComponent<EnemyAttackScript>().enemyDamage = enemyList[i].enemyDamage;
-            //enemyObject.GetComponent<EnemyAttackScript>().projectileSpeed = enemyList[i].projectileSpeed;
-            //enemyObject.GetComponent<EnemyAttackScript>().projectileDamage = enemyList[i].projectileDamage;
-            enemyObject.GetComponent<EnemyMoveScript>().aggroDistance = enemyList[i].aggroDistance;
-            enemyObject.GetComponent<EnemyMoveScript>().attackDistance = enemyList[i].attackDistance;
-            enemyObject.GetComponent<EnemyAttackScript>().attackDistance = enemyList[i].attackDistance;
-            enemyObject.GetComponent<EnemyMoveScript>().retreatDistance = enemyList[i].retreatDistance;
-            enemyObject.GetComponent<EnemyHealthScript>().enemyGold = enemyList[i].enemyGold;
-            enemyObject.GetComponent<EnemyHealthScript>().enemyXp = enemyList[i].enemyXp;
-            enemyObject.GetComponent<EnemyMoveScript>().isRanged = enemyList[i].isRanged;
-            enemyObject.GetComponent<EnemyAttackScript>().isRanged = enemyList[i].isRanged;
-
-            enemies.Add(enemyObj); // add to enemies list
-        }
-
-        Instantiate(enemies[0]); // instantiate enemy based off index in enemies list
     }
 
     void SetShop()
@@ -129,6 +102,10 @@ public class GameControllerScript : MonoBehaviour
 
             GameObject shopObject = Instantiate(shopObj, shopSpawnpoints[i].transform); // instantiate object at spawnpoint corresponding to item order
             shopObject.name = itemList[i].weaponName;
+            //AssetManagerScript.LoadSprite(itemList[i].shopItemSprite + ".png", (Sprite s) =>
+            //{
+            //    shopObject.GetComponent<SpriteRenderer>().sprite = s;
+            //});
             shopObject.GetComponent<ItemDisplayScript>().unlockLevel = itemList[i].unlockLevel;
             shopObject.GetComponent<ItemDisplayScript>().goldRequirement = itemList[i].goldRequirement;
         }

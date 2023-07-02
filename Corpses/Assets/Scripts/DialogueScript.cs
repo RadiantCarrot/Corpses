@@ -6,10 +6,10 @@ public class DialogueScript
 {
     public string dialogueId { get; }
     public string displayName { get; }
-    public Sprite displaySprite { get; }
+    public string displaySprite { get; }
     public string dialogueText { get; }
 
-    public DialogueScript (string dialogueId, string displayName, Sprite displaySprite, string dialogueText)
+    public DialogueScript (string dialogueId, string displayName, string displaySprite, string dialogueText)
     {
         this.dialogueId = dialogueId;
         this.displayName = displayName;

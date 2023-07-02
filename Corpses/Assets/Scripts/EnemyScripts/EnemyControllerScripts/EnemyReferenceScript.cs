@@ -8,7 +8,7 @@ public class EnemyReferenceScript
 {
     public string enemyId;
     public string enemyName;
-    public Sprite enemySprite;
+    public string enemySprite;
     public int enemyHealth;
     public float enemySpeed;
     public int enemyDamage;

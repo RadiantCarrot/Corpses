@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class AnalyticsScript : MonoBehaviour
 {
-    private bool timerRun = true;
-
     public int bulletsFired = 0;
     public string displayBulletsFired;
 

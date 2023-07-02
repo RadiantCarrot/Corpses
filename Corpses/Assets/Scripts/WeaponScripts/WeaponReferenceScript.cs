@@ -8,7 +8,7 @@ public class WeaponReferenceScript
 {
     public string weaponId;
     public string weaponName;
-    public Sprite weaponSprite;
+    public string weaponSprite;
     public float attackInterval;
     public string attackType;
     public int projectileDamage;

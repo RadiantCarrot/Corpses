@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using System;
+using UnityEditor.AddressableAssets;
 
 public class DataManagerScript : MonoBehaviour
 {
@@ -82,7 +84,5 @@ public class DataManagerScript : MonoBehaviour
         }
         DataAccessScript.SetDialogueList(dialogueList); // set list
         //Debug.Log(DataAccessScript.GetDialogueList().Count);
-
-        // (XScript)System.Enum.Parse(typeof(BuffType), xRef.x)
     }
 }

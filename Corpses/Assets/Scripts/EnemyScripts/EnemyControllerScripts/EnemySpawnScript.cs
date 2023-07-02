@@ -146,7 +146,10 @@ public class EnemySpawnScript : MonoBehaviour
                     GameObject enemyObject = Instantiate(enemyObj, Random.insideUnitSphere * spawnRadius + enemySpawnpoint.transform.position, enemySpawnpoint.transform.rotation); // instantiate enemy in a radius around room center
                     enemyObject.name = enemy.enemyName;
                     enemyObject.GetComponent<EnemyHealthScript>().enemyName = enemy.enemyName;
-                    // enemyObject.GetComponent<EnemyMoveScript>().enemySprite = enemy.enemySprite;
+                    //AssetManagerScript.LoadSprite(enemy.enemySprite + ".png", (Sprite s) =>
+                    //{
+                    //    enemyObject.GetComponent<SpriteRenderer>().sprite = s;
+                    //});
                     enemyObject.GetComponent<EnemyHealthScript>().enemyHealth = enemy.enemyHealth;
                     enemyObject.GetComponent<EnemyMoveScript>().enemySpeed = enemy.enemySpeed;
                     enemyObject.GetComponent<EnemyAttackScript>().enemyDamage = enemy.enemyDamage;

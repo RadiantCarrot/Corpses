@@ -7,7 +7,7 @@ public class EnemyStatsScript
 {
     public string enemyId { get; }
     public string enemyName { get; }
-    public Sprite enemySprite { get; }
+    public string enemySprite { get; }
     public int enemyHealth { get; }
     public float enemySpeed { get; }
     public int enemyDamage { get; }
@@ -26,7 +26,7 @@ public class EnemyStatsScript
     public bool isRanged { get; }
 
 
-    public EnemyStatsScript (string enemyId, string enemyName, Sprite enemySprite, int enemyHealth, float enemySpeed, int enemyDamage, float projectileSpeed, int projectileDamage, float aggroDistance, float attackDistance, float retreatDistance, int enemyGold, int enemyXp, bool isRanged)
+    public EnemyStatsScript (string enemyId, string enemyName, string enemySprite, int enemyHealth, float enemySpeed, int enemyDamage, float projectileSpeed, int projectileDamage, float aggroDistance, float attackDistance, float retreatDistance, int enemyGold, int enemyXp, bool isRanged)
     {
         this.enemyId = enemyId;
         this.enemyName = enemyName;
