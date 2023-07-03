@@ -2,40 +2,46 @@
   "dialogueList": [
     {
       "dialogueId": "1",
-      "displayName": "Player",
-      "displaySprite": "player_sprite",
-      "dialogueText": "Hi"
+      "displayName": "Shopkeeper",
+      "displaySprite": "ShopkeeperSprite",
+      "dialogueText": "Welcome to the magic shop! How may I assist you today?"
     },
     {
       "dialogueId": "2",
-      "displayName": "Shopkeeper",
-      "displaySprite": "shopkeeper_sprite",
-      "dialogueText": "I"
+      "displayName": "Player",
+      "displaySprite": "PlayerSprite",
+      "dialogueText": "I'd like to buy a weapon"
     },
     {
       "dialogueId": "3",
-      "displayName": "Player",
-      "displaySprite": "player_sprite",
-      "dialogueText": "Hate"
+      "displayName": "Shopkeeper",
+      "displaySprite": "ShopkeeperSprite",
+      "dialogueText": "Which weapon would you like?"
     },
     {
       "dialogueId": "4",
       "displayName": "Shopkeeper",
-      "displaySprite": "shopkeeper_sprite",
-      "dialogueText": "My"
+      "displaySprite": "ShopkeeperSprite",
+      "dialogueText": "Wonderful choice!"
     },
     {
       "dialogueId": "5",
-      "displayName": "Player",
-      "displaySprite": "player_sprite",
-      "dialogueText": "Life"
+      "displayName": "Shopkeeper",
+      "displaySprite": "ShopkeeperSprite",
+      "dialogueText": "Sorry, your level isn't high enough!"
+    },
+    {
+      "dialogueId": "6",
+      "displayName": "Shopkeeper",
+      "displaySprite": "ShopkeeperSprite",
+      "dialogueText": "Sorry, you don't have enough gold"
     }
   ],
   "enemyList": [
     {
       "enemyId": "1",
       "enemyName": "Enemy One",
-      "enemySprite": "enemy_one_sprite",
+      "enemySprite": "EnemyOneSprite",
       "enemyHealth": "100",
       "enemySpeed": "3",
       "enemyDamage": "20",
@@ -51,7 +57,7 @@
     {
       "enemyId": "2",
       "enemyName": "Enemy Two",
-      "enemySprite": "enemy_two_sprite",
+      "enemySprite": "EnemyTwoSprite",
       "enemyHealth": "200",
       "enemySpeed": "5",
       "enemyDamage": "20",
@@ -67,7 +73,7 @@
     {
       "enemyId": "3",
       "enemyName": "Enemy Three",
-      "enemySprite": "enemy_three_sprite",
+      "enemySprite": "EnemyThreeSprite",
       "enemyHealth": "150",
       "enemySpeed": "4",
       "enemyDamage": "20",
@@ -83,7 +89,7 @@
     {
       "enemyId": "4",
       "enemyName": "Enemy Four",
-      "enemySprite": "enemy_four_sprite",
+      "enemySprite": "EnemyFourSprite",
       "enemyHealth": "120",
       "enemySpeed": "0",
       "enemyDamage": "0",
@@ -100,7 +106,7 @@
   "shopItemList": [
     {
       "shopItemId": "1",
-      "shopItemSprite": "weapon_two_sprite",
+      "shopItemSprite": "WeaponTwoSprite",
       "weaponId": "2",
       "weaponName": "Wizard Staff",
       "unlockLevel": "5",
@@ -108,7 +114,7 @@
     },
     {
       "shopItemId": "2",
-      "shopItemSprite": "weapon_three_sprite",
+      "shopItemSprite": "WeaponThreeSprite",
       "weaponId": "3",
       "weaponName": "Magic Crystal",
       "unlockLevel": "8",
@@ -116,7 +122,7 @@
     },
     {
       "shopItemId": "3",
-      "shopItemSprite": "weapon_four_sprite",
+      "shopItemSprite": "WeaponFourSprite",
       "weaponId": "4",
       "weaponName": "Spell Book",
       "unlockLevel": "10",
@@ -689,7 +695,7 @@
     {
       "weaponId": "1",
       "weaponName": "Basic Wand",
-      "weaponSprite": "weapon_one_sprite",
+      "weaponSprite": "WeaponOneSprite",
       "attackInterval": "2.5",
       "attackType": "click",
       "projectileDamage": "50",
@@ -701,7 +707,7 @@
     {
       "weaponId": "2",
       "weaponName": "Wizard Staff",
-      "weaponSprite": "weapon_two_sprite",
+      "weaponSprite": "WeaponTwoSprite",
       "attackInterval": "1.2",
       "attackType": "click",
       "projectileDamage": "150",
@@ -713,7 +719,7 @@
     {
       "weaponId": "3",
       "weaponName": "Magic Crystal",
-      "weaponSprite": "weapon_three_sprite",
+      "weaponSprite": "WeaponThreeSprite",
       "attackInterval": "20",
       "attackType": "hold",
       "projectileDamage": "20",
@@ -725,7 +731,7 @@
     {
       "weaponId": "4",
       "weaponName": "Spell Book",
-      "weaponSprite": "weapon_four_sprite",
+      "weaponSprite": "WeaponFourSprite",
       "attackInterval": " -",
       "attackType": " -",
       "projectileDamage": " -",
