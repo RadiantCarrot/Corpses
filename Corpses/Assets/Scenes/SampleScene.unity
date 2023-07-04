@@ -2612,11 +2612,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09a6704ec65b4504687c7ff69cbd61bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerList: []
   weaponList: []
   enemyList: []
   waveList: []
+  tierList: []
   shopItemList: []
   dialogueList: []
+  playerGFX: {fileID: 1309832229}
   weaponObj: {fileID: 2865066977966366224, guid: 4b453f030cbe0cc4c8d0fb64be6bb541, type: 3}
   weaponHolder: {fileID: 1815605856}
   initialWeaponPt: {fileID: 1044471560}
@@ -3132,7 +3135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ac16ca94ff1e546a223c2c9b51d600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 8
   isMoving: 0
   facingRight: 1
   playerSprite: {fileID: 1309832229}
@@ -3221,8 +3223,6 @@ MonoBehaviour:
   timerActive: 0
   spawnInterval: 0
   spawnIntervalReset: 0
-  spawnIntervalMax: 10
-  spawnIntervalMin: 5
   waveText: {fileID: 1038864081}
   waveTextDuration: 2
   spawnRoom: 0

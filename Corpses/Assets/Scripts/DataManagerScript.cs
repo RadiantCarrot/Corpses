@@ -10,7 +10,7 @@ public class DataManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //LoadRefData();
+
     }
 
     // Update is called once per frame
@@ -32,6 +32,18 @@ public class DataManagerScript : MonoBehaviour
 
     private void ProcessData(DataReaderScript data)
     {
+        List<PlayerStatsScript> playerList = new List<PlayerStatsScript>(); // add data to list
+        foreach (PlayerReferenceScript playerRef in data.playerList) // for each dataset in list
+        {
+            PlayerStatsScript player = new PlayerStatsScript(playerRef.playerSprite, playerRef.playerHealth, playerRef.playerSpeed); // pass in values
+            playerList.Add(player); // add to list
+            //Debug.Log(player.playerName);
+
+        }
+        DataAccessScript.SetPlayerList(playerList); // set list
+        //Debug.Log(DataAccessScript.GetPlayerList().Count);
+
+
         List<WeaponStatsScript> weaponList = new List<WeaponStatsScript>(); // add data to list
         foreach (WeaponReferenceScript weaponRef in data.weaponList) // for each dataset in list
         {
@@ -64,6 +76,18 @@ public class DataManagerScript : MonoBehaviour
         }
         DataAccessScript.SetWaveList(waveList); // set list
         //Debug.Log(DataAccessScript.GetWaveList().Count);
+
+
+        List<TimerStatsScript> timerList = new List<TimerStatsScript>(); // add data to list
+        foreach (TimerReferenceScript timerRef in data.timerList) // for each dataset in list
+        {
+            TimerStatsScript timer = new TimerStatsScript(timerRef.spawnIntervalMax, timerRef.spawnIntervalMin, timerRef.spawnIntervalDecrement); // pass in values
+            timerList.Add(timer); // add to list
+            //Debug.Log(timer.timerName);
+
+        }
+        DataAccessScript.SetTimerList(timerList); // set list
+        //Debug.Log(DataAccessScript.GetTimerList().Count);
 
 
         List<ShopStatsScript> shopItemList = new List<ShopStatsScript>(); // add data to list

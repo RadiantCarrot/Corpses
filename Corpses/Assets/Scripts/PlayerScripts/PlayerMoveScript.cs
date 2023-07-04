@@ -6,7 +6,7 @@ public class PlayerMoveScript : MonoBehaviour
 {
     Vector2 moveDir;
 
-    public float moveSpeed = 10f;
+    private float moveSpeed;
     private float activeMoveSpeed;
 
     public bool isMoving;
@@ -15,16 +15,16 @@ public class PlayerMoveScript : MonoBehaviour
 
     Rigidbody2D rb;
 
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>(); // assigns rigidbody to character
-        activeMoveSpeed = moveSpeed;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
-        
+        foreach (PlayerStatsScript player in DataAccessScript.GetPlayerList()) // get player speed from data
+        {
+            moveSpeed = player.playerSpeed; // set max health
+        }
+
+        rb = GetComponent<Rigidbody2D>(); // assigns rigidbody to character
+        activeMoveSpeed = moveSpeed;
     }
 
     // Update is called once per frame

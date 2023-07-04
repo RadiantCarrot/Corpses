@@ -5,11 +5,16 @@ using UnityEngine;
 
 public class GameControllerScript : MonoBehaviour
 {
+    public List<string> playerList;
     public List<string> weaponList;
     public List<string> enemyList;
     public List<string> waveList;
+    public List<string> tierList;
     public List<string> shopItemList;
     public List<string> dialogueList;
+
+
+    public GameObject playerGFX;
 
 
     public GameObject weaponObj;
@@ -33,9 +38,22 @@ public class GameControllerScript : MonoBehaviour
         DataManagerScript dataManager = GetComponent <DataManagerScript>(); // assign data manager
         dataManager.LoadRefData(); // load data
 
+        SetPlayer();
         SetWeapon();
+        SetTimer();
         SetShop();
         SetDialogue();
+    }
+
+    void SetPlayer()
+    {
+        foreach (PlayerStatsScript player in DataAccessScript.GetPlayerList())
+        {
+            //AssetManagerScript.LoadSprite(player.playerSprite + ".png", (Sprite s) =>
+            //{
+            //    playerGFX.GetComponent<SpriteRenderer>().sprite = s;
+            //});
+        }
     }
 
     void SetWeapon()
@@ -83,6 +101,11 @@ public class GameControllerScript : MonoBehaviour
                 weaponObject.GetComponent<WeaponShootScript>().despawnTime = weapon.despawnTime;
             }
         }
+    }
+
+    void SetTimer()
+    {
+
     }
 
     void SetShop()

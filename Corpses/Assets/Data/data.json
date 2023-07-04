@@ -105,6 +105,7 @@
   ],
   "playerList": [
     {
+      "playerSprite": "PlayerSprite",
       "playerHealth": "100",
       "playerSpeed": "10"
     }

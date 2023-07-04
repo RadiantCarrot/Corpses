@@ -7,9 +7,11 @@ public class DataReaderScript
 {
     // NAMES HAVE TO BE THE SAME AS EXCEL SHEET NAMES
 
+    public List<PlayerReferenceScript> playerList;
     public List<WeaponReferenceScript> weaponList;
     public List<EnemyReferenceScript> enemyList;
     public List<WaveReferenceScript> waveList;
+    public List<TimerReferenceScript> timerList;
     public List<ShopReferenceScript> shopItemList;
     public List<DialogueReferenceScript> dialogueList;
 

@@ -9,10 +9,9 @@ public class EnemySpawnScript : MonoBehaviour
     public bool timerActive = false;
     public float spawnInterval;
     public float spawnIntervalReset;
-    public float spawnIntervalMax;
-    public float spawnIntervalMin;
-
-    private float spawnIntervalDecrement = 1f;
+    private float spawnIntervalMax;
+    private float spawnIntervalMin;
+    private float spawnIntervalDecrement;
 
     private int waveNumber = 0;
     public TMP_Text waveText;
@@ -37,6 +36,26 @@ public class EnemySpawnScript : MonoBehaviour
         player = GameObject.Find("Player"); // set player
         room1Checker = GameObject.Find("Room1Checker"); // set room checker
         room2Checker = GameObject.Find("Room2Checker"); // set room checker
+
+        TimeSetter();
+    }
+
+    void TimeSetter()
+    {
+        foreach (TimerStatsScript timer in DataAccessScript.GetTimerList()) // set timer
+        {
+            if (timer.spawnIntervalMax <= timer.spawnIntervalMin) // in case numbers are funny, default to a reasonable number
+            {
+                spawnIntervalMax = 10;
+                spawnIntervalMin = 5;
+            }
+            else // set timer values to data values
+            {
+                spawnIntervalMax = timer.spawnIntervalMax;
+                spawnIntervalMin = timer.spawnIntervalMin;
+                spawnIntervalDecrement = timer.spawnIntervalDecrement;
+            }
+        }
 
         spawnIntervalReset = spawnIntervalMax; // set initial spawn interval
         spawnInterval = spawnIntervalReset; // reset spawn interval
@@ -135,9 +154,6 @@ public class EnemySpawnScript : MonoBehaviour
     {
         foreach (EnemyStatsScript enemy in DataAccessScript.GetEnemyList())
         {
-            Debug.Log(enemyName);
-
-
             if (enemyName == enemy.enemyName)
             {
                 Debug.Log(enemy.enemyName);

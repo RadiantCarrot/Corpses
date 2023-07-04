@@ -4,11 +4,25 @@ using UnityEngine;
 
 public static class DataAccessScript
 {
+    public static List<PlayerStatsScript> playerList;
     public static List<WeaponStatsScript> weaponList;
     public static List<EnemyStatsScript> enemyList;
     public static List<WaveStatsScript> waveList;
+    public static List<TimerStatsScript> timerList;
     public static List<ShopStatsScript> shopItemList;
     public static List<DialogueScript> dialogueList;
+
+
+
+    public static List<PlayerStatsScript> GetPlayerList()
+    {
+        return playerList;
+    }
+
+    public static void SetPlayerList(List<PlayerStatsScript> pList)
+    {
+        playerList = pList;
+    }
 
 
 
@@ -54,6 +68,18 @@ public static class DataAccessScript
     public static void SetWaveList(List<WaveStatsScript> wList)
     {
         waveList = wList;
+    }
+
+
+
+    public static List<TimerStatsScript> GetTimerList()
+    {
+        return timerList;
+    }
+
+    public static void SetTimerList(List<TimerStatsScript> tList)
+    {
+        timerList = tList;
     }
 
 
