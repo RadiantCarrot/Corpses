@@ -12,6 +12,8 @@ public class EnemySpawnScript : MonoBehaviour
     public float spawnIntervalMax;
     public float spawnIntervalMin;
 
+    private float spawnIntervalDecrement = 1f;
+
     private int waveNumber = 0;
     public TMP_Text waveText;
     public float waveTextDuration;
@@ -63,7 +65,7 @@ public class EnemySpawnScript : MonoBehaviour
 
                 spawnInterval = spawnIntervalReset; // reset spawn interval
 
-                spawnIntervalReset -= 1f; // decrease spawn interval reset value
+                spawnIntervalReset -= spawnIntervalDecrement; // decrease spawn interval reset value
             }
         }
 

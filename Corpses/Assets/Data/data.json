@@ -103,6 +103,12 @@
       "isRanged": "0"
     }
   ],
+  "playerList": [
+    {
+      "playerHealth": "100",
+      "playerSpeed": "10"
+    }
+  ],
   "shopItemList": [
     {
       "shopItemId": "1",
@@ -127,6 +133,13 @@
       "weaponName": "Spell Book",
       "unlockLevel": "10",
       "goldRequirement": "100"
+    }
+  ],
+  "timerList": [
+    {
+      "spawnIntervalMax": "10",
+      "spawnIntervalMin": "5",
+      "spawnIntervalDecrement": "1"
     }
   ],
   "waveList": [

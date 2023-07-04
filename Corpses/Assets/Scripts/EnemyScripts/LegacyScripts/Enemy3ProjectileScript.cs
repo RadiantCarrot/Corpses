@@ -51,7 +51,7 @@ public class Enemy3ProjectileScript : MonoBehaviour
         PlayerHealthScript player = hitInfo.GetComponent<PlayerHealthScript>(); // check if bullet hits player
         if (player != null) // if you hit a player
         {
-            player.TakeDamage(bulletDamage); // damage player by creepiedamage amount
+            player.TakeDamage(bulletDamage); // damage player by damage amount
         }
 
         Destroy(gameObject); // destroy bullet
@@ -61,5 +61,5 @@ public class Enemy3ProjectileScript : MonoBehaviour
     {
         yield return new WaitForSeconds (bulletLifetime);
         Destroy(gameObject); // destroy bullet
-    }
+    } 
 }
