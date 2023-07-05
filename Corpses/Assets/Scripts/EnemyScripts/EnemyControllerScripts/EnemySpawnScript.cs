@@ -156,7 +156,6 @@ public class EnemySpawnScript : MonoBehaviour
         {
             if (enemyName == enemy.enemyName)
             {
-                Debug.Log(enemy.enemyName);
 
                 for (int i = 0; i < spawnCount; i++)
                 {

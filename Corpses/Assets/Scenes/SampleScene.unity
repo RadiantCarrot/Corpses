@@ -1812,6 +1812,7 @@ GameObject:
   - component: {fileID: 619880214}
   - component: {fileID: 619880213}
   - component: {fileID: 619880217}
+  - component: {fileID: 619880218}
   m_Layer: 5
   m_Name: EndscreenCanvas
   m_TagString: Untagged
@@ -1927,8 +1928,39 @@ MonoBehaviour:
   secondValue: 0
   minuteValue: 0
   displayTotalPlaytime: 
-  endscreenDisplayScript: {fileID: 376967869}
+  playerHealthScript: {fileID: 1077654554}
   xpScript: {fileID: 449225751}
+  csvWriterScript: {fileID: 619880218}
+--- !u!114 &619880218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619880212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29c2091b72df5e44fbadd65538b84649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myStatisticsList:
+    statistics:
+    - bulletsFired: 10
+      enemiesSlain: 10
+      highestLevel: 10
+      totalPlaytime: 10
+    - bulletsFired: 20
+      enemiesSlain: 20
+      highestLevel: 20
+      totalPlaytime: 20
+    - bulletsFired: 30
+      enemiesSlain: 30
+      highestLevel: 30
+      totalPlaytime: 30
+    - bulletsFired: 40
+      enemiesSlain: 40
+      highestLevel: 40
+      totalPlaytime: 40
 --- !u!1 &675973547
 GameObject:
   m_ObjectHideFlags: 0

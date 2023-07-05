@@ -27,9 +27,9 @@ public class EndscreenDisplayScript : MonoBehaviour
             SceneManager.LoadScene("MainMenu");
         }
 
-        bulletsFired.text = "Bullets Fired: " + analyticsScript.bulletsFired.ToString(); // display bullets fired
-        enemiesSlain.text = "Enemies Slain: " + analyticsScript.enemiesSlain.ToString(); // display enemies slain
-        highestLevel.text = "Highest Level: " + analyticsScript.highestLevel + " (" + analyticsScript.currentXp + "/" + analyticsScript.maxXp + "xp)"; // display highest level
-        totalPlaytime.text = "Total Playtime: " + analyticsScript.minuteValue + "mins " + analyticsScript.secondValue + "secs"; // display total playtime
+        bulletsFired.text = analyticsScript.displayBulletsFired; // display bullets fired
+        enemiesSlain.text = analyticsScript.displayEnemiesSlain; // display enemies slain
+        highestLevel.text = analyticsScript.displayHighestLevel; // display highest level
+        totalPlaytime.text = analyticsScript.displayTotalPlaytime; // display total playtime
     }
 }
