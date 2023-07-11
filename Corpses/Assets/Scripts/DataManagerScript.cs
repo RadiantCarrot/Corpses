@@ -97,16 +97,16 @@ public class DataManagerScript : MonoBehaviour
             shopItemList.Add(shopItem); // add to list
         }
         DataAccessScript.SetShopItemList(shopItemList); // set list
-        //Debug.Log(DataAccessScript.GetShopItemList().Count);
+                                                        //Debug.Log(DataAccessScript.GetShopItemList().Count);
 
 
         List<DialogueScript> dialogueList = new List<DialogueScript>(); // add data to list
-        foreach (DialogueReferenceScript dialogueRef in data.dialogueList) // for each dataset in list
-        {
-            DialogueScript dialogue = new DialogueScript(dialogueRef.dialogueId, dialogueRef.displayName, dialogueRef.displaySprite, dialogueRef.dialogueText); // pass in values
-            dialogueList.Add(dialogue); // add to list
-        }
-        DataAccessScript.SetDialogueList(dialogueList); // set list
-        //Debug.Log(DataAccessScript.GetDialogueList().Count);
+         foreach (DialogueReferenceScript dialogueRef in data.dialogueList) // for each dataset in list
+         {
+             DialogueScript dialogue = new DialogueScript(dialogueRef.dialogueId, dialogueRef.nextDialogueId, dialogueRef.currentSpeaker, dialogueRef.leftSpeaker, dialogueRef.rightSpeaker, dialogueRef.leftImage, dialogueRef.rightImage, dialogueRef.dialogueText, dialogueRef.choices); // pass in values
+             dialogueList.Add(dialogue); // add to list
+         }
+         DataAccessScript.SetDialogueList(dialogueList); // set list
+         //Debug.Log(DataAccessScript.GetDialogueList().Count);
     }
 }

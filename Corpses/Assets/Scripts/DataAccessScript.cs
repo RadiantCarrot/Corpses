@@ -111,7 +111,7 @@ public static class DataAccessScript
         dialogueList = dList;
     }
 
-    public static DialogueScript GetDialogueById(string dialogueId)
+    public static DialogueScript GetDialogueById(int dialogueId)
     {
         return dialogueList.Find(i => i.dialogueId == dialogueId);
     }

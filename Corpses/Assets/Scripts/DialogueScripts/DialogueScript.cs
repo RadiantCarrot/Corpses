@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Kar Lonng
-public class DialogueScript
+/*public class DialogueScript
 {
     public string dialogueId { get; }
     public string displayName { get; }
@@ -17,4 +17,4 @@ public class DialogueScript
         this.displaySprite = displaySprite;
         this.dialogueText = dialogueText;
     }
-}
+}*/
