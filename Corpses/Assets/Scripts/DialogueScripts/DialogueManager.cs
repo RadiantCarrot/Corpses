@@ -1,90 +1,72 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Newtonsoft.Json;
-
 
 //Jaina
 public class DialogueManager : MonoBehaviour
 {
-    public Image actorImage;
+    public Image actorImage1;
     public Image actorImage2;
     public TextMeshProUGUI actorName;
     public TextMeshProUGUI messageText;
-    public RectTransform DialogueBox;
+    public RectTransform dialogueBox;
 
     Message[] currentMessages;
+    Actor[] currentActors;
     int activeMessage = 0;
     public static bool isActive = false;
 
-    [System.Serializable]
-    public class Actor : MonoBehaviour
+    public void OpenDialogue(Message[] messages, Actor[] actors)
     {
-        public string name;
-        public Sprite sprite;
-    }
-
-    public void OpenDialogue(DialogueSet dialogueSet)
-    {
-        currentMessages = dialogueSet.messages.ToArray();
+        currentMessages = messages;
+        currentActors = actors;
         activeMessage = 0;
         isActive = true;
 
-        Debug.Log("Started Conversation! Loaded Messages: " + currentMessages.Length);
-        DisplayMessage(); // to update the UI 
+        Debug.Log("Started Conversation! Loaded messages:" + messages.Length);
+        DisplayMessage();
     }
-
     void DisplayMessage()
     {
-        Message messageToDisplay = currentMessages[activeMessage]; // to get current text
+        Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.dialogueText;
 
-        Actor actorToDisplay = GetActor(messageToDisplay.currentSpeaker); // to get current speaking character
-        actorName.text = actorToDisplay.name;
-        actorImage.sprite = actorToDisplay.sprite;
+        int actorId = messageToDisplay.actorId;
+        if (actorId >= 0 && actorId < currentActors.Length)
+        {
+            Actor actorToDisplay = currentActors[actorId];
+            actorName.text = actorToDisplay.name;
+            actorImage1.sprite = actorToDisplay.sprite;
+            actorImage2.sprite = actorToDisplay.sprite;
+        }
+        else
+        {
+            Debug.LogError("Invalid actorId: " + actorId);
+        }
     }
-
     public void NextMessage()
     {
         activeMessage++;
-        if (activeMessage < currentMessages.Length)
+        if(activeMessage < currentMessages.Length)
         {
             DisplayMessage();
         }
         else
         {
-            Debug.Log("Conversation ended");
+            Debug.Log("Conversation ended!");
             isActive = false;
         }
     }
-
-    // Start is called before the first frame update
     void Start()
     {
-
+        
     }
-
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isActive == true)
+        if(Input.GetKeyDown(KeyCode.Escape) && isActive == true)
         {
             NextMessage();
         }
     }
-
-    Actor GetActor(string actorName)
-    {
-        Actor[] actors = FindObjectsOfType<Actor>();
-        foreach (Actor actor in actors)
-        {
-            if (actor.name == actorName)
-            {
-                return actor;
-            }
-        }
-        return null;
-    }
 }
+

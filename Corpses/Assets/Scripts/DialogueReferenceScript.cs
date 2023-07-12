@@ -18,3 +18,4 @@ public class DialogueReferenceScript
     public string dialogueText;
     public string choices;
 }
+

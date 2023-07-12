@@ -1,34 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Newtonsoft.Json;
 
-// Jaina
+// Jaina 
 public class DialogueTrigger : MonoBehaviour
 {
-    public DialogueSet dialogueSet;
+    public Message[] messages;
+    public Actor[] actors;
 
     public void StartDialogue()
     {
-        string json = JsonConvert.SerializeObject(dialogueSet);
-        dialogueSet = JsonConvert.DeserializeObject<DialogueSet>(json);
-        FindObjectOfType<DialogueManager>().OpenDialogue(dialogueSet);
+        FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);
     }
 }
 
 [System.Serializable]
 public class DialogueSet
 {
-    public List<Message> messages;
-    public List<Actor> actors;
+    public int actorId;
+    public string messages;
 }
 
 [System.Serializable]
 public class Message
 {
-    public string dialogueId;
-    public string nextDialogueId;
-    public string dialogueSetId;
+    public int dialogueId;
+    public int nextDialogueId;
+    public int dialogueSetId;
     public string currentSpeaker;
     public string leftSpeaker;
     public string rightSpeaker;
@@ -36,6 +34,7 @@ public class Message
     public string rightImage;
     public string dialogueText;
     public string choices;
+    internal int actorId;
 }
 
 [System.Serializable]

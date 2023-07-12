@@ -108,5 +108,6 @@ public class DataManagerScript : MonoBehaviour
          }
          DataAccessScript.SetDialogueList(dialogueList); // set list
          //Debug.Log(DataAccessScript.GetDialogueList().Count);
+
     }
 }

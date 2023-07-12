@@ -30,4 +30,8 @@ public class DialogueScript
         this.dialogueText = dialogueText;
         this.choices = choices;
     }
+    public DialogueScript(int dialogueId, int nextDialogueId, string currentSpeaker, string leftSpeaker, string rightSpeaker, string leftImage, string rightImage, string dialogueText, string choices)
+    {
+        // Constructor implementation
+    }
 }
