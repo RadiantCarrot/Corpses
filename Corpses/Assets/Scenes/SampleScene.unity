@@ -969,7 +969,7 @@ RectTransform:
   m_Children:
   - {fileID: 626630995}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2131,7 +2131,7 @@ RectTransform:
   m_Children:
   - {fileID: 376967866}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3175,7 +3175,7 @@ RectTransform:
   m_Children:
   - {fileID: 2134888161}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -39569,6 +39569,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1275039361}
   m_CullTransparentMesh: 1
+--- !u!1 &1299664029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1299664032}
+  - component: {fileID: 1299664031}
+  - component: {fileID: 1299664030}
+  m_Layer: 0
+  m_Name: TutorialNpc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &1299664030
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299664029}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!212 &1299664031
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299664029}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Color: {r: 1, g: 0.54172015, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1299664032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1299664029}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.62, y: -4.41, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1978354438}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1307485819
 GameObject:
   m_ObjectHideFlags: 0
@@ -40797,7 +40899,7 @@ Transform:
   - {fileID: 1221191396}
   - {fileID: 2116829262}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1734172233
 GameObject:
@@ -41450,6 +41552,257 @@ Transform:
   m_Father: {fileID: 776584652}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1978354437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1978354438}
+  - component: {fileID: 1978354442}
+  - component: {fileID: 1978354441}
+  - component: {fileID: 1978354440}
+  - component: {fileID: 1978354439}
+  m_Layer: 0
+  m_Name: TutorialNpcCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1978354438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978354437}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1299664032}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1978354439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978354437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61e2d3227f661dd4785c1a0d806c57c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messages:
+  - dialogueId: 100101
+    nextDialogueId: 100102
+    dialogueSetId: 1001
+    currentSpeaker: TutorialNpc
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: Welcome To Banana Blast!
+    choices: 
+  - dialogueId: 100102
+    nextDialogueId: 100103
+    dialogueSetId: 1001
+    currentSpeaker: TutorialNpc
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: Would you like me to walk you through the controls of the game?
+    choices: 
+  - dialogueId: 100103
+    nextDialogueId: 100104
+    dialogueSetId: 1001
+    currentSpeaker: Player
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: Yes please
+    choices: 
+  - dialogueId: 100105
+    nextDialogueId: 100106
+    dialogueSetId: 1001
+    currentSpeaker: TutorialNpc
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: Fight endless waves of monsters and gain XP and gold along the
+      way
+    choices: 
+  - dialogueId: 100106
+    nextDialogueId: 100107
+    dialogueSetId: 1001
+    currentSpeaker: Player
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: Wow cool! But how?
+    choices: 
+  - dialogueId: 100107
+    nextDialogueId: 100108
+    dialogueSetId: 1001
+    currentSpeaker: TutorialNpc
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: The Controls for the game are W,A,S,D
+    choices: 
+  - dialogueId: 100108
+    nextDialogueId: 100109
+    dialogueSetId: 1001
+    currentSpeaker: TutorialNpc
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: Use your mouse to aim and shoot at enemies!
+    choices: 
+  - dialogueId: 100109
+    nextDialogueId: 100110
+    dialogueSetId: 1001
+    currentSpeaker: Player
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: Where do I buy weapons?
+    choices: 
+  - dialogueId: 100110
+    nextDialogueId: 100111
+    dialogueSetId: 1001
+    currentSpeaker: TutorialNpc
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: Weapons can be unlocked and bought at the magic shop!
+    choices: 
+  - dialogueId: 100111
+    nextDialogueId: 100112
+    dialogueSetId: 1001
+    currentSpeaker: TutorialNpc
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: Alright , hope you have a blast out there!
+    choices: 
+  - dialogueId: 100104
+    nextDialogueId: 100105
+    dialogueSetId: 1001
+    currentSpeaker: Player
+    leftSpeaker: Player
+    rightSpeaker: TutorialNpc
+    leftImage: PlayerSprite
+    rightImage: TutorialNpcSprite
+    dialogueText: Thank you!
+    choices: 
+  actors:
+  - name: Player
+    sprite: {fileID: 21300000, guid: e4a61c5500e99af4da2402db54c0fc00, type: 3}
+  - name: TutorialNpc
+    sprite: {fileID: 21300000, guid: 5f726edf0a390e849b6bbfabf43a1cb4, type: 3}
+  dialogueCanvas: {fileID: 295453235}
+  npc: {fileID: 1978354440}
+--- !u!114 &1978354440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978354437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3561763b2540db54dbf46538de5b58df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canInteract: 0
+  dialogueManager: {fileID: 626630998}
+  trigger: {fileID: 1978354439}
+  dialogueStarted: 0
+  dialogueCanvas: {fileID: 295453235}
+--- !u!58 &1978354441
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978354437}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.08
+--- !u!212 &1978354442
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1978354437}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Color: {r: 1, g: 0.5411765, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &2013040665
 GameObject:
   m_ObjectHideFlags: 0
