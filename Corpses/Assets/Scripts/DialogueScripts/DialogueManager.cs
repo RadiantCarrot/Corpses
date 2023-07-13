@@ -22,13 +22,12 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject playerAvatar;
     public GameObject shopkeeperAvatar;
-    public Image shopkeeperImage;
-    public Image playerImage;
+
+    public TMP_Text shopkeeperText;
 
     void Start()
     {
-        shopkeeperImage = shopkeeperAvatar.GetComponent<Image>();
-        playerImage = playerAvatar.GetComponent<Image>();
+
     }
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
@@ -88,6 +87,7 @@ public class DialogueManager : MonoBehaviour
             isActive = false;
             dialogueCanvas.SetActive(false);
             npc.dialogueStarted = false;
+            shopkeeperText.text = "Interact [E]";
         }
     }
 

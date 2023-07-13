@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 // //Jaina 
 public class NPC : MonoBehaviour
@@ -11,6 +12,7 @@ public class NPC : MonoBehaviour
     public bool dialogueStarted = false;
 
     public GameObject dialogueCanvas;
+    public TMP_Text shopkeeperText;
 
     private void Update()
     {
@@ -26,6 +28,7 @@ public class NPC : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             canInteract = true;
+            shopkeeperText.text = "Interact [E]";
         }
     }
 
@@ -34,6 +37,7 @@ public class NPC : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             canInteract = false;
+            shopkeeperText.text = "";
             //dialogueCanvas.SetActive(false);
         }
     }

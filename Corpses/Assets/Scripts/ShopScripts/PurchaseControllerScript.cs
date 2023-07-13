@@ -19,6 +19,9 @@ public class PurchaseControllerScript : MonoBehaviour
     public Transform weaponHolder;
     public GameObject testWeapon;
 
+    public GameObject winPanel;
+    public float panelDuration;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +31,10 @@ public class PurchaseControllerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetButtonDown("Fire1"))
+        {
+            winPanel.SetActive(false);
+        }
     }
 
     public void BuyWeapon(string weaponName, int unlockLevel, int goldRequirement)
@@ -67,6 +73,11 @@ public class PurchaseControllerScript : MonoBehaviour
                             {
                                 Destroy(shopWeapon); // destroy weapon on display
                             }
+                        }
+
+                        if (weapon.name == "Spell Book") // if player has purchased spell book
+                        {
+                            winPanel.SetActive(true); // display player win panel
                         }
                     }
 

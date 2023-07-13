@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using TMPro;
 
 // Jaina 
 public class DialogueTrigger : MonoBehaviour
@@ -12,12 +13,15 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject dialogueCanvas;
     public NPC npc;
 
+    public TMP_Text shopkeeperText;
+
     public void StartDialogue()
     {
         if (npc.canInteract == true)
         {
             dialogueCanvas.SetActive(true);
             FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);
+            shopkeeperText.text = "";
         }
     }
 }
