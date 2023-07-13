@@ -4,6 +4,8 @@ using System.Xml.Linq;
 using UnityEngine;
 using TMPro;
 
+// Done by KarLonng
+
 public class XpScript : MonoBehaviour
 {
     public int minXp = 0;

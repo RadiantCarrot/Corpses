@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// Done by KarLonng
+
 public class Room2CheckerScript : MonoBehaviour
 {
     public bool room2Spawn;

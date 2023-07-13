@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using System;
 
+// Done by KarLonng
+
 public class PurchaseControllerScript : MonoBehaviour
 {
     public XpScript xpScript;

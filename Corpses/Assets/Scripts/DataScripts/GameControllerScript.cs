@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
+// Done by KarLonng
+
 public class GameControllerScript : MonoBehaviour
 {
     public List<string> playerList;

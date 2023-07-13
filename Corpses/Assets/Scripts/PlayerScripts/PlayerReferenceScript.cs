@@ -4,6 +4,8 @@ using UnityEngine;
 
 [System.Serializable]
 
+// Done by KarLonng
+
 public class PlayerReferenceScript
 {
     public string playerSprite;

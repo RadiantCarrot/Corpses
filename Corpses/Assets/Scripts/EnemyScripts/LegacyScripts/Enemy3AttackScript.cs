@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
 
+// Done by KarLonng
+
 public class Enemy3AttackScript : MonoBehaviour
 {
     public float attackDistance;

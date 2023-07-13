@@ -3,6 +3,8 @@ using System.Collections.Generic;
 //using UnityEditor.PackageManager;
 using UnityEngine;
 
+// Done by KarLonng
+
 public class StaffProjectileScript : MonoBehaviour
 {
     Rigidbody2D rb;

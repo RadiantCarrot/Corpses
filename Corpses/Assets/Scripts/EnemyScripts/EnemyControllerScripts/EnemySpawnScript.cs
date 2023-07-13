@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using TMPro;
 
+// Done by KarLonng
+
 public class EnemySpawnScript : MonoBehaviour
 {
     public bool timerActive = false;

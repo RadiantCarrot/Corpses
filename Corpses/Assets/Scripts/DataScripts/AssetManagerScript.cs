@@ -4,6 +4,8 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
+// Done by KarLonng
+
 public static class AssetManagerScript
 {
     private static string imagePath = "Assets/Art/{0}"; // get path to load sprites from

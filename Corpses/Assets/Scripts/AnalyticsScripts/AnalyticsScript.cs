@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+// Done by KarLonng
+
 public class AnalyticsScript : MonoBehaviour
 {
     public int bulletsFired = 0;

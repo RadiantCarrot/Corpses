@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
             isActive = false;
             dialogueCanvas.SetActive(false);
             npc.dialogueStarted = false;
-            shopkeeperText.text = "Interact [E]";
+            shopkeeperText.text = "";
         }
     }
 

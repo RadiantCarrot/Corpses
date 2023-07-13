@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Done by KarLonng
+
 public class Enemy2ProjectileScript : MonoBehaviour
 {
     public int bulletDamage = 20;

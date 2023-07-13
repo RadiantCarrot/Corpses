@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using System;
 
+// Done by KarLonng
+
 public class GoldScript : MonoBehaviour
 {
     public int minGold = 0;

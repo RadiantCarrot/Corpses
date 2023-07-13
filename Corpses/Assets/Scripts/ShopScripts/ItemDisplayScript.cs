@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// Done by KarLonng
+
 public class ItemDisplayScript : MonoBehaviour
 {
     public string itemName;

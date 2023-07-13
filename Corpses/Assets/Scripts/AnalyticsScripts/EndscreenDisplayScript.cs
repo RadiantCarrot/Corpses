@@ -4,6 +4,8 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+// Done by KarLonng
+
 public class EndscreenDisplayScript : MonoBehaviour
 {
     public AnalyticsScript analyticsScript;

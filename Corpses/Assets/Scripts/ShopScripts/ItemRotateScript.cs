@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Done by KarLonng
+
 public class ItemRotateScript : MonoBehaviour
 {
     private float rotateSpeed = 50f;

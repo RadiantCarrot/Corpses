@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 [System.Serializable]
+
+// Done by KarLonng
+
 public class DataReaderScript
 {
     // NAMES HAVE TO BE THE SAME AS EXCEL SHEET NAMES

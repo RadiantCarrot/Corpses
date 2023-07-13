@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Done by KarLonng
+
 public class Enemy3ProjectileScript : MonoBehaviour
 {
     public GameObject player;

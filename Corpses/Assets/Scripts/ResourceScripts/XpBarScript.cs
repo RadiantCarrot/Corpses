@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Done by KarLonng
+
 public class XpBarScript : MonoBehaviour
 {
     public Slider slider;
