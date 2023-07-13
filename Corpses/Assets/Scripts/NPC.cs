@@ -5,7 +5,7 @@ using UnityEngine;
 // //Jaina 
 public class NPC : MonoBehaviour
 {
-    public bool canInteract = true;
+    public bool canInteract = false;
     public DialogueManager dialogueManager;
     public DialogueTrigger trigger;
     public bool dialogueStarted = false;
@@ -17,7 +17,7 @@ public class NPC : MonoBehaviour
         if (canInteract && Input.GetKeyDown(KeyCode.E) && dialogueStarted == false) //Press E to interact with NPC
         {
             dialogueStarted = true;
-            //dialogueCanvas.SetActive(true);
+            // dialogueCanvas.SetActive(true);
             trigger.StartDialogue();
         }
     }

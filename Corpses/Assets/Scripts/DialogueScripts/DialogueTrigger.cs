@@ -10,11 +10,15 @@ public class DialogueTrigger : MonoBehaviour
     public Actor[] actors;
 
     public GameObject dialogueCanvas;
+    public NPC npc;
 
     public void StartDialogue()
     {
-        dialogueCanvas.SetActive(true);
-        FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);
+        if (npc.canInteract == true)
+        {
+            dialogueCanvas.SetActive(true);
+            FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);
+        }
     }
 }
 

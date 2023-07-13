@@ -41349,6 +41349,7 @@ MonoBehaviour:
   - name: ShopKeeper
     sprite: {fileID: 21300000, guid: 5f726edf0a390e849b6bbfabf43a1cb4, type: 3}
   dialogueCanvas: {fileID: 295453235}
+  npc: {fileID: 1947688613}
 --- !u!114 &1947688613
 MonoBehaviour:
   m_ObjectHideFlags: 0
