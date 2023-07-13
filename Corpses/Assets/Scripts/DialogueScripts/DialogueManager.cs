@@ -20,6 +20,17 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueCanvas;
     public NPC npc; //SCRIPT
 
+    public GameObject playerAvatar;
+    public GameObject shopkeeperAvatar;
+    public Image shopkeeperImage;
+    public Image playerImage;
+
+    void Start()
+    {
+        shopkeeperImage = shopkeeperAvatar.GetComponent<Image>();
+        playerImage = playerAvatar.GetComponent<Image>();
+    }
+
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
         currentMessages = messages;
@@ -28,7 +39,7 @@ public class DialogueManager : MonoBehaviour
         activeName = 0;
         isActive = true;
 
-        Debug.Log("Started Conversation! Loaded messages:" + messages.Length);
+        //Debug.Log("Started Conversation! Loaded messages:" + messages.Length);
         DisplayMessage();
     }
     void DisplayMessage()
@@ -38,18 +49,30 @@ public class DialogueManager : MonoBehaviour
         Message nameToDisplay = currentMessages[activeMessage];
         actorName.text = nameToDisplay.currentSpeaker;
 
-        //int actorId = messageToDisplay.actorId;
-        //if (actorId >= 0 && actorId < currentActors.Length)
+        if (nameToDisplay.currentSpeaker == "Player")
+        {
+            shopkeeperAvatar.GetComponent<Image>().color = Color.grey;
+            playerAvatar.GetComponent<Image>().color = Color.white;
+        }
+
+        else
+        {
+            shopkeeperAvatar.GetComponent<Image>().color = Color.white;
+            playerAvatar.GetComponent<Image>().color = Color.grey;
+        }
+
+        //int actorid = messagetodisplay.actorid;
+        //if (actorid >= 0 && actorid < currentactors.length)
         //{
-        //    Actor actorToDisplay = currentActors[actorId];
-        //    actorName.text = actorToDisplay.name;
-        //    Debug.Log(actorToDisplay);
-        //    //actorImage1.sprite = actorToDisplay.sprite;
-        //    //actorImage2.sprite = actorToDisplay.sprite;
+        //    actor actortodisplay = currentactors[actorid];
+        //    actorname.text = actortodisplay.name;
+        //    debug.log(actortodisplay);
+        //    //actorimage1.sprite = actortodisplay.sprite;
+        //    //actorimage2.sprite = actortodisplay.sprite;
         //}
         //else
         //{
-        //    Debug.LogError("Invalid actorId: " + actorId);
+        //    debug.logerror("invalid actorid: " + actorid);
         //}
     }
     public void NextMessage()
@@ -61,16 +84,13 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Conversation ended!");
+            //Debug.Log("Conversation ended!");
             isActive = false;
             dialogueCanvas.SetActive(false);
             npc.dialogueStarted = false;
         }
     }
-    void Start()
-    {
-        
-    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.E) && isActive == true)
