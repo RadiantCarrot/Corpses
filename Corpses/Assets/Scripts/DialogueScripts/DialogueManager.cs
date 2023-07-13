@@ -14,13 +14,18 @@ public class DialogueManager : MonoBehaviour
     Message[] currentMessages;
     Actor[] currentActors;
     int activeMessage = 0;
+    int activeName = 0;
     public static bool isActive = false;
+
+    public GameObject dialogueCanvas;
+    public NPC npc; //SCRIPT
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
         currentMessages = messages;
         currentActors = actors;
         activeMessage = 0;
+        activeName = 0;
         isActive = true;
 
         Debug.Log("Started Conversation! Loaded messages:" + messages.Length);
@@ -30,19 +35,22 @@ public class DialogueManager : MonoBehaviour
     {
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.dialogueText;
+        Message nameToDisplay = currentMessages[activeMessage];
+        actorName.text = nameToDisplay.currentSpeaker;
 
-        int actorId = messageToDisplay.actorId;
-        if (actorId >= 0 && actorId < currentActors.Length)
-        {
-            Actor actorToDisplay = currentActors[actorId];
-            actorName.text = actorToDisplay.name;
-            actorImage1.sprite = actorToDisplay.sprite;
-            actorImage2.sprite = actorToDisplay.sprite;
-        }
-        else
-        {
-            Debug.LogError("Invalid actorId: " + actorId);
-        }
+        //int actorId = messageToDisplay.actorId;
+        //if (actorId >= 0 && actorId < currentActors.Length)
+        //{
+        //    Actor actorToDisplay = currentActors[actorId];
+        //    actorName.text = actorToDisplay.name;
+        //    Debug.Log(actorToDisplay);
+        //    //actorImage1.sprite = actorToDisplay.sprite;
+        //    //actorImage2.sprite = actorToDisplay.sprite;
+        //}
+        //else
+        //{
+        //    Debug.LogError("Invalid actorId: " + actorId);
+        //}
     }
     public void NextMessage()
     {
@@ -55,6 +63,8 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log("Conversation ended!");
             isActive = false;
+            dialogueCanvas.SetActive(false);
+            npc.dialogueStarted = false;
         }
     }
     void Start()
@@ -63,7 +73,7 @@ public class DialogueManager : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && isActive == true)
+        if(Input.GetKeyDown(KeyCode.E) && isActive == true)
         {
             NextMessage();
         }

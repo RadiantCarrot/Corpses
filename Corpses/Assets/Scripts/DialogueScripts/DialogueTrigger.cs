@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 // Jaina 
@@ -8,8 +9,11 @@ public class DialogueTrigger : MonoBehaviour
     public Message[] messages;
     public Actor[] actors;
 
+    public GameObject dialogueCanvas;
+
     public void StartDialogue()
     {
+        dialogueCanvas.SetActive(true);
         FindObjectOfType<DialogueManager>().OpenDialogue(messages, actors);
     }
 }

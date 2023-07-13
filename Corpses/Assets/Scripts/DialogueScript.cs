@@ -15,9 +15,12 @@ public class DialogueScript
     public string dialogueText { get; }
     public string choices { get; }
 
+    //public string name { get; }
+
+
     public DialogueScript (int dialogueId, int nextDialogueId, int dialogueSetId,
         string currentSpeaker, string leftSpeaker, string rightSpeaker, string leftImage, 
-        string rightImage, string dialogueText, string choices)
+        string rightImage, string dialogueText, string choices/*, string name*/)
     {
         this.dialogueId = dialogueId;
         this.nextDialogueId = nextDialogueId;
@@ -29,8 +32,9 @@ public class DialogueScript
         this.rightImage = rightImage;
         this.dialogueText = dialogueText;
         this.choices = choices;
+        //this .name = name;
     }
-    public DialogueScript(int dialogueId, int nextDialogueId, string currentSpeaker, string leftSpeaker, string rightSpeaker, string leftImage, string rightImage, string dialogueText, string choices)
+    public DialogueScript(int dialogueId, int nextDialogueId, string currentSpeaker, string leftSpeaker, string rightSpeaker, string leftImage, string rightImage, string dialogueText, string choices/*, string name*/)
     {
         // Constructor implementation
     }

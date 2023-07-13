@@ -17,5 +17,6 @@ public class DialogueReferenceScript
     public string rightImage;
     public string dialogueText;
     public string choices;
+    public string name;
 }
 

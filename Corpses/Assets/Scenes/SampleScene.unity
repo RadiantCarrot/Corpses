@@ -893,7 +893,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &295453236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1452,9 +1452,9 @@ RectTransform:
   m_Father: {fileID: 626630995}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.5212, y: -27.4187}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 789.4788, y: -27.4187}
   m_SizeDelta: {x: 1537.5178, y: 137.83}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &398414765
@@ -2281,6 +2281,8 @@ MonoBehaviour:
   actorName: {fileID: 1614019120}
   messageText: {fileID: 398414765}
   dialogueBox: {fileID: 626630995}
+  dialogueCanvas: {fileID: 295453235}
+  npc: {fileID: 1947688613}
 --- !u!1 &675973547
 GameObject:
   m_ObjectHideFlags: 0
@@ -3616,6 +3618,8 @@ MonoBehaviour:
   canInteract: 1
   dialogueManager: {fileID: 626630998}
   trigger: {fileID: 1947688612}
+  dialogueStarted: 0
+  dialogueCanvas: {fileID: 0}
 --- !u!1 &1086499528
 GameObject:
   m_ObjectHideFlags: 0
@@ -40293,10 +40297,10 @@ RectTransform:
   m_Father: {fileID: 626630995}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -607.8086, y: 81.73047}
-  m_SizeDelta: {x: 330.9432, y: 57.5465}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 563.35394, y: 76}
+  m_SizeDelta: {x: 1085.2682, y: 69.007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614019120
 MonoBehaviour:
@@ -41267,7 +41271,7 @@ MonoBehaviour:
   - dialogueId: 100201
     nextDialogueId: 100202
     dialogueSetId: 1002
-    currentSpeaker: Right
+    currentSpeaker: ShopKeeper
     leftSpeaker: Player
     rightSpeaker: ShopKeeper
     leftImage: PlayerSprite
@@ -41277,7 +41281,7 @@ MonoBehaviour:
   - dialogueId: 100202
     nextDialogueId: 100203
     dialogueSetId: 1002
-    currentSpeaker: Right
+    currentSpeaker: ShopKeeper
     leftSpeaker: Player
     rightSpeaker: ShopKeeper
     leftImage: PlayerSprite
@@ -41287,7 +41291,7 @@ MonoBehaviour:
   - dialogueId: 100203
     nextDialogueId: 100204
     dialogueSetId: 1002
-    currentSpeaker: Left
+    currentSpeaker: Player
     leftSpeaker: Player
     rightSpeaker: ShopKeeper
     leftImage: PlayerSprite
@@ -41297,7 +41301,7 @@ MonoBehaviour:
   - dialogueId: 100204
     nextDialogueId: 100205
     dialogueSetId: 1002
-    currentSpeaker: Right
+    currentSpeaker: ShopKeeper
     leftSpeaker: Player
     rightSpeaker: ShopKeeper
     leftImage: PlayerSprite
@@ -41307,7 +41311,7 @@ MonoBehaviour:
   - dialogueId: 100205
     nextDialogueId: 100206
     dialogueSetId: 1002
-    currentSpeaker: Right
+    currentSpeaker: ShopKeeper
     leftSpeaker: Player
     rightSpeaker: ShopKeeper
     leftImage: PlayerSprite
@@ -41317,7 +41321,7 @@ MonoBehaviour:
   - dialogueId: 100206
     nextDialogueId: 100207
     dialogueSetId: 1002
-    currentSpeaker: Right
+    currentSpeaker: ShopKeeper
     leftSpeaker: Player
     rightSpeaker: ShopKeeper
     leftImage: PlayerSprite
@@ -41327,7 +41331,7 @@ MonoBehaviour:
   - dialogueId: 100207
     nextDialogueId: 0
     dialogueSetId: 1002
-    currentSpeaker: Left
+    currentSpeaker: Player
     leftSpeaker: Player
     rightSpeaker: ShopKeeper
     leftImage: PlayerSprite
@@ -41339,6 +41343,7 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: e4a61c5500e99af4da2402db54c0fc00, type: 3}
   - name: ShopKeeper
     sprite: {fileID: 21300000, guid: 5f726edf0a390e849b6bbfabf43a1cb4, type: 3}
+  dialogueCanvas: {fileID: 295453235}
 --- !u!114 &1947688613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41351,9 +41356,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3561763b2540db54dbf46538de5b58df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canInteract: 1
+  canInteract: 0
   dialogueManager: {fileID: 626630998}
   trigger: {fileID: 1947688612}
+  dialogueStarted: 0
+  dialogueCanvas: {fileID: 295453235}
 --- !u!58 &1947688614
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41364,7 +41371,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
