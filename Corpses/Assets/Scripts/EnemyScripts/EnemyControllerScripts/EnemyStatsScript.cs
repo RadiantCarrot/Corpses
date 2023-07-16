@@ -13,12 +13,16 @@ public class EnemyStatsScript
     public float enemySpeed { get; }
     public int enemyDamage { get; }
 
+
     public float projectileSpeed { get; }
     public int projectileDamage { get; }
+    public float despawnTime { get; }
+
 
     public float aggroDistance { get; }
     public float attackDistance { get; }
     public float retreatDistance { get; }
+
 
     public int enemyGold { get; }
     public int enemyXp { get; }
@@ -27,7 +31,7 @@ public class EnemyStatsScript
     public bool isRanged { get; }
 
 
-    public EnemyStatsScript (string enemyId, string enemyName, string enemySprite, int enemyHealth, float enemySpeed, int enemyDamage, float projectileSpeed, int projectileDamage, float aggroDistance, float attackDistance, float retreatDistance, int enemyGold, int enemyXp, bool isRanged)
+    public EnemyStatsScript (string enemyId, string enemyName, string enemySprite, int enemyHealth, float enemySpeed, int enemyDamage, float projectileSpeed, int projectileDamage, float despawnTime, float aggroDistance, float attackDistance, float retreatDistance, int enemyGold, int enemyXp, bool isRanged)
     {
         this.enemyId = enemyId;
         this.enemyName = enemyName;
@@ -37,6 +41,7 @@ public class EnemyStatsScript
         this.enemyDamage = enemyDamage;
         this.projectileSpeed = projectileSpeed;
         this.projectileDamage = projectileDamage;
+        this.despawnTime = despawnTime;
         this.aggroDistance = aggroDistance;
         this.attackDistance = attackDistance;
         this.retreatDistance = retreatDistance;

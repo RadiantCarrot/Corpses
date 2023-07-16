@@ -17,6 +17,7 @@ public class EnemyReferenceScript
 
     public float projectileSpeed;   
     public int projectileDamage;
+    public float despawnTime;
 
     public float aggroDistance;
     public float attackDistance;

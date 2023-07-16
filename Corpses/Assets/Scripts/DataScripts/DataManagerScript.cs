@@ -61,7 +61,7 @@ public class DataManagerScript : MonoBehaviour
         List<EnemyStatsScript> enemyList = new List<EnemyStatsScript>(); // add data to list
         foreach (EnemyReferenceScript enemyRef in data.enemyList) // for each dataset in list
         {
-            EnemyStatsScript enemy = new EnemyStatsScript(enemyRef.enemyId, enemyRef.enemyName, enemyRef.enemySprite, enemyRef.enemyHealth, enemyRef.enemySpeed, enemyRef.enemyDamage, enemyRef.projectileSpeed, enemyRef.projectileDamage, enemyRef.aggroDistance, enemyRef.attackDistance, enemyRef.retreatDistance, enemyRef.enemyGold, enemyRef.enemyXp, enemyRef.isRanged); // pass in values
+            EnemyStatsScript enemy = new EnemyStatsScript(enemyRef.enemyId, enemyRef.enemyName, enemyRef.enemySprite, enemyRef.enemyHealth, enemyRef.enemySpeed, enemyRef.enemyDamage, enemyRef.projectileSpeed, enemyRef.projectileDamage, enemyRef.despawnTime, enemyRef.aggroDistance, enemyRef.attackDistance, enemyRef.retreatDistance, enemyRef.enemyGold, enemyRef.enemyXp, enemyRef.isRanged); // pass in values
             enemyList.Add(enemy); // add to list
         }
         DataAccessScript.SetEnemyList(enemyList); // set list

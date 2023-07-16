@@ -156,10 +156,9 @@ public class EnemySpawnScript : MonoBehaviour
     {
         foreach (EnemyStatsScript enemy in DataAccessScript.GetEnemyList())
         {
-            if (enemyName == enemy.enemyName)
+            if (enemyName == enemy.enemyName) // if enemy name in wave list matches enemy name in enemy list
             {
-
-                for (int i = 0; i < spawnCount; i++)
+                for (int i = 0; i < spawnCount; i++) // loop based on spawn count
                 {
                     GameObject enemyObject = Instantiate(enemyObj, Random.insideUnitSphere * spawnRadius + enemySpawnpoint.transform.position, enemySpawnpoint.transform.rotation); // instantiate enemy in a radius around room center
                     enemyObject.name = enemy.enemyName;
@@ -171,8 +170,9 @@ public class EnemySpawnScript : MonoBehaviour
                     enemyObject.GetComponent<EnemyHealthScript>().enemyHealth = enemy.enemyHealth;
                     enemyObject.GetComponent<EnemyMoveScript>().enemySpeed = enemy.enemySpeed;
                     enemyObject.GetComponent<EnemyAttackScript>().enemyDamage = enemy.enemyDamage;
-                    //enemyObject.GetComponent<EnemyAttackScript>().projectileSpeed = enemy.projectileSpeed;
-                    //enemyObject.GetComponent<EnemyAttackScript>().projectileDamage = enemy.projectileDamage;
+                    enemyObject.GetComponent<EnemyAttackScript>().projectileSpeed = enemy.projectileSpeed;
+                    enemyObject.GetComponent<EnemyAttackScript>().projectileDamage = enemy.projectileDamage;
+                    enemyObject.GetComponent<EnemyAttackScript>().despawnTime = enemy.despawnTime;
                     enemyObject.GetComponent<EnemyMoveScript>().aggroDistance = enemy.aggroDistance;
                     enemyObject.GetComponent<EnemyMoveScript>().attackDistance = enemy.attackDistance;
                     enemyObject.GetComponent<EnemyAttackScript>().attackDistance = enemy.attackDistance;

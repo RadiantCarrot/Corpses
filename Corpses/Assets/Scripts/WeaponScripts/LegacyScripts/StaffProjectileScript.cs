@@ -8,7 +8,7 @@ using UnityEngine;
 public class StaffProjectileScript : MonoBehaviour
 {
     Rigidbody2D rb;
-    public int bulletLifetime;
+    public float bulletLifetime;
 
     private Vector2 lastVelocity;
     private float currentSpeed;

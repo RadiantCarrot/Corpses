@@ -138,6 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   spawnDelay: 0.5
-  bulletForce: 10
-  bulletDamage: 20
-  bulletLifetime: 10
+  bulletForce: 0
+  bulletDamage: 0
+  bulletLifetime: 0

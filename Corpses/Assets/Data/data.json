@@ -4,11 +4,10 @@
       "dialogueId": "100101",
       "nextDialogueId": "100102",
       "dialogueSetId": "1001",
-      "currentSpeaker": "Player",
+      "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Welcome To Banana Blast!",
-      "choices": " -"
+      "dialogueText": "Welcome To Banana Blast!"
     },
     {
       "dialogueId": "100102",
@@ -17,28 +16,25 @@
       "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Would you like me to walk you through the controls of the game?",
-      "choices": " -"
+      "dialogueText": "Would you like me to walk you through the controls of the game?"
     },
     {
       "dialogueId": "100103",
-      "nextDialogueId": "-2",
+      "nextDialogueId": "100104",
       "dialogueSetId": "1001",
-      "currentSpeaker": "TutorialNpc",
+      "currentSpeaker": "Player",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "-1",
-      "choices": "Yes please #104 @No thanks... Just show me the controls please...#105"
+      "dialogueText": "Yes please"
     },
     {
       "dialogueId": "100104",
       "nextDialogueId": "100106",
       "dialogueSetId": "1001",
-      "currentSpeaker": "Player",
+      "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Yes please",
-      "choices": " -"
+      "dialogueText": "Fight endless waves of monsters and gain XP and gold along the way"
     },
     {
       "dialogueId": "100105",
@@ -47,8 +43,7 @@
       "currentSpeaker": "Player",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "No thanks... Just show me the controls, please...",
-      "choices": " -"
+      "dialogueText": "Wow cool! But how?"
     },
     {
       "dialogueId": "100106",
@@ -57,28 +52,25 @@
       "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Fight endless waves of monsters and gain XP and gold along the way",
-      "choices": " -"
+      "dialogueText": "The Controls for the game are W,A,S,D"
     },
     {
       "dialogueId": "100107",
       "nextDialogueId": "100108",
       "dialogueSetId": "1001",
-      "currentSpeaker": "Player",
+      "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Wow cool! But how?",
-      "choices": " -"
+      "dialogueText": "Use your mouse to aim and shoot at enemies!"
     },
     {
       "dialogueId": "100108",
       "nextDialogueId": "100109",
       "dialogueSetId": "1001",
-      "currentSpeaker": "TutorialNpc",
+      "currentSpeaker": "Player",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "The Controls for the game are W,A,S,D",
-      "choices": " -"
+      "dialogueText": "Where do I buy weapons?"
     },
     {
       "dialogueId": "100109",
@@ -87,118 +79,88 @@
       "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Use your mouse to aim and shoot at enemies!",
-      "choices": " -"
+      "dialogueText": "Weapons can be unlocked and bought at the magic shop!"
     },
     {
       "dialogueId": "100110",
       "nextDialogueId": "100111",
       "dialogueSetId": "1001",
-      "currentSpeaker": "Player",
+      "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Where do I buy weapons?",
-      "choices": " -"
+      "dialogueText": "Alright , hope you have a blast out there!"
     },
     {
       "dialogueId": "100111",
       "nextDialogueId": "100112",
       "dialogueSetId": "1001",
-      "currentSpeaker": "TutorialNpc",
-      "leftImage": "PlayerSprite",
-      "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Weapons can be unlocked and bought at the magic shop!",
-      "choices": " -"
-    },
-    {
-      "dialogueId": "100112",
-      "nextDialogueId": "100113",
-      "dialogueSetId": "TutorialNpc",
-      "currentSpeaker": "Right",
-      "leftImage": "PlayerSprite",
-      "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Alright , hope you have a blast out there!",
-      "choices": " -"
-    },
-    {
-      "dialogueId": "100113",
-      "nextDialogueId": " -",
-      "dialogueSetId": "1001",
       "currentSpeaker": "Player",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Thank you!",
-      "choices": " -"
+      "dialogueText": "Thank you!"
     },
     {
-      "dialogueId": "100201",
+      "dialogueId": "100112",
       "nextDialogueId": "100202",
       "dialogueSetId": "1002",
       "currentSpeaker": "Shopkeeper",
       "leftImage": "PlayerSprite",
       "rightImage": "ShopkeeperSprite",
-      "dialogueText": "Hello! Welcome to my magic shop!",
-      "choices": " -"
+      "dialogueText": "Hello! Welcome to my magic shop!"
     },
     {
-      "dialogueId": "100202",
+      "dialogueId": "100113",
       "nextDialogueId": "100203",
       "dialogueSetId": "1002",
       "currentSpeaker": "Shopkeeper",
       "leftImage": "PlayerSprite",
       "rightImage": "ShopkeeperSprite",
-      "dialogueText": "How may I assist you today?",
-      "choices": " -"
+      "dialogueText": "How may I assist you today?"
     },
     {
-      "dialogueId": "100203",
+      "dialogueId": "100201",
       "nextDialogueId": "100204",
       "dialogueSetId": "1002",
       "currentSpeaker": "Player",
       "leftImage": "PlayerSprite",
       "rightImage": "ShopkeeperSprite",
-      "dialogueText": "I'd like to buy a weapon.",
-      "choices": " -"
+      "dialogueText": "I'd like to buy a weapon."
     },
     {
-      "dialogueId": "100204",
+      "dialogueId": "100202",
       "nextDialogueId": "100205",
       "dialogueSetId": "1002",
       "currentSpeaker": "Shopkeeper",
       "leftImage": "PlayerSprite",
       "rightImage": "ShopkeeperSprite",
-      "dialogueText": "Take a look around the shop.",
-      "choices": " -"
+      "dialogueText": "Take a look around the shop."
     },
     {
-      "dialogueId": "100205",
+      "dialogueId": "100203",
       "nextDialogueId": "100206",
       "dialogueSetId": "1002",
       "currentSpeaker": "Shopkeeper",
       "leftImage": "PlayerSprite",
       "rightImage": "ShopkeeperSprite",
-      "dialogueText": "New weapons unlock as you level up! ",
-      "choices": " -"
+      "dialogueText": "New weapons unlock as you level up! "
     },
     {
-      "dialogueId": "100206",
+      "dialogueId": "100204",
       "nextDialogueId": "100207",
       "dialogueSetId": "1002",
       "currentSpeaker": "Shopkeeper",
       "leftImage": "PlayerSprite",
       "rightImage": "ShopkeeperSprite",
-      "dialogueText": "Hope you find something that will help you along your quest!",
-      "choices": " -"
+      "dialogueText": "Hope you find something that will help you along your quest!"
     },
     {
-      "dialogueId": "100207",
-      "nextDialogueId": " -",
+      "dialogueId": "100205",
+      "nextDialogueId": "",
       "dialogueSetId": "1002",
       "currentSpeaker": "Player",
       "leftImage": "PlayerSprite",
       "rightImage": "ShopkeeperSprite",
-      "dialogueText": "Thank you!",
-      "choices": " -"
+      "dialogueText": "Thank you!"
     }
   ],
   "enemyList": [
@@ -211,6 +173,7 @@
       "enemyDamage": "20",
       "projectileSpeed": " -",
       "projectileDamage": " -",
+      "despawnTime": " -",
       "aggroDistance": "16",
       "attackDistance": "3",
       "retreatDistance": " -",
@@ -225,8 +188,9 @@
       "enemyHealth": "200",
       "enemySpeed": "5",
       "enemyDamage": "20",
-      "projectileSpeed": " -",
+      "projectileSpeed": "0.2",
       "projectileDamage": "5",
+      "despawnTime": "10",
       "aggroDistance": "12",
       "attackDistance": "7",
       "retreatDistance": " -",
@@ -243,6 +207,7 @@
       "enemyDamage": "20",
       "projectileSpeed": "10",
       "projectileDamage": "20",
+      "despawnTime": "10",
       "aggroDistance": "12",
       "attackDistance": "10",
       "retreatDistance": "7",
@@ -255,10 +220,11 @@
       "enemyName": "Enemy Four",
       "enemySprite": "EnemyFourSprite",
       "enemyHealth": "120",
-      "enemySpeed": "0",
-      "enemyDamage": "0",
-      "projectileSpeed": "0",
-      "projectileDamage": "0",
+      "enemySpeed": " -",
+      "enemyDamage": " -",
+      "projectileSpeed": " -",
+      "projectileDamage": " -",
+      "despawnTime": " -",
       "aggroDistance": " -",
       "attackDistance": " -",
       "retreatDistance": " -",
@@ -879,7 +845,7 @@
       "projectileDamage": "50",
       "projectileSpeed": "10",
       "projectileType": "regular",
-      "despawnTime": " -",
+      "despawnTime": "10",
       "startEquipped": "1"
     },
     {

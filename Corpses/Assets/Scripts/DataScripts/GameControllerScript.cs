@@ -42,9 +42,7 @@ public class GameControllerScript : MonoBehaviour
 
         SetPlayer();
         SetWeapon();
-        SetTimer();
         SetShop();
-        SetDialogue();
     }
 
     void SetPlayer()
@@ -105,11 +103,6 @@ public class GameControllerScript : MonoBehaviour
         }
     }
 
-    void SetTimer()
-    {
-
-    }
-
     void SetShop()
     {
         shopSpawnpoints = GameObject.FindGameObjectsWithTag("ShopSpawnpoint"); // create array of shop spawnpoints
@@ -134,10 +127,5 @@ public class GameControllerScript : MonoBehaviour
             shopObject.GetComponent<ItemDisplayScript>().unlockLevel = itemList[i].unlockLevel;
             shopObject.GetComponent<ItemDisplayScript>().goldRequirement = itemList[i].goldRequirement;
         }
-    }
-
-    void SetDialogue()
-    {
-
     }
 }

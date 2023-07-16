@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class StaffProjectileScript2 : MonoBehaviour
 {
-    public int bulletDamage = 150;
+    public int bulletDamage;
 
     // Start is called before the first frame update
     void Start()

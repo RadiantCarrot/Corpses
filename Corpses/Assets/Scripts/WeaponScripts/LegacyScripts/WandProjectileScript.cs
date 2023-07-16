@@ -8,12 +8,15 @@ public class WandProjectileScript : MonoBehaviour
 {
     Rigidbody2D rb;
 
-    public int bulletDamage = 40;
+    public int bulletDamage;
+    public float bulletLifetime;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        StartCoroutine(Despawn());
     }
 
     // Update is called once per frame
@@ -54,6 +57,12 @@ public class WandProjectileScript : MonoBehaviour
             enemy.TakeDamage(bulletDamage); // damage enemy by bulletdamage amount
         }
 
+        Destroy(gameObject); // destroy bullet
+    }
+
+    IEnumerator Despawn()
+    {
+        yield return new WaitForSeconds(bulletLifetime);
         Destroy(gameObject); // destroy bullet
     }
 }

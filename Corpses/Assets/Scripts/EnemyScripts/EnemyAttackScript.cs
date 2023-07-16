@@ -13,13 +13,17 @@ public class EnemyAttackScript : MonoBehaviour
     public bool canAttack = true;
     public int enemyDamage;
 
+    public int projectileDamage;
+    public float projectileSpeed;
+    public float despawnTime;
+
     public bool isRanged;
+
 
     // melee parameters
     public GameObject enemyMeleeProjectile;
     private float meleeProjectileCount = 1;
     private float projectileSpread = 0.8f;
-    public float projectileForce = 0.1f;
     public Transform firePoint;
 
     private float meleeTimer;
@@ -64,11 +68,14 @@ public class EnemyAttackScript : MonoBehaviour
 
         if (followTarget != null) // if player exists
         {
-            if (isRanged == false)
+            if (isRanged == false) // check ranged status
             {
-                if (Vector2.Distance(transform.position, followTarget.position) <= attackDistance) // if player is within attack distance of enemy
+                if (name != "Enemy One") // 
                 {
-                    MeleeAttack(); // enemy can attack
+                    if (Vector2.Distance(transform.position, followTarget.position) <= attackDistance) // if player is within attack distance of enemy
+                    {
+                        MeleeAttack(); // enemy can attack
+                    }
                 }
             }
             else
@@ -90,9 +97,12 @@ public class EnemyAttackScript : MonoBehaviour
             {
                 GameObject newBullet = Instantiate(enemyMeleeProjectile, firePoint.position, firePoint.rotation); // create projectile
                 Vector2 dir = followTarget.transform.position - transform.position; // get direction of player
-                                                                                    //Vector2 dir = transform.rotation * Vector2.right; // get bullet direction
+                //Vector2 dir = transform.rotation * Vector2.right; // get bullet direction
                 Vector2 pdir = Vector2.Perpendicular(dir) * Random.Range(-projectileSpread, projectileSpread); // get projectile spread
-                newBullet.GetComponent<Rigidbody2D>().velocity = (dir + pdir) * projectileForce; // projectiles go pew
+                newBullet.GetComponent<Rigidbody2D>().velocity = (dir + pdir) * projectileSpeed; // projectiles go pew
+
+                newBullet.GetComponent<Enemy2ProjectileScript>().bulletDamage = projectileDamage; // set projectile damage
+                newBullet.GetComponent<Enemy2ProjectileScript>().bulletLifetime = despawnTime; // set projectile lifetime
             }
         }
     }
@@ -101,7 +111,11 @@ public class EnemyAttackScript : MonoBehaviour
     {
         for (int i = 0; i < rangedProjectileCount; i++) // for each projectile
         {
-            Instantiate(enemyRangedProjectile, Random.insideUnitSphere * spawnRadius + transform.position, transform.rotation); // instantiate in a radius around self
+            GameObject newBullet = Instantiate(enemyRangedProjectile, Random.insideUnitSphere * spawnRadius + transform.position, transform.rotation); // instantiate in a radius around self
+
+            newBullet.GetComponent<Enemy3ProjectileScript>().bulletForce = projectileSpeed; // set projectile speed
+            newBullet.GetComponent<Enemy3ProjectileScript>().bulletDamage = projectileDamage; // set projectile damage
+            newBullet.GetComponent<Enemy3ProjectileScript>().bulletLifetime = despawnTime; // set projectile lifetime
         }
     }
 
@@ -110,7 +124,7 @@ public class EnemyAttackScript : MonoBehaviour
         PlayerHealthScript player = hitInfo.gameObject.GetComponent<PlayerHealthScript>(); // check if bullet hits player
 
         if (hitInfo.gameObject.CompareTag("Player")) // if there is player
-        {
+        { 
             player.TakeDamage(enemyDamage); // damage player by enemy damage amount
         }
     }

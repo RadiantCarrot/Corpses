@@ -82,10 +82,16 @@ public class WeaponShootScript : MonoBehaviour
     {
         GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation); // create bullet
         newBullet.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed; // bullet go pew
+
+        newBullet.GetComponent<WandProjectileScript>().bulletDamage = projectileDamage; // set projectile damage
+        newBullet.GetComponent<WandProjectileScript>().bulletLifetime = despawnTime; // set projectile lifetime
     }
     void BouncyShot()
     {
         GameObject newBullet = Instantiate(bulletBouncyPrefab, firePoint.position, firePoint.rotation); // create bullet
         newBullet.GetComponent<Rigidbody2D>().velocity = transform.right * projectileSpeed; // bullet go pew
+
+        newBullet.GetComponentInChildren<StaffProjectileScript2>().bulletDamage = projectileDamage; // set projectile damage
+        newBullet.GetComponent<StaffProjectileScript>().bulletLifetime = despawnTime; // set projectile lifetime
     }
 }

@@ -11,7 +11,7 @@ public class Enemy3ProjectileScript : MonoBehaviour
 
     public float spawnDelay;
     public float bulletForce;
-    public int bulletDamage = 20;
+    public int bulletDamage;
 
     public float bulletLifetime;
 

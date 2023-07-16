@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class Enemy2ProjectileScript : MonoBehaviour
 {
-    public int bulletDamage = 20;
-    public int bulletLifetime;
+    public int bulletDamage;
+    public float bulletLifetime;
 
     // Start is called before the first frame update
     void Start()
