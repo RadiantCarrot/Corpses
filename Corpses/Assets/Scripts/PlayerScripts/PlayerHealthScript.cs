@@ -45,6 +45,7 @@ public class PlayerHealthScript : MonoBehaviour
             analyticsScript.SetPlaytime(); // set playtime
             endScreenUI.SetActive(true); // activate endscreen
             Destroy(gameObject); // die
+            FindObjectOfType<AudioManager>().Play("BadGameOver");//Added by Jaina - Audio to be played when player dies
         }
     }
 }

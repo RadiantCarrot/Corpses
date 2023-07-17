@@ -44,6 +44,7 @@ public class EnemyHealthScript : MonoBehaviour
             analyticsScript.EnemyCounter(1); // add enemy death to counter
 
             Destroy(gameObject); //die
+            FindObjectOfType<AudioManager>().Play("EnemyKilled"); // Added by Jaina - audio to be played when enemy dies
         }
     }
 
