@@ -4150,7 +4150,6 @@ GameObject:
   - component: {fileID: 1077654553}
   - component: {fileID: 1077654550}
   - component: {fileID: 1077654554}
-  - component: {fileID: 1077654555}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4211,6 +4210,7 @@ MonoBehaviour:
   isMoving: 0
   facingRight: 1
   playerSprite: {fileID: 1309832229}
+  ParticleSystem: {fileID: 3420706844063028527, guid: 61a77e842d1e2944985d4e06e19ffb1b, type: 3}
 --- !u!58 &1077654553
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4245,24 +4245,6 @@ MonoBehaviour:
   waveText: {fileID: 1038864079}
   endScreenUI: {fileID: 376967865}
   analyticsScript: {fileID: 619880217}
---- !u!114 &1077654555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1077654544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3561763b2540db54dbf46538de5b58df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canInteract: 1
-  dialogueManager: {fileID: 626630998}
-  trigger: {fileID: 1947688612}
-  dialogueStarted: 0
-  dialogueCanvas: {fileID: 0}
-  shopkeeperText: {fileID: 0}
 --- !u!1 &1086499528
 GameObject:
   m_ObjectHideFlags: 0

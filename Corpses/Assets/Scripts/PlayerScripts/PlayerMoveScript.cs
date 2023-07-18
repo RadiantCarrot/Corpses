@@ -17,6 +17,8 @@ public class PlayerMoveScript : MonoBehaviour
 
     Rigidbody2D rb;
 
+    public GameObject ParticleSystem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,8 @@ public class PlayerMoveScript : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>(); // assigns rigidbody to character
         activeMoveSpeed = moveSpeed;
+
+        InvokeRepeating("SpawnParticle", 0f, 0.25f);
     }
 
     // Update is called once per frame
@@ -54,5 +58,15 @@ public class PlayerMoveScript : MonoBehaviour
         playerSprite.transform.localScale = currentScale; // flip player sprite
 
         facingRight = !facingRight;
+    }
+
+    void SpawnParticle()
+    {
+        float x = rb.velocity.x;
+        float y = rb.velocity.y;
+        if (rb.velocity.x == 0 && rb.velocity.y == 0)
+        {
+            Instantiate(ParticleSystem, transform.localPosition, Quaternion.identity);
+        }
     }
 }
