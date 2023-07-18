@@ -13,8 +13,6 @@ public static class DataAccessScript
     public static List<ShopStatsScript> shopItemList;
     public static List<DialogueScript> dialogueList;
 
-
-
     public static List<PlayerStatsScript> GetPlayerList()
     {
         return playerList;
@@ -115,5 +113,10 @@ public static class DataAccessScript
     public static DialogueScript GetDialogueById(int dialogueId)
     {
         return dialogueList.Find(i => i.dialogueId == dialogueId);
+    }
+
+    public static List<DialogueScript> GetDialogueBySetId(int setId)
+    {
+        return dialogueList.FindAll(i => i.dialogueSetId == setId);
     }
 }

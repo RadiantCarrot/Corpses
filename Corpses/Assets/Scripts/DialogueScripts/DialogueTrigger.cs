@@ -18,11 +18,61 @@ public class DialogueTrigger : MonoBehaviour
 
     public void Start()
     {
+        //List<DialogueScript> dialogueList = DataAccessScript.GetDialogueList();
+        //List<Message> messageList = new List<Message>();
+
+        //foreach(DialogueScript dialogue in dialogueList)
+        //{
+        //    Message newMessage = new Message(dialogue.dialogueId, dialogue.nextDialogueId, dialogue.dialogueSetId, dialogue.currentSpeaker, dialogue.leftImage, dialogue.rightImage, dialogue.dialogueText);
+        //    messageList.Add(newMessage);
+        //}
+
+        //messages = messageList.ToArray();
 
     }
 
     public void StartDialogue()
     {
+        if (npc.isShopkeeper == false) // if NPC is tutorial NPC
+        {
+            List<DialogueScript> dialogueList = DataAccessScript.GetDialogueBySetId(1001);
+            List<Message> messageList = new List<Message>();
+
+            foreach (DialogueScript dialogue in dialogueList)
+            {
+                Message newMessage = new Message(dialogue.dialogueId, dialogue.nextDialogueId, dialogue.dialogueSetId, dialogue.currentSpeaker, dialogue.leftImage, dialogue.rightImage, dialogue.dialogueText);
+                messageList.Add(newMessage);
+            }
+
+            messages = messageList.ToArray();
+        }
+
+        else // if NPC is shopkeeper
+        {
+            List<DialogueScript> dialogueList = DataAccessScript.GetDialogueBySetId(1002);
+            List<Message> messageList = new List<Message>();
+
+            foreach (DialogueScript dialogue in dialogueList)
+            {
+                Message newMessage = new Message(dialogue.dialogueId, dialogue.nextDialogueId, dialogue.dialogueSetId, dialogue.currentSpeaker, dialogue.leftImage, dialogue.rightImage, dialogue.dialogueText);
+                messageList.Add(newMessage);
+            }
+
+            messages = messageList.ToArray();
+        }
+
+        //List<DialogueScript> dialogueList = DataAccessScript.GetDialogueList();
+        //List<Message> messageList = new List<Message>();
+
+        //foreach (DialogueScript dialogue in dialogueList)
+        //{
+        //    Message newMessage = new Message(dialogue.dialogueId, dialogue.nextDialogueId, dialogue.dialogueSetId, dialogue.currentSpeaker, dialogue.leftImage, dialogue.rightImage, dialogue.dialogueText);
+        //    messageList.Add(newMessage);
+        //}
+
+        //messages = messageList.ToArray();
+
+
         if (npc.canInteract == true)
         {
             dialogueCanvas.SetActive(true);
@@ -50,6 +100,17 @@ public class Message
     public string rightImage;
     public string dialogueText;
     internal int actorId;
+
+    public Message (int dialogueId, int nextDialogueId, int dialogueSetId, string currentSpeaker, string leftImage, string rightImage, string dialogueText)
+    {
+        this.dialogueId = dialogueId;
+        this.nextDialogueId = nextDialogueId;
+        this.dialogueSetId = dialogueSetId;
+        this.currentSpeaker = currentSpeaker;
+        this.leftImage = leftImage;
+        this.rightImage = rightImage;
+        this.dialogueText = dialogueText;
+    }
 }
 
 [System.Serializable]

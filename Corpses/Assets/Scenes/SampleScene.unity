@@ -2856,6 +2856,7 @@ MonoBehaviour:
   dialogueStarted: 0
   dialogueCanvas: {fileID: 46983051}
   shopkeeperText: {fileID: 1479908423}
+  isShopkeeper: 0
 --- !u!58 &687339461
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -42728,56 +42729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e2d3227f661dd4785c1a0d806c57c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messages:
-  - dialogueId: 100201
-    nextDialogueId: 100202
-    dialogueSetId: 1002
-    currentSpeaker: ShopKeeper
-    leftImage: PlayerSprite
-    rightImage: ShopKeeperSprite
-    dialogueText: Hello! Welcome to my magic shop!
-  - dialogueId: 100202
-    nextDialogueId: 100203
-    dialogueSetId: 1002
-    currentSpeaker: ShopKeeper
-    leftImage: PlayerSprite
-    rightImage: ShopKeeperSprite
-    dialogueText: How may I assist you today?
-  - dialogueId: 100203
-    nextDialogueId: 100204
-    dialogueSetId: 1002
-    currentSpeaker: Player
-    leftImage: PlayerSprite
-    rightImage: ShopKeeperSprite
-    dialogueText: I'd like to buy a weapon.
-  - dialogueId: 100204
-    nextDialogueId: 100205
-    dialogueSetId: 1002
-    currentSpeaker: ShopKeeper
-    leftImage: PlayerSprite
-    rightImage: ShopKeeperSprite
-    dialogueText: Take a look around the shop.
-  - dialogueId: 100205
-    nextDialogueId: 100206
-    dialogueSetId: 1002
-    currentSpeaker: ShopKeeper
-    leftImage: PlayerSprite
-    rightImage: ShopKeeperSprite
-    dialogueText: 'New weapons unlock as you level up! '
-  - dialogueId: 100206
-    nextDialogueId: 100207
-    dialogueSetId: 1002
-    currentSpeaker: ShopKeeper
-    leftImage: PlayerSprite
-    rightImage: ShopKeeperSprite
-    dialogueText: Hope you find something that will help you along your quest!
-  - dialogueId: 100207
-    nextDialogueId: 0
-    dialogueSetId: 1002
-    currentSpeaker: Player
-    leftImage: PlayerSprite
-    rightImage: ShopKeeperSprite
-    dialogueText: Thank you!
+  messages: []
   actors:
   - name: Player
     sprite: {fileID: 21300000, guid: e4a61c5500e99af4da2402db54c0fc00, type: 3}
@@ -42804,6 +42756,7 @@ MonoBehaviour:
   dialogueStarted: 0
   dialogueCanvas: {fileID: 295453235}
   shopkeeperText: {fileID: 1479908423}
+  isShopkeeper: 1
 --- !u!58 &1947688614
 CircleCollider2D:
   m_ObjectHideFlags: 0

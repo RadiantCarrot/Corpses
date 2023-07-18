@@ -13,6 +13,7 @@ public class NPC : MonoBehaviour
 
     public GameObject dialogueCanvas;
     public TMP_Text shopkeeperText;
+    public bool isShopkeeper;
 
     private void Update()
     {

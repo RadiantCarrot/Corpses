@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DialogueScript
 {
     public int dialogueId { get; }
@@ -11,7 +12,7 @@ public class DialogueScript
     public string leftImage { get; }
     public string rightImage { get; }
     public string dialogueText { get; }
-   
+
 
     //public string name { get; }
 
@@ -29,8 +30,5 @@ public class DialogueScript
         this.dialogueText = dialogueText;
     }
 
-    public DialogueScript(int dialogueId, int nextDialogueId, string currentSpeaker,  string leftImage, string rightImage, string dialogueText)
-    {
-        // Constructor implementation
-    }
+    
 }
