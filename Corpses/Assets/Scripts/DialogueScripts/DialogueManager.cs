@@ -100,6 +100,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             //Debug.Log("Conversation ended!");
+            Time.timeScale = 1;
             isActive = false;
             dialogueCanvas.SetActive(false);
             npc.dialogueStarted = false;

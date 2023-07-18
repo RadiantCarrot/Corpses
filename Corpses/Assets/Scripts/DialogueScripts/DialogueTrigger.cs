@@ -16,23 +16,10 @@ public class DialogueTrigger : MonoBehaviour
 
     public TMP_Text shopkeeperText;
 
-    public void Start()
-    {
-        //List<DialogueScript> dialogueList = DataAccessScript.GetDialogueList();
-        //List<Message> messageList = new List<Message>();
-
-        //foreach(DialogueScript dialogue in dialogueList)
-        //{
-        //    Message newMessage = new Message(dialogue.dialogueId, dialogue.nextDialogueId, dialogue.dialogueSetId, dialogue.currentSpeaker, dialogue.leftImage, dialogue.rightImage, dialogue.dialogueText);
-        //    messageList.Add(newMessage);
-        //}
-
-        //messages = messageList.ToArray();
-
-    }
-
     public void StartDialogue()
     {
+        Time.timeScale = 0;
+
         if (npc.isShopkeeper == false) // if NPC is tutorial NPC
         {
             List<DialogueScript> dialogueList = DataAccessScript.GetDialogueBySetId(1001);
