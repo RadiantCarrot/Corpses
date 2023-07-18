@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject playerAvatar;
     public GameObject shopkeeperAvatar;
+    public GameObject tutorialNpcAvatar;
 
     public TMP_Text shopkeeperText;
 
