@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     public static bool isActive = false;
 
     public GameObject dialogueCanvas;
-    public NPC npc; //SCRIPT
+    public NPC npc; //NPC SCRIPT
 
     public GameObject playerAvatar;
     public GameObject shopkeeperAvatar;
@@ -97,6 +97,7 @@ public class DialogueManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && isActive == true)
         {
             NextMessage();
+            FindObjectOfType<AudioManager>().Play("DialogueClick");
         }
     }
 }

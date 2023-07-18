@@ -2801,18 +2801,11 @@ MonoBehaviour:
     currentSpeaker: TutorialNpc
     leftImage: PlayerSprite
     rightImage: TutorialNpcSprite
-    dialogueText: Thank you!
-  - dialogueId: 100107
-    nextDialogueId: 100108
-    dialogueSetId: 1001
-    currentSpeaker: Player
-    leftImage: PlayerSprite
-    rightImage: TutorialNpcSprite
     dialogueText: Use your mouse to aim and shoot at enemies!
   - dialogueId: 100108
     nextDialogueId: 100109
     dialogueSetId: 1001
-    currentSpeaker: TutorialNpc
+    currentSpeaker: Player
     leftImage: PlayerSprite
     rightImage: TutorialNpcSprite
     dialogueText: Where do I buy weapons?
@@ -51247,7 +51240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3744239093299078830, guid: 303d7695668fbee49ba53862a267a434, type: 3}
       propertyPath: sounds.Array.data[0].volume
-      value: 0.55
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 3744239093299078830, guid: 303d7695668fbee49ba53862a267a434, type: 3}
       propertyPath: sounds.Array.data[1].volume

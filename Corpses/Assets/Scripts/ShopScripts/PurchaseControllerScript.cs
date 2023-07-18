@@ -80,6 +80,7 @@ public class PurchaseControllerScript : MonoBehaviour
                         if (weapon.name == "Spell Book") // if player has purchased spell book
                         {
                             winPanel.SetActive(true); // display player win panel
+                            FindObjectOfType<AudioManager>().Play("GoodGameOver");
                         }
                     }
 

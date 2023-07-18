@@ -562,7 +562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1264450232ccced47b422628cce51ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
 --- !u!1 &1040466214
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1264450232ccced47b422628cce51ad7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 0}
 --- !u!1 &1257579062
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,8 +799,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3744239093299078830, guid: 303d7695668fbee49ba53862a267a434, type: 3}
+      propertyPath: sounds.Array.data[6].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b34490ca65894541a44e7f9ff71bab4, type: 3}
+    - target: {fileID: 3744239093299078830, guid: 303d7695668fbee49ba53862a267a434, type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744239093299078830, guid: 303d7695668fbee49ba53862a267a434, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744239093299078830, guid: 303d7695668fbee49ba53862a267a434, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.799
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744239093299078830, guid: 303d7695668fbee49ba53862a267a434, type: 3}
       propertyPath: sounds.Array.data[5].volume
       value: 0.585
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744239093299078830, guid: 303d7695668fbee49ba53862a267a434, type: 3}
+      propertyPath: sounds.Array.data[6].volume
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3744239093299078831, guid: 303d7695668fbee49ba53862a267a434, type: 3}
       propertyPath: m_Name
