@@ -49,10 +49,10 @@ public class GameControllerScript : MonoBehaviour
     {
         foreach (PlayerStatsScript player in DataAccessScript.GetPlayerList())
         {
-            //AssetManagerScript.LoadSprite(player.playerSprite + ".png", (Sprite s) =>
-            //{
-            //    playerGFX.GetComponent<SpriteRenderer>().sprite = s;
-            //});
+            AssetManagerScript.LoadSprite(player.playerSprite + ".png", (Sprite s) =>
+            {
+                playerGFX.GetComponent<SpriteRenderer>().sprite = s;
+            });
         }
     }
 

@@ -167,7 +167,7 @@
     {
       "enemyId": "1",
       "enemyName": "Enemy One",
-      "enemySprite": "EnemyOneSprite",
+      "enemySprite": "EnemySprite1R",
       "enemyHealth": "100",
       "enemySpeed": "3",
       "enemyDamage": "20",
@@ -184,41 +184,41 @@
     {
       "enemyId": "2",
       "enemyName": "Enemy Two",
-      "enemySprite": "EnemyTwoSprite",
+      "enemySprite": "EnemySprite2R",
       "enemyHealth": "200",
       "enemySpeed": "5",
       "enemyDamage": "20",
       "projectileSpeed": "0.2",
       "projectileDamage": "5",
-      "despawnTime": "10",
+      "despawnTime": "8",
       "aggroDistance": "12",
       "attackDistance": "7",
       "retreatDistance": " -",
       "enemyGold": "2",
-      "enemyXp": "30",
+      "enemyXp": "40",
       "isRanged": "0"
     },
     {
       "enemyId": "3",
       "enemyName": "Enemy Three",
-      "enemySprite": "EnemyThreeSprite",
+      "enemySprite": "EnemySprite3R",
       "enemyHealth": "150",
       "enemySpeed": "4",
       "enemyDamage": "20",
       "projectileSpeed": "10",
       "projectileDamage": "20",
-      "despawnTime": "10",
+      "despawnTime": "8",
       "aggroDistance": "12",
       "attackDistance": "10",
       "retreatDistance": "7",
       "enemyGold": "2",
-      "enemyXp": "30",
+      "enemyXp": "40",
       "isRanged": "1"
     },
     {
       "enemyId": "4",
       "enemyName": "Enemy Four",
-      "enemySprite": "EnemyFourSprite",
+      "enemySprite": "EnemySprite4R",
       "enemyHealth": "120",
       "enemySpeed": " -",
       "enemyDamage": " -",
@@ -235,7 +235,7 @@
   ],
   "playerList": [
     {
-      "playerSprite": "PlayerSprite",
+      "playerSprite": "PlayerSpriteR",
       "playerHealth": "100",
       "playerSpeed": "10"
     }
@@ -247,7 +247,7 @@
       "weaponId": "2",
       "weaponName": "Wizard Staff",
       "unlockLevel": "5",
-      "goldRequirement": "10"
+      "goldRequirement": "20"
     },
     {
       "shopItemId": "2",
@@ -255,7 +255,7 @@
       "weaponId": "3",
       "weaponName": "Magic Crystal",
       "unlockLevel": "8",
-      "goldRequirement": "50"
+      "goldRequirement": "40"
     },
     {
       "shopItemId": "3",
@@ -263,7 +263,7 @@
       "weaponId": "4",
       "weaponName": "Spell Book",
       "unlockLevel": "10",
-      "goldRequirement": "100"
+      "goldRequirement": "60"
     }
   ],
   "timerList": [

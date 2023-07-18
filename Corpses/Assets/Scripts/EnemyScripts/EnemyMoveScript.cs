@@ -82,12 +82,12 @@ public class EnemyMoveScript : MonoBehaviour
         Vector3 perp = Vector3.Cross(fwd, targetDir); // check for axis direction
         float dir = Vector3.Dot(perp, up); // check for the other axis direction
 
-        if (dir > 0f && !facingRight) // if player is to the right and face right check is false, flip
+        if (dir < 0f && !facingRight) // if player is to the right and face right check is false, flip
         {
             Flip();
             return 1f; // target is on the right
         }
-        else if (dir < 0f && facingRight) // if player is to the left and face right check is true, flip
+        else if (dir > 0f && facingRight) // if player is to the left and face right check is true, flip
         {
             Flip();
             return -1f; // target is on the left
