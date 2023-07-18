@@ -18,7 +18,7 @@ public class DialogueScript
 
     public DialogueScript (int dialogueId, int nextDialogueId, int dialogueSetId,
         string currentSpeaker, string leftImage, 
-        string rightImage, string dialogueText/*, string name*/)
+        string rightImage, string dialogueText)
     {
         this.dialogueId = dialogueId;
         this.nextDialogueId = nextDialogueId;
@@ -27,10 +27,9 @@ public class DialogueScript
         this.leftImage = leftImage;
         this.rightImage = rightImage;
         this.dialogueText = dialogueText;
-       
-        //this .name = name;
     }
-    public DialogueScript(int dialogueId, int nextDialogueId, string currentSpeaker,  string leftImage, string rightImage, string dialogueText/*, string name*/)
+
+    public DialogueScript(int dialogueId, int nextDialogueId, string currentSpeaker,  string leftImage, string rightImage, string dialogueText)
     {
         // Constructor implementation
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 // Jaina 
 public class DialogueTrigger : MonoBehaviour
@@ -14,6 +15,11 @@ public class DialogueTrigger : MonoBehaviour
     public NPC npc;
 
     public TMP_Text shopkeeperText;
+
+    public void Start()
+    {
+
+    }
 
     public void StartDialogue()
     {

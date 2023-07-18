@@ -30,7 +30,7 @@ public class PlayerMoveScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>(); // assigns rigidbody to character
         activeMoveSpeed = moveSpeed;
 
-        InvokeRepeating("SpawnParticle", 0f, 0.25f);
+        //InvokeRepeating("SpawnParticle", 0f, 0.25f);
     }
 
     // Update is called once per frame

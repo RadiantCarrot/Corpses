@@ -12,8 +12,8 @@ public class CSVWriterScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //filename = Application.dataPath + "Data/analytics.csv";
-        filename = Application.dataPath + "/Data/analytics.csv";
+        //filename = Application.DataPath + "/Data/analytics.csv";
+        filename = Application.persistentDataPath + "analytics.csv";
     }
 
     // Update is called once per frame

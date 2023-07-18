@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     public RectTransform dialogueBox;
 
     Message[] currentMessages;
+    string[] currentMessage;
     Actor[] currentActors;
     int activeMessage = 0;
     int activeName = 0;
@@ -28,8 +29,19 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-
+        //Debug.Log("Hi");
+        //foreach (DialogueScript dialogue in DataAccessScript.GetDialogueList())
+        //{
+        //    Debug.Log(dialogue.dialogueText);
+        //    Debug.Log("Hi");
+        //    for (int i = 0; i <= currentMessage.Length; i++)
+        //    {
+        //        currentMessage[i] = dialogue.dialogueText;
+        //        Debug.Log(currentMessage[i]);
+        //    }
+        //}
     }
+
 
     public void OpenDialogue(Message[] messages, Actor[] actors)
     {
@@ -39,6 +51,8 @@ public class DialogueManager : MonoBehaviour
         activeName = 0;
         isActive = true;
 
+
+
         //Debug.Log("Started Conversation! Loaded messages:" + messages.Length);
         DisplayMessage();
     }
@@ -46,6 +60,7 @@ public class DialogueManager : MonoBehaviour
     {
         Message messageToDisplay = currentMessages[activeMessage];
         messageText.text = messageToDisplay.dialogueText;
+        //messageText.text = currentMessage[activeMessage];
         Message nameToDisplay = currentMessages[activeMessage];
         actorName.text = nameToDisplay.currentSpeaker;
 
