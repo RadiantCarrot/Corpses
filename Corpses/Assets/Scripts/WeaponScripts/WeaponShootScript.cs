@@ -26,52 +26,58 @@ public class WeaponShootScript : MonoBehaviour
     public bool startEquipped;
 
     public AnalyticsScript analyticsScript;
+    public WeaponFreezerScript weaponFreezerScript;
+
 
     // Start is called before the first frame update
     void Start()
     {
         analyticsScript = GameObject.Find("EndscreenCanvas").GetComponent<AnalyticsScript>(); // assign analytics script
+        weaponFreezerScript = GameObject.Find("WeaponHolder").GetComponent<WeaponFreezerScript>(); // assign freezer script
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.parent.name == "WeaponHolder")
+        if (transform.parent.name == "WeaponHolder") // if weapon is equipped
         {
-            if (Time.time >= nextShot)
+            if (Time.time >= nextShot) // if shot is off cooldown
             {
-                if (attackType == "click")
+                if (weaponFreezerScript.weaponFreeze == false) // if weapon is not frozen
                 {
-                    if (Input.GetButtonDown("Fire1")) // pew pew when mouse left click is pressed
+                    if (attackType == "click") // if you click to shoot weapon
                     {
-                        if (projectileType == "bouncy") // if weapon shoots bouncy projectiles
+                        if (Input.GetButtonDown("Fire1")) // pew pew when mouse left click is pressed
                         {
-                            BouncyShot(); // pew pew
-                            nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                            if (projectileType == "bouncy") // if weapon shoots bouncy projectiles
+                            {
+                                BouncyShot(); // pew pew
+                                nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                            }
+                            else
+                            {
+                                NormalShot(); // pew pew
+                                nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                            }
+                            analyticsScript.BulletCounter(1); // add bullet shot to counter
                         }
-                        else
-                        {
-                            NormalShot(); // pew pew
-                            nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
-                        }
-                        analyticsScript.BulletCounter(1); // add bullet shot to counter
                     }
-                }
-                else
-                {
-                    if (Input.GetMouseButton(0)) // pew pew when mouse left click is pressed
+                    else // if you hold to shoot weapon
                     {
-                        if (projectileType == "bouncy") // if weapon shoots bouncy projectiles
+                        if (Input.GetMouseButton(0)) // pew pew when mouse left click is pressed
                         {
-                            BouncyShot(); // pew pew
-                            nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                            if (projectileType == "bouncy") // if weapon shoots bouncy projectiles
+                            {
+                                BouncyShot(); // pew pew
+                                nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                            }
+                            else
+                            {
+                                NormalShot(); // pew pew
+                                nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
+                            }
+                            analyticsScript.BulletCounter(1); // add bullet shot to counter
                         }
-                        else
-                        {
-                            NormalShot(); // pew pew
-                            nextShot = Time.time + 1f / attackInterval; // this is the delay between shots
-                        }
-                        analyticsScript.BulletCounter(1); // add bullet shot to counter
                     }
                 }
             }

@@ -56,6 +56,7 @@ public class Room1CheckerScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player")) // if there is player
         {
             enemySpawnScript.timerActive = false; // stop timer
+            enemySpawnScript.waveNumber = 0; // reset waves
 
             displayCountdown = false; // wipe countdown text
             countdownText.text = " "; // display countdown text

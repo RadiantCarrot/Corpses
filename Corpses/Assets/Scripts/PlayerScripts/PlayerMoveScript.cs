@@ -13,6 +13,7 @@ public class PlayerMoveScript : MonoBehaviour
 
     public bool isMoving;
     public bool facingRight = true;
+    public bool flipFreeze;
     public GameObject playerSprite;
 
     Rigidbody2D rb;
@@ -41,13 +42,16 @@ public class PlayerMoveScript : MonoBehaviour
 
         // ~~~~~ Flipping ~~~~~
 
-        if (moveDir.x > 0 && !facingRight) // if moving left and facing left, flip
+        if (flipFreeze == false) // if flipping is not frozen
         {
-            Flip();
-        }
-        if (moveDir.x < 0 && facingRight) // if moving right and facing right, flip
-        {
-            Flip();
+            if (moveDir.x > 0 && !facingRight) // if moving left and facing left, flip
+            {
+                Flip();
+            }
+            if (moveDir.x < 0 && facingRight) // if moving right and facing right, flip
+            {
+                Flip();
+            }
         }
     }
 

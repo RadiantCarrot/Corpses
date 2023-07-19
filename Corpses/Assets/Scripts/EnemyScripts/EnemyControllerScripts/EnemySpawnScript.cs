@@ -15,7 +15,7 @@ public class EnemySpawnScript : MonoBehaviour
     private float spawnIntervalMin;
     private float spawnIntervalDecrement;
 
-    private int waveNumber = 0;
+    public int waveNumber = 0;
     public TMP_Text waveText;
     public float waveTextDuration;
 

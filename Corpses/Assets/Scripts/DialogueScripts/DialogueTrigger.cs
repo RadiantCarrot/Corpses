@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using TMPro;
-using System.Linq;
 
 // Jaina 
 public class DialogueTrigger : MonoBehaviour
@@ -16,9 +15,15 @@ public class DialogueTrigger : MonoBehaviour
 
     public TMP_Text shopkeeperText;
 
+    public WeaponFreezerScript weaponFreezerScript;
+    public PlayerMoveScript playerMoveScript;
+
+
     public void StartDialogue()
     {
         Time.timeScale = 0;
+        weaponFreezerScript.weaponFreeze = true;
+        playerMoveScript.flipFreeze = true;
 
         if (npc.isShopkeeper == false) // if NPC is tutorial NPC
         {
@@ -47,18 +52,6 @@ public class DialogueTrigger : MonoBehaviour
 
             messages = messageList.ToArray();
         }
-
-        //List<DialogueScript> dialogueList = DataAccessScript.GetDialogueList();
-        //List<Message> messageList = new List<Message>();
-
-        //foreach (DialogueScript dialogue in dialogueList)
-        //{
-        //    Message newMessage = new Message(dialogue.dialogueId, dialogue.nextDialogueId, dialogue.dialogueSetId, dialogue.currentSpeaker, dialogue.leftImage, dialogue.rightImage, dialogue.dialogueText);
-        //    messageList.Add(newMessage);
-        //}
-
-        //messages = messageList.ToArray();
-
 
         if (npc.canInteract == true)
         {

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-//Jaina
+// Jaina
 public class DialogueManager : MonoBehaviour
 {
     public Image actorImage1;
@@ -27,19 +27,13 @@ public class DialogueManager : MonoBehaviour
 
     public TMP_Text shopkeeperText;
 
+    public WeaponFreezerScript weaponFreezerScript;
+    public PlayerMoveScript playerMoveScript;
+
+
     void Start()
     {
-        //Debug.Log("Hi");
-        //foreach (DialogueScript dialogue in DataAccessScript.GetDialogueList())
-        //{
-        //    Debug.Log(dialogue.dialogueText);
-        //    Debug.Log("Hi");
-        //    for (int i = 0; i <= currentMessage.Length; i++)
-        //    {
-        //        currentMessage[i] = dialogue.dialogueText;
-        //        Debug.Log(currentMessage[i]);
-        //    }
-        //}
+
     }
 
 
@@ -101,6 +95,8 @@ public class DialogueManager : MonoBehaviour
         {
             //Debug.Log("Conversation ended!");
             Time.timeScale = 1;
+            weaponFreezerScript.weaponFreeze = false;
+            playerMoveScript.flipFreeze = false;
             isActive = false;
             dialogueCanvas.SetActive(false);
             npc.dialogueStarted = false;

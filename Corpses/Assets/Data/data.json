@@ -188,7 +188,7 @@
       "enemyHealth": "200",
       "enemySpeed": "5",
       "enemyDamage": "20",
-      "projectileSpeed": "0.2",
+      "projectileSpeed": "0.1",
       "projectileDamage": "5",
       "despawnTime": "8",
       "aggroDistance": "12",
@@ -218,7 +218,7 @@
     {
       "enemyId": "4",
       "enemyName": "Enemy Four",
-      "enemySprite": "EnemySprite4R",
+      "enemySprite": "EnemySprite1R",
       "enemyHealth": "120",
       "enemySpeed": " -",
       "enemyDamage": " -",
