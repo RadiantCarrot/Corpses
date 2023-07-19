@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
-using UnityEditor.AddressableAssets;
+using UnityEngine.AddressableAssets;
 
 // Done by KarLonng
 
@@ -21,15 +21,43 @@ public class DataManagerScript : MonoBehaviour
         
     }
 
-    public void LoadRefData()
+    public void LoadRefData(Action onLoaded)
     {
-        string filePath = Path.Combine(Application.dataPath, "Data/data.json"); // load data from file path
+        //string filePath = Path.Combine(Application.dataPath, "Data/data.json"); // load data from file path
 
-        string dataString = File.ReadAllText(filePath); // read data
-        //Debug.Log(dataString);
+        //string dataString = File.ReadAllText(filePath); // read data
+        ////Debug.Log(dataString);
 
-        DataReaderScript data = JsonUtility.FromJson<DataReaderScript>(dataString); // create and return data based on data passed in
+        //DataReaderScript data = JsonUtility.FromJson<DataReaderScript>(dataString); // create and return data based on data passed in
+        //ProcessData(data);
+
+        StartCoroutine(DoLoadRefData("Data/data.json", onLoaded));
+    }
+
+    public IEnumerator DoLoadRefData(string path, Action onLoaded)
+    {
+        bool processing = true; // bool to check if processing has finished yet
+        string loadedText = ""; // string to store text loaded
+
+        Addressables.LoadAssetAsync<TextAsset>(path).Completed += (op) =>
+        {
+            loadedText = op.Result.text; // load assets as text asset
+
+            processing = false; // processing has ended
+        };
+
+        while (processing) // while processing is still ongoing
+        {
+            Debug.Log("Still processing!");
+            yield return null; // wait for next frame
+        }
+
+        DataReaderScript data = JsonUtility.FromJson<DataReaderScript>(loadedText); // create and return data based on data passed in
         ProcessData(data);
+
+        Debug.Log("Done processing!");
+
+        onLoaded?.Invoke();
     }
 
     private void ProcessData(DataReaderScript data)
@@ -39,8 +67,7 @@ public class DataManagerScript : MonoBehaviour
         {
             PlayerStatsScript player = new PlayerStatsScript(playerRef.playerSprite, playerRef.playerHealth, playerRef.playerSpeed); // pass in values
             playerList.Add(player); // add to list
-            //Debug.Log(player.playerName);
-
+            //Debug.Log(player.playerHealth);
         }
         DataAccessScript.SetPlayerList(playerList); // set list
         //Debug.Log(DataAccessScript.GetPlayerList().Count);
@@ -73,8 +100,7 @@ public class DataManagerScript : MonoBehaviour
         {
             WaveStatsScript wave = new WaveStatsScript(waveRef.dungeonId, waveRef.waveNumber, waveRef.enemyId, waveRef.enemyName,waveRef.spawnCount); // pass in values
             waveList.Add(wave); // add to list
-            //Debug.Log(wave.waveName);
-
+            //Debug.Log(wave.dungeonId);
         }
         DataAccessScript.SetWaveList(waveList); // set list
         //Debug.Log(DataAccessScript.GetWaveList().Count);
@@ -85,8 +111,7 @@ public class DataManagerScript : MonoBehaviour
         {
             TimerStatsScript timer = new TimerStatsScript(timerRef.spawnIntervalMax, timerRef.spawnIntervalMin, timerRef.spawnIntervalDecrement); // pass in values
             timerList.Add(timer); // add to list
-            //Debug.Log(timer.timerName);
-
+            //Debug.Log(timer.spawnIntervalMax);
         }
         DataAccessScript.SetTimerList(timerList); // set list
         //Debug.Log(DataAccessScript.GetTimerList().Count);
@@ -99,7 +124,7 @@ public class DataManagerScript : MonoBehaviour
             shopItemList.Add(shopItem); // add to list
         }
         DataAccessScript.SetShopItemList(shopItemList); // set list
-                                                        //Debug.Log(DataAccessScript.GetShopItemList().Count);
+        //Debug.Log(DataAccessScript.GetShopItemList().Count);
 
 
         List<DialogueScript> dialogueList = new List<DialogueScript>(); // add data to list

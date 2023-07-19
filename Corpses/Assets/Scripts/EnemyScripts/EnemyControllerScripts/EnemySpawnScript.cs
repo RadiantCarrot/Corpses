@@ -39,10 +39,10 @@ public class EnemySpawnScript : MonoBehaviour
         room1Checker = GameObject.Find("Room1Checker"); // set room checker
         room2Checker = GameObject.Find("Room2Checker"); // set room checker
 
-        TimeSetter();
+        // TimeSetter();
     }
 
-    void TimeSetter()
+    public void TimeSetter()
     {
         foreach (TimerStatsScript timer in DataAccessScript.GetTimerList()) // set timer
         {

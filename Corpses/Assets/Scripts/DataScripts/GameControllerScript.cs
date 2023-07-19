@@ -17,6 +17,8 @@ public class GameControllerScript : MonoBehaviour
 
 
     public GameObject playerGFX;
+    public PlayerHealthScript playerHealthScript;
+    public PlayerMoveScript playerMoveScript;
 
 
     public GameObject weaponObj;
@@ -28,20 +30,26 @@ public class GameControllerScript : MonoBehaviour
 
     public GameObject enemyObj;
     public List<GameObject> enemies = new List<GameObject>(); // create new list to store each enemy type
+    public EnemySpawnScript enemySpawnScript;
 
 
     public GameObject shopObj;
     public GameObject[] shopSpawnpoints;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
         DataManagerScript dataManager = GetComponent <DataManagerScript>(); // assign data manager
-        dataManager.LoadRefData(); // load data
+        dataManager.LoadRefData(OnDataLoaded); // load data
+    }
 
+    void OnDataLoaded()
+    {
         SetPlayer();
         SetWeapon();
+        SetTimer();
         SetShop();
         SetDialogue();
     }
@@ -55,6 +63,9 @@ public class GameControllerScript : MonoBehaviour
                 playerGFX.GetComponent<SpriteRenderer>().sprite = s;
             });
         }
+
+        playerHealthScript.SetPlayer();
+        playerMoveScript.SetPlayer();
     }
 
     void SetWeapon()
@@ -102,6 +113,11 @@ public class GameControllerScript : MonoBehaviour
                 weaponObject.GetComponent<WeaponShootScript>().despawnTime = weapon.despawnTime;
             }
         }
+    }
+
+    void SetTimer()
+    {
+        enemySpawnScript.TimeSetter();
     }
 
     void SetShop()

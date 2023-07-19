@@ -23,6 +23,19 @@ public class PlayerMoveScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //foreach (PlayerStatsScript player in DataAccessScript.GetPlayerList()) // get player speed from data
+        //{
+        //    moveSpeed = player.playerSpeed; // set max health
+        //}
+
+        //rb = GetComponent<Rigidbody2D>(); // assigns rigidbody to character
+        //activeMoveSpeed = moveSpeed;
+
+        //InvokeRepeating("SpawnParticle", 0f, 0.25f);
+    }
+
+    public void SetPlayer()
+    {
         foreach (PlayerStatsScript player in DataAccessScript.GetPlayerList()) // get player speed from data
         {
             moveSpeed = player.playerSpeed; // set max health
@@ -30,15 +43,16 @@ public class PlayerMoveScript : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>(); // assigns rigidbody to character
         activeMoveSpeed = moveSpeed;
-
-        //InvokeRepeating("SpawnParticle", 0f, 0.25f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        moveDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); // geting player direction
-        rb.velocity = moveDir.normalized * activeMoveSpeed; // actually moving the player
+        if (activeMoveSpeed != 0)
+        {
+            moveDir = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")); // geting player direction
+            rb.velocity = moveDir.normalized * activeMoveSpeed; // actually moving the player
+        }
 
         // ~~~~~ Flipping ~~~~~
 

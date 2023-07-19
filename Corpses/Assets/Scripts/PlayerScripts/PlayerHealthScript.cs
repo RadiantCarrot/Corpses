@@ -19,6 +19,17 @@ public class PlayerHealthScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //foreach (PlayerStatsScript player in DataAccessScript.GetPlayerList()) // get player max health from data
+        //{
+        //    maxHealth = player.playerHealth; // set max health
+        //}
+
+        //currentHealth = maxHealth; // set health to max
+        //healthBar.setMaxHealth(maxHealth); // set healthbar to max
+    }
+
+    public void SetPlayer()
+    {
         foreach (PlayerStatsScript player in DataAccessScript.GetPlayerList()) // get player max health from data
         {
             maxHealth = player.playerHealth; // set max health
