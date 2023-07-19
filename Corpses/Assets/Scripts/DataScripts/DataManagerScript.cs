@@ -48,14 +48,14 @@ public class DataManagerScript : MonoBehaviour
 
         while (processing) // while processing is still ongoing
         {
-            Debug.Log("Still processing!");
+            //Debug.Log("Still processing!");
             yield return null; // wait for next frame
         }
 
         DataReaderScript data = JsonUtility.FromJson<DataReaderScript>(loadedText); // create and return data based on data passed in
         ProcessData(data);
 
-        Debug.Log("Done processing!");
+        //Debug.Log("Done processing!");
 
         onLoaded?.Invoke();
     }

@@ -243,7 +243,7 @@
   "shopItemList": [
     {
       "shopItemId": "1",
-      "shopItemSprite": "WeaponTwoSprite",
+      "shopItemSprite": "WizardStaff",
       "weaponId": "2",
       "weaponName": "Wizard Staff",
       "unlockLevel": "5",
@@ -251,7 +251,7 @@
     },
     {
       "shopItemId": "2",
-      "shopItemSprite": "WeaponThreeSprite",
+      "shopItemSprite": "Crystal",
       "weaponId": "3",
       "weaponName": "Magic Crystal",
       "unlockLevel": "8",
@@ -259,7 +259,7 @@
     },
     {
       "shopItemId": "3",
-      "shopItemSprite": "WeaponFourSprite",
+      "shopItemSprite": "SpellBook",
       "weaponId": "4",
       "weaponName": "Spell Book",
       "unlockLevel": "10",
@@ -839,7 +839,7 @@
     {
       "weaponId": "1",
       "weaponName": "Basic Wand",
-      "weaponSprite": "WeaponOneSprite",
+      "weaponSprite": "BasicWandL",
       "attackInterval": "2.5",
       "attackType": "click",
       "projectileDamage": "50",
@@ -851,7 +851,7 @@
     {
       "weaponId": "2",
       "weaponName": "Wizard Staff",
-      "weaponSprite": "WeaponTwoSprite",
+      "weaponSprite": "WizardStaffR",
       "attackInterval": "1.2",
       "attackType": "click",
       "projectileDamage": "150",
@@ -863,7 +863,7 @@
     {
       "weaponId": "3",
       "weaponName": "Magic Crystal",
-      "weaponSprite": "WeaponThreeSprite",
+      "weaponSprite": "Crystal",
       "attackInterval": "20",
       "attackType": "hold",
       "projectileDamage": "20",
@@ -875,7 +875,7 @@
     {
       "weaponId": "4",
       "weaponName": "Spell Book",
-      "weaponSprite": "WeaponFourSprite",
+      "weaponSprite": "OpenedSpellBook",
       "attackInterval": " -",
       "attackType": " -",
       "projectileDamage": " -",

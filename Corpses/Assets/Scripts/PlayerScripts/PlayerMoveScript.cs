@@ -23,14 +23,6 @@ public class PlayerMoveScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //foreach (PlayerStatsScript player in DataAccessScript.GetPlayerList()) // get player speed from data
-        //{
-        //    moveSpeed = player.playerSpeed; // set max health
-        //}
-
-        //rb = GetComponent<Rigidbody2D>(); // assigns rigidbody to character
-        //activeMoveSpeed = moveSpeed;
-
         //InvokeRepeating("SpawnParticle", 0f, 0.25f);
     }
 

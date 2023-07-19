@@ -83,10 +83,10 @@ public class GameControllerScript : MonoBehaviour
 
                 weaponObject.GetComponent<WeaponShootScript>().weaponId = weapon.weaponId;
                 weaponObject.name = weapon.weaponName;
-                //AssetManagerScript.LoadSprite(weapon.weaponSprite + ".png", (Sprite s) =>
-                //{
-                //    weaponObject.GetComponent<SpriteRenderer>().sprite = s;
-                //});
+                AssetManagerScript.LoadSprite(weapon.weaponSprite + ".png", (Sprite s) =>
+                {
+                    weaponObject.GetComponent<SpriteRenderer>().sprite = s;
+                });
                 weaponObject.GetComponent<WeaponShootScript>().attackInterval = weapon.attackInterval;
                 weaponObject.GetComponent<WeaponShootScript>().attackType = weapon.attackType;
                 weaponObject.GetComponent<WeaponShootScript>().projectileDamage = weapon.projectileDamage;
@@ -101,10 +101,10 @@ public class GameControllerScript : MonoBehaviour
 
                 weaponObject.GetComponent<WeaponShootScript>().weaponId = weapon.weaponId;
                 weaponObject.name = weapon.weaponName;
-                //AssetManagerScript.LoadSprite(weapon.weaponSprite + ".png", (Sprite s) =>
-                //{
-                //    weaponObject.GetComponent<SpriteRenderer>().sprite = s;
-                //});
+                AssetManagerScript.LoadSprite(weapon.weaponSprite + ".png", (Sprite s) =>
+                {
+                    weaponObject.GetComponent<SpriteRenderer>().sprite = s;
+                });
                 weaponObject.GetComponent<WeaponShootScript>().attackInterval = weapon.attackInterval;
                 weaponObject.GetComponent<WeaponShootScript>().attackType = weapon.attackType;
                 weaponObject.GetComponent<WeaponShootScript>().projectileDamage = weapon.projectileDamage;
@@ -137,10 +137,10 @@ public class GameControllerScript : MonoBehaviour
 
             GameObject shopObject = Instantiate(shopObj, shopSpawnpoints[i].transform); // instantiate object at spawnpoint corresponding to item order
             shopObject.name = itemList[i].weaponName;
-            //AssetManagerScript.LoadSprite(itemList[i].shopItemSprite + ".png", (Sprite s) =>
-            //{
-            //    shopObject.GetComponent<SpriteRenderer>().sprite = s;
-            //});
+            AssetManagerScript.LoadSprite(itemList[i].shopItemSprite + ".png", (Sprite s) =>
+            {
+                shopObject.GetComponent<SpriteRenderer>().sprite = s;
+            });
             shopObject.GetComponent<ItemDisplayScript>().unlockLevel = itemList[i].unlockLevel;
             shopObject.GetComponent<ItemDisplayScript>().goldRequirement = itemList[i].goldRequirement;
         }
