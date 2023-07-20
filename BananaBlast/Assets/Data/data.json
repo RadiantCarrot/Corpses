@@ -218,7 +218,7 @@
     {
       "enemyId": "4",
       "enemyName": "Enemy Four",
-      "enemySprite": "EnemySprite1R",
+      "enemySprite": "Chest",
       "enemyHealth": "120",
       "enemySpeed": " -",
       "enemyDamage": " -",
@@ -839,7 +839,7 @@
     {
       "weaponId": "1",
       "weaponName": "Basic Wand",
-      "weaponSprite": "BasicWandL",
+      "weaponSprite": "BasicWandR",
       "attackInterval": "2.5",
       "attackType": "click",
       "projectileDamage": "50",
