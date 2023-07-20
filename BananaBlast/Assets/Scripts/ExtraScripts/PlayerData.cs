@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Jaina - this is for a Save and Load System incase we wanna implement it (4/7/2023)
+//Done by Jaina- this is for a Save and Load System incase we wanna implement it (4/7/2023)
 [System.Serializable]
 public class PlayerData
 {

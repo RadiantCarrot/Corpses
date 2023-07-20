@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Jaina 
+//Done by Jaina
 public class Player : MonoBehaviour
 {
     public int level;

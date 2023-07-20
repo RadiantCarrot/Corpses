@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-// Jaina
+// Done by : Jaina
 public class DialogueManager : MonoBehaviour
 {
     public Image actorImage1;
