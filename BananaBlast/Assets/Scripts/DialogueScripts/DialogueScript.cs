@@ -13,10 +13,6 @@ public class DialogueScript
     public string rightImage { get; }
     public string dialogueText { get; }
 
-
-    //public string name { get; }
-
-
     public DialogueScript (int dialogueId, int nextDialogueId, int dialogueSetId,
         string currentSpeaker, string leftImage, 
         string rightImage, string dialogueText)
@@ -29,6 +25,4 @@ public class DialogueScript
         this.rightImage = rightImage;
         this.dialogueText = dialogueText;
     }
-
-    
 }

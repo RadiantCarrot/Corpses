@@ -4,9 +4,10 @@ using UnityEngine;
 
 [System.Serializable]
 
+// Done by KarLonng
+
 public class DialogueReferenceScript
 {
-
     public int dialogueId;
     public int nextDialogueId;
     public int dialogueSetId;

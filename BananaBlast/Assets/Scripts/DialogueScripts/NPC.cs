@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-// Done by: Jaina
+// Done by: Jaina and KarLonng
 public class NPC : MonoBehaviour
 {
     public bool canInteract = false;

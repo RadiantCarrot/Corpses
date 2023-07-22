@@ -7,7 +7,7 @@
       "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Welcome To Banana Blast!"
+      "dialogueText": "Welcome To Banana Blast, where the best wizards come to prove themselves!"
     },
     {
       "dialogueId": "100102",
@@ -16,7 +16,7 @@
       "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Would you like me to walk you through the controls of the game?"
+      "dialogueText": "Your goal is to fight endless waves of monsters to be the very best!"
     },
     {
       "dialogueId": "100103",
@@ -25,7 +25,7 @@
       "currentSpeaker": "Player",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Yes please"
+      "dialogueText": "Definitely! Fight monsters, level up, get stronger. I got this!"
     },
     {
       "dialogueId": "100104",
@@ -34,7 +34,7 @@
       "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Fight endless waves of monsters and gain XP and gold along the way"
+      "dialogueText": "Use 'W,A,S,D' to move, and 'E' to interact."
     },
     {
       "dialogueId": "100105",
@@ -43,7 +43,7 @@
       "currentSpeaker": "Player",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Wow cool! But how?"
+      "dialogueText": "Okayy... but how do I shoot stuff? I wanna shoot stuff!!"
     },
     {
       "dialogueId": "100106",
@@ -52,7 +52,7 @@
       "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "The Controls for the game are W,A,S,D"
+      "dialogueText": "Use your mouse cursor to aim, and left click to shoot at enemies!"
     },
     {
       "dialogueId": "100107",
@@ -61,7 +61,7 @@
       "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Use your mouse to aim and shoot at enemies!"
+      "dialogueText": "You can also use the scroll wheel to switch between the weapons you have on you."
     },
     {
       "dialogueId": "100108",
@@ -70,7 +70,7 @@
       "currentSpeaker": "Player",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Where do I buy weapons?"
+      "dialogueText": "I see a shop ahead, is that how I unlock new weapons?"
     },
     {
       "dialogueId": "100109",
@@ -79,7 +79,7 @@
       "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Weapons can be unlocked and bought at the magic shop!"
+      "dialogueText": "Yup, new weapons are available as you level up, to be purchased with gold."
     },
     {
       "dialogueId": "100110",
@@ -88,7 +88,7 @@
       "currentSpeaker": "TutorialNpc",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Alright , hope you have a blast out there!"
+      "dialogueText": "Good luck, remember you can always back out of dungeons if it gets too rough!"
     },
     {
       "dialogueId": "100111",
@@ -97,7 +97,7 @@
       "currentSpeaker": "Player",
       "leftImage": "PlayerSprite",
       "rightImage": "TutorialNpcSprite",
-      "dialogueText": "Thank you!"
+      "dialogueText": "Thank you, I'm sure to have a bananablastin' time out there!!"
     },
     {
       "dialogueId": "100112",
@@ -142,7 +142,7 @@
       "currentSpeaker": "Shopkeeper",
       "leftImage": "PlayerSprite",
       "rightImage": "ShopkeeperSprite",
-      "dialogueText": "New weapons unlock as you level up! "
+      "dialogueText": "New weapons unlock as you level up!"
     },
     {
       "dialogueId": "100204",
@@ -170,7 +170,7 @@
       "enemySprite": "EnemySprite1R",
       "enemyHealth": "100",
       "enemySpeed": "3",
-      "enemyDamage": "20",
+      "enemyDamage": "15",
       "projectileSpeed": " -",
       "projectileDamage": " -",
       "despawnTime": " -",
@@ -187,7 +187,7 @@
       "enemySprite": "EnemySprite2R",
       "enemyHealth": "200",
       "enemySpeed": "5",
-      "enemyDamage": "20",
+      "enemyDamage": "15",
       "projectileSpeed": "0.1",
       "projectileDamage": "5",
       "despawnTime": "8",
@@ -204,7 +204,7 @@
       "enemySprite": "EnemySprite3R",
       "enemyHealth": "150",
       "enemySpeed": "4",
-      "enemyDamage": "20",
+      "enemyDamage": "15",
       "projectileSpeed": "10",
       "projectileDamage": "20",
       "despawnTime": "8",
@@ -236,7 +236,7 @@
   "playerList": [
     {
       "playerSprite": "PlayerSpriteR",
-      "playerHealth": "100",
+      "playerHealth": "500",
       "playerSpeed": "10"
     }
   ],
